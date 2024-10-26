@@ -1,95 +1,72 @@
 import Image from "next/image";
+import Intersection from "./components/Intersection";
 import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <main className={`${styles.main} ${styles["animate-layer"]}`}>
+        <section className={styles.section}>
+          <Intersection>
+            <div className={styles.imageContainer}>
+              <Image
+                src="https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o"
+                alt="설명"
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+            <div className={styles.mainContents}>
+              <div className={styles.mainContentsText}>
+                <span>OOO</span>
+                <span>|</span>
+                <span>OOO</span>
+              </div>
+              <div className={styles.mainContentsSubText}>
+                2024년 11월 10일 일요일 오후 2시
+                <br />
+                장소
+              </div>
+            </div>
+          </Intersection>
+        </section>
+
+        <section className={styles.section}>
+          <Intersection>
+            <span>우리를 찾아주세요</span>
+          </Intersection>
+        </section>
+
+        <section className={styles.section}>
+          <Intersection>
+            <span>마음을 보내주세요</span>
+          </Intersection>
+        </section>
+
+        <section className={styles.section}>
+          <Intersection>
+            <span>방명록</span>
+          </Intersection>
+        </section>
+
+        <section className={styles.section}>
+          <Intersection>
+            <div className={styles.shareInvitation}>
+              <button>
+                <span>카카오톡 공유하기</span>
+              </button>
+              <button>
+                <span>링크 복사하기</span>
+              </button>
+            </div>
+          </Intersection>
+        </section>
+
+        <footer className={styles.footer}>
+          <p>OOOOOOOOOOO</p>
+        </footer>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
