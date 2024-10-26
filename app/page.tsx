@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Intersection from "./components/Intersection";
+import { Intersection, Share } from "./components";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
             <div className={styles.imageContainer}>
               <Image
                 src="https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o"
-                alt="설명"
+                alt="메인 이미지"
                 layout="fill"
                 objectFit="cover"
               />
@@ -52,14 +52,7 @@ export default function Home() {
 
         <section className={styles.section}>
           <Intersection>
-            <div className={styles.shareInvitation}>
-              <button>
-                <span>카카오톡 공유하기</span>
-              </button>
-              <button>
-                <span>링크 복사하기</span>
-              </button>
-            </div>
+            <Share />
           </Intersection>
         </section>
 

@@ -23,6 +23,10 @@ h3 {
   font-family: var(--font-serif);
 }
 
+button {
+  font-family: var(--font-serif);
+}
+
 @keyframes stage-enter {
   0% {
     opacity: 0;
