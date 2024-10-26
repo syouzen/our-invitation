@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from 'react';
 
 interface IntersectionProps {
   children: React.ReactNode;
 }
 
-const Intersection = ({ children }: IntersectionProps) => {
+const Intersection = ({children}: IntersectionProps) => {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -24,7 +24,7 @@ const Intersection = ({ children }: IntersectionProps) => {
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      {threshold: 0.1},
     );
 
     observer.observe(currentRef);
@@ -35,7 +35,7 @@ const Intersection = ({ children }: IntersectionProps) => {
   }, []);
 
   return (
-    <div ref={ref} className={`animate ${isVisible ? "visible" : ""}`}>
+    <div ref={ref} className={`animate ${isVisible ? 'visible' : ''}`}>
       {children}
     </div>
   );

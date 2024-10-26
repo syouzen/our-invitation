@@ -1,0 +1,21 @@
+.Toastify__toast-container {
+  width: fit-content;
+}
+
+.Toastify__toast {
+  font-size: 14px;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  min-height: 44px;
+  text-align: center;
+  width: fit-content;
+}
+
+.Toastify__toast--success {
+  background: rgba(48, 173, 120, 0.8);
+}
+
+.Toastify__toast--error {
+  background: rgba(224, 72, 82, 0.8);
+}

@@ -1,12 +1,13 @@
-"use client";
+'use client';
 
-import React from "react";
-import styles from "./components.module.css";
-import { IconKakao, IconLink } from "@/app/assets";
-import Image from "next/image";
-import Script from "next/script";
+import React from 'react';
+import styles from './components.module.css';
+import {IconKakao, IconLink} from '@/app/assets';
+import Image from 'next/image';
+import Script from 'next/script';
+import {toast, ToastOptions} from 'react-toastify';
 
-const INVITATION_URL = "실제 URL";
+const INVITATION_URL = '실제 URL';
 
 const Share = () => {
   const onInitKakao = () => {
@@ -15,14 +16,14 @@ const Share = () => {
 
   const onShareKakao = () => {
     window.Kakao.Share.sendDefault({
-      objectType: "feed",
+      objectType: 'feed',
       content: {
         imageUrl:
-          "https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o",
+          'https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o',
         imageWidth: 600,
         imageHeight: 400,
-        title: "공유 타이틀",
-        description: "공유 내용",
+        title: '공유 타이틀',
+        description: '공유 내용',
         link: {
           mobileWebUrl: INVITATION_URL,
           webUrl: INVITATION_URL,
@@ -30,7 +31,7 @@ const Share = () => {
       },
       buttons: [
         {
-          title: "공유 내용 내 버튼 (URL 이동 버튼)",
+          title: '공유 내용 내 버튼 (URL 이동 버튼)',
           link: {
             mobileWebUrl: INVITATION_URL,
             webUrl: INVITATION_URL,
@@ -40,14 +41,30 @@ const Share = () => {
     });
   };
 
-  const onLinkCopy = () => {
-    // TODO:Link Copy
-    console.log("Link Copy");
+  const onLinkCopy = async () => {
+    const toastId = 'unique-link-toast-id';
+    if (toast.isActive(toastId)) return;
+
+    const options: ToastOptions = {
+      toastId,
+      icon: false,
+    };
+
+    try {
+      await navigator.clipboard.writeText(INVITATION_URL);
+      toast.success('링크를 복사했어요', options);
+    } catch (e) {
+      console.error(e);
+      toast.error('링크 복사를 실패했어요', options);
+    }
   };
 
   return (
     <div>
-      <Script src="https://developers.kakao.com/sdk/js/kakao.min.js" onLoad={onInitKakao} />
+      <Script
+        src="https://developers.kakao.com/sdk/js/kakao.min.js"
+        onLoad={onInitKakao}
+      />
       <div className={styles.shareImageContainer}>
         <Image
           src="https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o"

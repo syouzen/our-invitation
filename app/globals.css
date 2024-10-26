@@ -1,6 +1,6 @@
 :root {
-  --font-sans: "Noto Sans KR", sans-serif;
-  --font-serif: "Nanum Myeongjo", serif;
+  --font-sans: 'Noto Sans KR', sans-serif;
+  --font-serif: 'Nanum Myeongjo', serif;
 
   --max-logo-width: 10rem;
   --color: black;

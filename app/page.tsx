@@ -1,11 +1,11 @@
-import Image from "next/image";
-import { Intersection, Share } from "./components";
-import styles from "./page.module.css";
+import Image from 'next/image';
+import {Intersection, Share} from './components';
+import styles from './page.module.css';
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={`${styles.main} ${styles["animate-layer"]}`}>
+      <main className={`${styles.main} ${styles['animate-layer']}`}>
         <section className={styles.section}>
           <Intersection>
             <div className={styles.imageContainer}>
