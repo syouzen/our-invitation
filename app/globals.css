@@ -1,4 +1,7 @@
 :root {
+  --font-sans: "Noto Sans KR", sans-serif;
+  --font-serif: "Nanum Myeongjo", serif;
+
   --max-logo-width: 10rem;
   --color: black;
   --background-color: white;
@@ -8,6 +11,16 @@
 
 html {
   -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-serif);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
 }
 
 @keyframes stage-enter {
