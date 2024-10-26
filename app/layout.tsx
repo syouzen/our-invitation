@@ -16,8 +16,6 @@ export const metadata: Metadata = {
     description: contents.description,
     images: ["http://www.drpaulwong.com/wp-content/uploads/2022/12/mayur-gala-2PODhmrvLik-unsplash-1080x675.jpg"],
   },
-  viewport: "width=device-width, initial-scale=1.0, maximum-scale=1.0",
-  themeColor: "#FFFFFF",
   manifest: "/manifest.json",
   robots: {
     index: false,
