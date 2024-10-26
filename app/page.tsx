@@ -34,19 +34,30 @@ export default function Home() {
 
         <section className={styles.section}>
           <Intersection>
-            <span>우리를 찾아주세요</span>
+            <span>오시는 길</span>
+            {/* TODO: 맵, 이동 정보 등 */}
+          </Intersection>
+        </section>
+
+        <section className={styles.section}>
+          <Intersection>
+            <span>정보 및 안내 사항</span>
+            {/* TODO: 식사, 주차 안내 등 */}
+            {/* TODO: 참석 의사 전달? */}
           </Intersection>
         </section>
 
         <section className={styles.section}>
           <Intersection>
             <span>마음을 보내주세요</span>
+            {/* TODO: 계좌 번호 등 */}
           </Intersection>
         </section>
 
         <section className={styles.section}>
           <Intersection>
             <span>방명록</span>
+            {/* TODO: 방명록 DB, ROUTES HANDLER로 추가 */}
           </Intersection>
         </section>
 
