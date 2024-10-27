@@ -1,5 +1,6 @@
 import {create} from 'zustand';
 import {Comment} from '@/app/type';
+import dayjs from 'dayjs';
 
 interface CommentsState {
   comments: Comment[];
@@ -16,8 +17,12 @@ export const useCommentsStore = create<CommentsState>(set => ({
   comments: [],
   fetchComments: async () => {
     const response = await fetch('/api/comments');
-    const data = await response.json();
-    set({comments: data});
+    const data: Comment[] = await response.json();
+    set({
+      comments: data.sort((a, b) =>
+        dayjs(a.created_at).isBefore(dayjs(b.created_at)) ? 1 : -1,
+      ),
+    });
   },
   createComment: async (name, content, password) => {
     const response = await fetch('/api/comments', {
