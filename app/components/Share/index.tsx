@@ -7,7 +7,10 @@ import Image from 'next/image';
 import Script from 'next/script';
 import {toast, ToastOptions} from 'react-toastify';
 
-const INVITATION_URL = '실제 URL';
+const INVITATION_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://our-invitation.vercel.app/'
+    : 'http://localhost:3000/';
 
 const Share = () => {
   const onInitKakao = () => {
@@ -60,7 +63,7 @@ const Share = () => {
   };
 
   return (
-    <div>
+    <>
       <Script
         src="https://developers.kakao.com/sdk/js/kakao.min.js"
         onLoad={onInitKakao}
@@ -91,7 +94,7 @@ const Share = () => {
           링크주소 복사하기
         </button>
       </div>
-    </div>
+    </>
   );
 };
 
