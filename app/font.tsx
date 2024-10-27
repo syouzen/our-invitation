@@ -1,4 +1,4 @@
-import {Noto_Sans_KR, Nanum_Myeongjo} from 'next/font/google';
+import {Noto_Sans_KR, Gowun_Batang} from 'next/font/google';
 
 export const sans = Noto_Sans_KR({
   weight: ['300', '400', '500', '700'],
@@ -7,7 +7,7 @@ export const sans = Noto_Sans_KR({
   variable: '--font-sans',
 });
 
-export const serif = Nanum_Myeongjo({
+export const serif = Gowun_Batang({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
