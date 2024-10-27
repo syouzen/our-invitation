@@ -10,7 +10,7 @@ const MapInfo = () => {
         <b>두가헌</b>
         <br />
         <p className={styles.infoPhone}>
-          <IconPhone width={12} height={12} /> 02-538-3300
+          <IconPhone width={12} height={12} /> 02-6261-1616
         </p>
       </p>
     </div>
