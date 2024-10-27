@@ -2,3 +2,23 @@
   margin-top: 16px;
   margin-bottom: 16px;
 }
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.commentHeader {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.commentContent {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}

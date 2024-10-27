@@ -18,7 +18,7 @@ const Comment = () => {
 
   return (
     <div>
-      <span className={styles.commentTitle}>방명록</span>
+      <span className={styles.commentTitle}>마음을 남겨주세요</span>
       {isLoading && (
         <div className="">
           <IconLoading />
@@ -27,14 +27,16 @@ const Comment = () => {
       {!isLoading && (
         <Intersection>
           {comments.map(comment => (
-            <div key={comment.id} className="">
-              <div className="">
-                <span>{comment.name}</span>
-                <span className="">
+            <div key={comment.id} className={styles.comment}>
+              <div className={styles.commentHeader}>
+                <span>
+                  <b>{comment.name}</b>
+                </span>
+                <span>
                   {dayjs(comment.created_at).format('YYYY.MM.DD HH:mm:ss')}
                 </span>
               </div>
-              <div className="">{comment.content}</div>
+              <div className={styles.commentContent}>{comment.content}</div>
             </div>
           ))}
         </Intersection>
