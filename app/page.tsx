@@ -6,15 +6,11 @@ export default function Home() {
     <div className={styles.page}>
       <main className={`${styles.main} ${styles['animate-layer']}`}>
         <section className={styles.section}>
-          <Intersection>
-            <Header />
-          </Intersection>
+          <Header />
         </section>
 
         <section className={styles.section}>
-          <Intersection>
-            <SubHeader />
-          </Intersection>
+          <SubHeader />
         </section>
 
         <section className={styles.section}>
