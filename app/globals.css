@@ -7,6 +7,8 @@
   --background-color: white;
   --sticky-color: gray;
   --sticky-bgc: yellow;
+
+  user-select: none;
 }
 
 html {
@@ -25,6 +27,14 @@ h3 {
 
 button {
   font-family: var(--font-serif);
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
 }
 
 @keyframes stage-enter {
