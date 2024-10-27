@@ -68,8 +68,11 @@
 }
 
 .commentHeaderDate {
+  display: flex;
   color: gray;
   font-size: 12px;
+  justify-content: center;
+  align-items: center;
 }
 
 .commentContent {
@@ -82,4 +85,6 @@
   background-color: white;
   color: gray;
   cursor: pointer;
+  margin-left: 12px;
+  padding-top: 2.5px;
 }

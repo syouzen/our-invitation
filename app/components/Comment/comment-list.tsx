@@ -16,6 +16,8 @@ const CommentList = () => {
     fetchComments().then(() => setIsLoading(false));
   }, [fetchComments]);
 
+  const onOpenDeleteDialog = () => {};
+
   return (
     <>
       {isLoading && (
@@ -31,7 +33,10 @@ const CommentList = () => {
                 <span className={styles.commentHeaderName}>{comment.name}</span>
                 <span className={styles.commentHeaderDate}>
                   {dayjs(comment.created_at).format('YYYY.MM.DD')}
-                  <button className={styles.commentDeletebutton}>
+                  <button
+                    className={styles.commentDeletebutton}
+                    onClick={onOpenDeleteDialog}
+                  >
                     <IconClose width={12} height={12} />
                   </button>
                 </span>
