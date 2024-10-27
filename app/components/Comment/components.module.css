@@ -1,13 +1,58 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 64px;
+}
+
 .commentTitle {
   margin-top: 16px;
   margin-bottom: 16px;
 }
 
+.commentSendButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.commentSendButton {
+  width: fit-content;
+  padding: 6px 12px;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.commentSendButton:hover {
+  background-color: lightgray;
+}
+
+.commentLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 .comment {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   width: 100%;
   margin-top: 12px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  margin-top: 16px;
+  border-bottom: 1px solid lightgray;
 }
 
 .commentHeader {
@@ -18,7 +63,23 @@
   user-select: none;
 }
 
+.commentHeaderName {
+  color: gray;
+}
+
+.commentHeaderDate {
+  color: gray;
+  font-size: 12px;
+}
+
 .commentContent {
   margin-top: 16px;
   margin-bottom: 16px;
+}
+
+.commentDeletebutton {
+  border: none;
+  background-color: white;
+  color: gray;
+  cursor: pointer;
 }
