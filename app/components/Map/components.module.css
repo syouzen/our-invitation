@@ -1,0 +1,57 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.mapTitle {
+  text-align: center;
+  margin-top: 64px;
+  margin-bottom: 32px;
+}
+
+.mapWrapper {
+  display: flex;
+  width: 100%;
+  height: 250px;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  position: relative;
+  font-size: 18px;
+}
+
+.infoPhone {
+  margin: 0px;
+  margin-top: 4px;
+  margin-bottom: 32px;
+  color: gray;
+  font-size: 14px;
+}
+
+.descWrapper {
+  margin-top: 16px;
+  margin-bottom: 64px;
+}
+
+.desc {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.descTitle {
+  width: 100px;
+}
+
+.descContent {
+  font-size: 14px;
+  line-height: 20px;
+  color: gray;
+}

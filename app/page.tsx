@@ -1,4 +1,11 @@
-import {Comment, Header, Intersection, Share, SubHeader} from './components';
+import {
+  Comment,
+  Header,
+  Intersection,
+  Map,
+  Share,
+  SubHeader,
+} from './components';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -21,10 +28,7 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <Intersection>
-            <span>오시는 길</span>
-            {/* TODO: 맵, 이동 정보 등 */}
-          </Intersection>
+          <Map />
         </section>
 
         <section className={styles.section}>
