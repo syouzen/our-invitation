@@ -1,5 +1,4 @@
 .subContents {
-  margin-bottom: 96px;
   text-align: center;
   color: black;
 }
@@ -39,4 +38,13 @@
 
 .contactButton:hover {
   background-color: lightgray;
+}
+
+.contentsSpare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 96px;
+  margin-bottom: 96px;
+  color: lightgray;
 }

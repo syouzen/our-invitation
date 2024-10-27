@@ -28,6 +28,10 @@ const Header = () => {
         </div>
       </Intersection>
 
+      <div className={styles.contentsSpare}>
+        <span>-</span>
+      </div>
+
       <Intersection>
         <div className={styles.family}>
           <div className={styles.familyParents}>
