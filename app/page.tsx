@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {Intersection, Share} from './components';
+import {Comment, Intersection, Share} from './components';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -56,8 +56,8 @@ export default function Home() {
 
         <section className={styles.section}>
           <Intersection>
-            <span>방명록</span>
             {/* TODO: 방명록 DB, ROUTES HANDLER로 추가 */}
+            <Comment />
           </Intersection>
         </section>
 
