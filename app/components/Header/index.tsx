@@ -4,7 +4,7 @@ import React from 'react';
 import styles from './components.module.css';
 import Image from 'next/image';
 
-const Header = () => {
+const SubHeader = () => {
   return (
     <>
       <div className={styles.imageContainer}>
@@ -17,18 +17,24 @@ const Header = () => {
       </div>
       <div className={styles.mainContents}>
         <div className={styles.mainContentsText}>
+          <span className={styles.mainContentsTitle}>OUR WEDDING STORY</span>
+        </div>
+        <div className={styles.mainContentsSpare}>
+          <span>💍</span>
+        </div>
+        <div className={styles.mainContentsText}>
           <span>OOO</span>
           <span>|</span>
           <span>OOO</span>
         </div>
         <div className={styles.mainContentsSubText}>
-          2024년 11월 10일 일요일 오후 2시
+          202X년 XX월 XX일 일요일 오후 2시
           <br />
-          장소
+          두가헌
         </div>
       </div>
     </>
   );
 };
 
-export default Header;
+export default SubHeader;

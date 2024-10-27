@@ -1,0 +1,42 @@
+.subContents {
+  margin-bottom: 96px;
+  text-align: center;
+  color: black;
+}
+
+.family {
+  display: flex;
+  margin-top: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.familyParents {
+  width: 50px;
+}
+
+.contactButtonWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 96px;
+  margin-bottom: 64px;
+}
+
+.contactButton {
+  width: fit-content;
+  padding: 6px 12px;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.contactButton:hover {
+  background-color: lightgray;
+}

@@ -1,4 +1,4 @@
-import {Comment, Header, Intersection, Share} from './components';
+import {Comment, Header, Intersection, Share, SubHeader} from './components';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -8,6 +8,12 @@ export default function Home() {
         <section className={styles.section}>
           <Intersection>
             <Header />
+          </Intersection>
+        </section>
+
+        <section className={styles.section}>
+          <Intersection>
+            <SubHeader />
           </Intersection>
         </section>
 
