@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './components.module.css';
-import {IconMessage} from '@/app/assets';
+import {IconPhone} from '@/app/assets';
 import Intersection from '../Intersection';
 
 const Header = () => {
@@ -55,7 +55,7 @@ const Header = () => {
       <Intersection>
         <div className={styles.contactButtonWrapper}>
           <button className={styles.contactButton}>
-            <IconMessage /> 연락하기
+            <IconPhone /> 연락하기
           </button>
         </div>
       </Intersection>
