@@ -3,20 +3,20 @@
 import React, {useEffect, useState} from 'react';
 import styles from './components.module.css';
 import {useCommentsStore} from '@/app/store';
-import {IconLoading, IconClose} from '@/app/assets';
-import Intersection from '../Intersection';
+import {IconLoading} from '@/app/assets';
 import dayjs from 'dayjs';
+import {Intersection} from '@/app/components';
+import CommentDeleteButton from './comment-delete-btn';
 
 const CommentList = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const {comments, fetchComments} = useCommentsStore();
 
   useEffect(() => {
     setIsLoading(true);
     fetchComments().then(() => setIsLoading(false));
   }, [fetchComments]);
-
-  const onOpenDeleteDialog = () => {};
 
   return (
     <>
@@ -33,12 +33,7 @@ const CommentList = () => {
                 <span className={styles.commentHeaderName}>{comment.name}</span>
                 <span className={styles.commentHeaderDate}>
                   {dayjs(comment.created_at).format('YYYY.MM.DD')}
-                  <button
-                    className={styles.commentDeletebutton}
-                    onClick={onOpenDeleteDialog}
-                  >
-                    <IconClose width={12} height={12} />
-                  </button>
+                  <CommentDeleteButton comment={comment} />
                 </span>
               </div>
               <div className={styles.commentContent}>{comment.content}</div>

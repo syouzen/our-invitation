@@ -2,19 +2,15 @@
 
 import React from 'react';
 import styles from './components.module.css';
-import {IconMessage} from '@/app/assets';
 import CommentList from './comment-list';
+import CommentCreateButton from './comment-create-btn';
 
 const Comment = () => {
-  const onOpenDialog = () => {};
-
   return (
     <div className={styles.wrapper}>
       <span className={styles.commentTitle}>마음을 남겨주세요</span>
       <div className={styles.commentSendButtonWrapper}>
-        <button className={styles.commentSendButton} onClick={onOpenDialog}>
-          <IconMessage /> 남기기
-        </button>
+        <CommentCreateButton />
       </div>
       <CommentList />
     </div>

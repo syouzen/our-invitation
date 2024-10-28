@@ -29,6 +29,11 @@ button {
   font-family: var(--font-serif);
 }
 
+input,
+textarea {
+  font-family: var(--font-serif);
+}
+
 img {
   -webkit-user-drag: none;
   -khtml-user-drag: none;

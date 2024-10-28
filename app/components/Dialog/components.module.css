@@ -1,0 +1,49 @@
+/* Dialog.module.css */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.description {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.body {
+  margin-top: 32px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 30px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: gray;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  color: #333;
+}

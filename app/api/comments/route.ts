@@ -11,11 +11,12 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  const {name, password, contents} = await request.json();
+  const {name, password, content} = await request.json();
   const {data, error} = await supabase
     .from('comment')
-    .insert([{name, password, contents}]);
+    .insert([{name, password, content}])
+    .select();
 
   if (error) return NextResponse.json({error: error.message}, {status: 400});
-  return NextResponse.json(data, {status: 201});
+  return NextResponse.json(data, {status: 200});
 }

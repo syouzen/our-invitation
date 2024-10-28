@@ -24,23 +24,25 @@ export const useCommentsStore = create<CommentsState>(set => ({
       ),
     });
   },
-  createComment: async (name, content, password) => {
+  createComment: async (name, password, content) => {
     const response = await fetch('/api/comments', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({name, content, password}),
+      body: JSON.stringify({name, password, content}),
     });
 
-    const {data: res} = await response.json();
+    const data: Comment[] = await response.json();
     set(state => ({
-      comments: [...state.comments, res],
+      comments: [...state.comments, ...data].sort((a, b) =>
+        dayjs(a.created_at).isBefore(dayjs(b.created_at)) ? 1 : -1,
+      ),
     }));
   },
   deleteComment: async (id, password) => {
-    const response = await fetch('/api/comments', {
+    const response = await fetch(`/api/comments/${id}`, {
       method: 'DELETE',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({id, password}),
+      body: JSON.stringify({password}),
     });
 
     if (response.ok) {
@@ -48,8 +50,7 @@ export const useCommentsStore = create<CommentsState>(set => ({
         comments: state.comments.filter(comment => comment.id !== id),
       }));
     } else {
-      const errorData = await response.json();
-      console.error(errorData.error);
+      throw new Error('delete error');
     }
   },
 }));
