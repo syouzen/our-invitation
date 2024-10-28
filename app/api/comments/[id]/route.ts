@@ -8,12 +8,18 @@ export async function DELETE(
   const {id} = await context.params;
   const {password} = await request.json();
 
-  const {error} = await supabase
+  const {data} = await supabase
     .from('comment')
-    .delete()
+    .select('password')
     .eq('id', id)
-    .eq('password', password);
+    .single();
 
-  if (error) return NextResponse.json({error: error.message}, {status: 400});
-  return new NextResponse(null, {status: 204});
+  if (data && data.password === password) {
+    const {error} = await supabase.from('comment').delete().eq('id', id);
+
+    if (error) return NextResponse.json({error: error.message}, {status: 400});
+    return new NextResponse(null, {status: 204});
+  } else {
+    return NextResponse.json({error: 'invalid password'}, {status: 400});
+  }
 }
