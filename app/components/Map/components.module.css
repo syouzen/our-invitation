@@ -51,11 +51,17 @@
 }
 
 .descTitle {
-  width: 100px;
+  width: 80px;
 }
 
 .descContent {
+  width: calc(100% - 80px);
   font-size: 14px;
   line-height: 20px;
   color: gray;
+}
+
+.descContentSub {
+  display: flex;
+  gap: 2px;
 }
