@@ -8,7 +8,9 @@ import {toast, ToastOptions} from 'react-toastify';
 import styles from './components.module.css';
 import {useCommentsStore} from '@/app/store';
 
-const CommentDeleteButton = ({comment}) => {
+import {Comment} from '@/app/type';
+
+const CommentDeleteButton = ({comment}: {comment: Comment}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const [password, setPassword] = useState('');

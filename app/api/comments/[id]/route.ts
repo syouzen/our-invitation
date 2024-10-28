@@ -3,9 +3,9 @@ import {supabase} from '@/app/utils';
 
 export async function DELETE(
   request: Request,
-  {params}: {params: {id: string}},
+  context: {params: Promise<{id: string}>},
 ) {
-  const {id} = await params;
+  const {id} = await context.params;
   const {password} = await request.json();
 
   const {error} = await supabase
