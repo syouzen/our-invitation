@@ -5,13 +5,16 @@ const MapInfo = () => {
   return (
     <div className={styles.info}>
       <p>
+        <b>💍 두가헌</b>
+        <br />
         서울 종로구 삼청로 14
         <br />
-        <b>두가헌</b>
-        <br />
-        <p className={styles.infoPhone}>
+        <button
+          className={styles.infoPhone}
+          onClick={() => (window.location.href = 'tel:02-6261-1616')}
+        >
           <IconPhone width={12} height={12} /> 02-6261-1616
-        </p>
+        </button>
       </p>
     </div>
   );
