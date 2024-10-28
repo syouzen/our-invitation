@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './components.module.css';
 import Image from 'next/image';
 import Intersection from '../Intersection';
+import DDayCounter from '../DDayCounter';
 
 const SubHeader = () => {
   return (
@@ -17,6 +18,9 @@ const SubHeader = () => {
             objectFit="cover"
           />
         </div>
+      </Intersection>
+      <Intersection>
+        <DDayCounter />
       </Intersection>
       <Intersection>
         <div className={styles.mainContents}>
