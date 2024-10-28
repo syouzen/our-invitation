@@ -19,35 +19,46 @@ const Dialog = ({children, trigger, open, onOpenChange}: DialogProps) => (
 );
 
 interface DialogContentProps {
-  title: string;
+  title?: string;
   description?: string;
   children: ReactNode;
-  onClose: () => void;
+  hasClose?: boolean;
+  onClose?: () => void;
 }
 
 const DialogContent = ({
   title,
   description,
   children,
+  hasClose = true,
   onClose,
 }: DialogContentProps) => (
   <DialogPrimitive.Portal>
-    <DialogPrimitive.Overlay className={styles.overlay} onClick={onClose} />
-    <DialogPrimitive.Content className={styles.content}>
-      <DialogPrimitive.Title className={styles.title}>
-        {title}
-      </DialogPrimitive.Title>
+    <DialogPrimitive.Overlay
+      className={`${styles.overlay} ${styles.fadeinout}`}
+      onClick={onClose}
+    />
+    <DialogPrimitive.Content
+      className={`${styles.content} ${styles.fadeinout}`}
+    >
+      {title && (
+        <DialogPrimitive.Title className={styles.title}>
+          {title}
+        </DialogPrimitive.Title>
+      )}
       {description && (
         <DialogPrimitive.Description className={styles.description}>
           {description}
         </DialogPrimitive.Description>
       )}
       <div className={styles.body}>{children}</div>
-      <DialogPrimitive.Close asChild>
-        <button onClick={onClose} className={styles.closeButton}>
-          <IconClose width={16} height={16} />
-        </button>
-      </DialogPrimitive.Close>
+      {hasClose && (
+        <DialogPrimitive.Close asChild>
+          <button onClick={onClose} className={styles.closeButton}>
+            <IconClose width={16} height={16} />
+          </button>
+        </DialogPrimitive.Close>
+      )}
     </DialogPrimitive.Content>
   </DialogPrimitive.Portal>
 );
