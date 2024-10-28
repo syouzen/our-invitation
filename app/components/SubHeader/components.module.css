@@ -49,3 +49,34 @@
   margin-bottom: 96px;
   color: lightgray;
 }
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 8px;
+  margin-bottom: 16px;
+}
+
+.contactWrapper .contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contactWrapper span {
+  margin: 0px;
+  padding: 0px;
+}
+
+.infoPhone {
+  margin: 0px;
+  margin-top: 4px;
+  color: gray;
+  font-size: 14px;
+  border: none;
+  background-color: white;
+  padding: 0px;
+  border-bottom: 1px solid gray;
+  cursor: pointer;
+}

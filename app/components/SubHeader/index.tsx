@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './components.module.css';
-import {IconPhone} from '@/app/assets';
 import Intersection from '../Intersection';
+import ContactButton from './contact-btn';
 
 const Header = () => {
   return (
@@ -54,9 +54,7 @@ const Header = () => {
 
       <Intersection>
         <div className={styles.contactButtonWrapper}>
-          <button className={styles.contactButton}>
-            <IconPhone /> 연락하기
-          </button>
+          <ContactButton />
         </div>
       </Intersection>
     </>

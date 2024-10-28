@@ -1,0 +1,64 @@
+'use client';
+
+import {Dialog, DialogContent} from '@/app/components';
+import {IconPhone} from '@/app/assets';
+
+import styles from './components.module.css';
+
+const ContactButton = () => {
+  return (
+    <Dialog
+      trigger={
+        <button className={styles.contactButton}>
+          <IconPhone /> 연락하기
+        </button>
+      }
+    >
+      <DialogContent title="연락하기">
+        <div className={styles.contactWrapper}>
+          <div className={styles.contact}>
+            <span>신랑 최승연</span>
+            <button
+              className={styles.infoPhone}
+              onClick={() => (window.location.href = 'tel:010-9058-9205')}
+            >
+              <IconPhone width={12} height={12} /> 010-9058-9205
+            </button>
+          </div>
+          <div className={styles.contact}>
+            <span>어머니 최승연</span>
+            <button
+              className={styles.infoPhone}
+              onClick={() => (window.location.href = 'tel:010-3716-4766')}
+            >
+              <IconPhone width={12} height={12} /> 010-3716-4766
+            </button>
+          </div>
+        </div>
+
+        <div className={styles.contactWrapper}>
+          <div className={styles.contact}>
+            <span>신부 김현아</span>
+            <button
+              className={styles.infoPhone}
+              onClick={() => (window.location.href = 'tel:010-3415-7375')}
+            >
+              <IconPhone width={12} height={12} /> 010-3415-7375
+            </button>
+          </div>
+          <div className={styles.contact}>
+            <span>어머니 서영민</span>
+            <button
+              className={styles.infoPhone}
+              onClick={() => (window.location.href = 'tel:010-3415-7375')}
+            >
+              <IconPhone width={12} height={12} /> 010-3415-7375
+            </button>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+export default ContactButton;
