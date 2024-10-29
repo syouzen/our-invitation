@@ -1,5 +1,3 @@
-'use client';
-
 import React, {useEffect, useState} from 'react';
 import styles from './components.module.css';
 import {useCommentsStore} from '@/app/store';
@@ -11,13 +9,16 @@ import CommentDeleteButton from './comment-delete-btn';
 const CommentList = () => {
   const [offset, setOffset] = useState(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
   const {comments, fetchComments} = useCommentsStore();
 
   useEffect(() => {
     setIsLoading(true);
     fetchComments().then(() => setIsLoading(false));
   }, [fetchComments]);
+
+  const onMore = () => {
+    setOffset(prevOffset => prevOffset + 1);
+  };
 
   return (
     <>
@@ -27,30 +28,31 @@ const CommentList = () => {
         </div>
       )}
       {!isLoading && (
-        <Intersection>
+        <>
           {comments.slice(0, offset * 4).map(comment => (
-            <div key={comment.id} className={styles.comment}>
-              <div className={styles.commentHeader}>
-                <span className={styles.commentHeaderName}>{comment.name}</span>
-                <span className={styles.commentHeaderDate}>
-                  {dayjs(comment.created_at).format('YYYY.MM.DD')}
-                  <CommentDeleteButton comment={comment} />
-                </span>
+            <Intersection key={comment.id}>
+              <div className={styles.comment}>
+                <div className={styles.commentHeader}>
+                  <span className={styles.commentHeaderName}>
+                    {comment.name}
+                  </span>
+                  <span className={styles.commentHeaderDate}>
+                    {dayjs(comment.created_at).format('YYYY.MM.DD')}
+                    <CommentDeleteButton comment={comment} />
+                  </span>
+                </div>
+                <div className={styles.commentContent}>{comment.content}</div>
               </div>
-              <div className={styles.commentContent}>{comment.content}</div>
-            </div>
+            </Intersection>
           ))}
           <div className={styles.moreButtonWrapper}>
             {comments.length > offset * 4 && (
-              <button
-                className={styles.moreButton}
-                onClick={() => setOffset(offset + 1)}
-              >
+              <button className={styles.moreButton} onClick={onMore}>
                 <IconArrowDown />
               </button>
             )}
           </div>
-        </Intersection>
+        </>
       )}
     </>
   );

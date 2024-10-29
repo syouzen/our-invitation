@@ -4,6 +4,7 @@ import {
   Header,
   Intersection,
   Map,
+  Photos,
   Share,
   SubHeader,
 } from './components';
@@ -22,10 +23,7 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <Intersection>
-            <span>갤러리</span>
-            {/* TODO: 사진 등 */}
-          </Intersection>
+          <Photos />
         </section>
 
         <section className={styles.section}>

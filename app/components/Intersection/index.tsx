@@ -1,44 +1,25 @@
 'use client';
 
-import React, {useEffect, useRef, useState} from 'react';
+import React, {ReactNode} from 'react';
+import {motion} from 'framer-motion';
 
 interface IntersectionProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const Intersection = ({children}: IntersectionProps) => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const currentRef = ref.current;
-
-    if (!currentRef) {
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      {threshold: 0.3},
-    );
-
-    observer.observe(currentRef);
-
-    return () => {
-      observer.unobserve(currentRef);
-    };
-  }, []);
-
+export default function Intersection({children}: IntersectionProps) {
   return (
-    <div ref={ref} className={`animate ${isVisible ? 'visible' : ''}`}>
+    <motion.div
+      initial={{opacity: 0, y: 10}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{once: false}}
+      transition={{
+        ease: 'easeInOut',
+        duration: 0.4,
+        y: {duration: 1},
+      }}
+    >
       {children}
-    </div>
+    </motion.div>
   );
-};
-
-export default Intersection;
+}
