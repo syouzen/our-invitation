@@ -73,6 +73,7 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
           </div>
           <div className={styles.dialogButtonWrapper}>
             <button
+              type="button"
               disabled={isLoading}
               className={styles.closeButton}
               onClick={() => {
