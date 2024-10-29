@@ -46,18 +46,18 @@
 
 .desc {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
+  gap: 8px;
 }
 
 .descTitle {
-  width: 80px;
+  font-weight: 700;
 }
 
 .descContent {
-  width: calc(100% - 80px);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 20px;
   color: gray;
 }
@@ -65,4 +65,9 @@
 .descContentSub {
   display: flex;
   gap: 2px;
+}
+
+.aPhone {
+  color: gray;
+  text-decoration: none;
 }

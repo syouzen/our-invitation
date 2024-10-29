@@ -33,14 +33,6 @@ export default function Home() {
 
         <section className={styles.section}>
           <Intersection>
-            <span>정보 및 안내 사항</span>
-            {/* TODO: 식사, 주차 안내 등 */}
-            {/* TODO: 참석 의사 전달? */}
-          </Intersection>
-        </section>
-
-        <section className={styles.section}>
-          <Intersection>
             <span>마음을 전해주세요</span>
             {/* TODO: 계좌 번호 등 */}
           </Intersection>
