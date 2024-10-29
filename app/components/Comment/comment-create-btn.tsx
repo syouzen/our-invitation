@@ -2,7 +2,7 @@
 
 import {useState} from 'react';
 import {Dialog, DialogContent} from '@/app/components';
-import {IconMessage} from '@/app/assets';
+import {IconLoading, IconMessage} from '@/app/assets';
 import {toast, ToastOptions} from 'react-toastify';
 
 import styles from './components.module.css';
@@ -39,20 +39,16 @@ const CommentDeleteButton = () => {
 
     try {
       setIsLoading(true);
-      await toast.promise(
-        createComment(
-          target.name.value || '익명',
-          target.password.value,
-          target.content.value.replace(/\n\r?/g, '\n\r'),
-        ),
-        {
-          pending: '마음을 남기고 있어요',
-          success: '마음을 남겼어요',
-          error: '마음 남기기에 실패했어요',
-        },
-        options,
+      await createComment(
+        target.name.value || '익명',
+        target.password.value,
+        target.content.value.replace(/\n\r?/g, '\n\r'),
       );
+      toast.success('마음을 남겼어요', options);
       setIsOpen(false);
+    } catch (e) {
+      console.error(e);
+      toast.error('마음 남기기에 실패했어요', options);
     } finally {
       setIsLoading(false);
     }
@@ -123,7 +119,8 @@ const CommentDeleteButton = () => {
               type="submit"
               className={styles.primaryButton}
             >
-              남기기
+              {!isLoading && '남기기'}
+              {isLoading && <IconLoading width={20} height={20} />}
             </button>
           </div>
         </form>

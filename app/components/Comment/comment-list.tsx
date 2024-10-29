@@ -8,7 +8,7 @@ import CommentDeleteButton from './comment-delete-btn';
 
 const CommentList = () => {
   const [offset, setOffset] = useState(1);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState(false);
   const {comments, fetchComments} = useCommentsStore();
 
   useEffect(() => {

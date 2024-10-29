@@ -2,7 +2,7 @@
 
 import {useState} from 'react';
 import {Dialog, DialogContent} from '@/app/components';
-import {IconClose} from '@/app/assets';
+import {IconClose, IconLoading} from '@/app/assets';
 import {toast, ToastOptions} from 'react-toastify';
 
 import styles from './components.module.css';
@@ -34,16 +34,12 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
 
     try {
       setIsLoading(true);
-      await toast.promise(
-        deleteComment(comment.id, target.password.value),
-        {
-          pending: '마음을 지우고 있어요',
-          success: '마음을 지웠어요',
-          error: '마음 지우기에 실패했어요',
-        },
-        options,
-      );
+      await deleteComment(comment.id, target.password.value);
+      toast.success('마음을 지웠어요', options);
       setIsOpen(false);
+    } catch (e) {
+      console.error(e);
+      toast.error('마음을 지우기에 실패했어요', options);
     } finally {
       setIsLoading(false);
     }
@@ -91,7 +87,8 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
               className={styles.primaryButton}
               type="submit"
             >
-              지우기
+              {!isLoading && '지우기'}
+              {isLoading && <IconLoading width={20} height={20} />}
             </button>
           </div>
         </form>
