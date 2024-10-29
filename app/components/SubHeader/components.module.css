@@ -49,6 +49,7 @@
   width: 100%;
   row-gap: 8px;
   margin-bottom: 16px;
+  font-size: 0.8rem;
 }
 
 .contactWrapper .contact {
@@ -66,7 +67,7 @@
   margin: 0px;
   margin-top: 4px;
   color: gray;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   border: none;
   background-color: white;
   padding: 0px;

@@ -21,15 +21,27 @@
   height: 100%;
 }
 
+.infoWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 48px;
+  margin-right: 16px;
+}
+
 .info {
   position: relative;
   font-size: 1em;
 }
 
+.infoP {
+  margin: 0px;
+  padding: 0px;
+}
+
 .infoPhone {
   margin: 0px;
   margin-top: 4px;
-  margin-bottom: 32px;
   color: gray;
   font-size: 0.8em;
   border: none;

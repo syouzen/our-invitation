@@ -49,7 +49,12 @@ export default function Home() {
         </section>
 
         <footer className={styles.footer}>
-          <p>OOOOOOOOOOO</p>
+          <span>
+            Developed by <b>seungyeon</b>
+          </span>
+          <span>
+            Designed by <b>hyuna</b>
+          </span>
         </footer>
       </main>
     </div>

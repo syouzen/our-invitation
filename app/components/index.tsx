@@ -9,3 +9,4 @@ export {default as DDayCounter} from './DDayCounter';
 export {default as Account} from './Account';
 export * from './Dialog';
 export * from './Accordion';
+export * from './Dropdown';
