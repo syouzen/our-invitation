@@ -5,7 +5,12 @@ import styles from './components.module.css';
 import Intersection from '../Intersection';
 import Image from 'next/image';
 import {IconArrowDown} from '@/app/assets';
-import PhotoDialog from './photo-dialog';
+
+import dynamic from 'next/dynamic';
+
+const PhotoDialog = dynamic(() => import('./photo-dialog'), {
+  ssr: false,
+});
 
 const SubHeader = () => {
   const [offset, setOffset] = useState(1);
