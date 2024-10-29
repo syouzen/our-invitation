@@ -23,7 +23,7 @@
 
 .info {
   position: relative;
-  font-size: 18px;
+  font-size: 1em;
 }
 
 .infoPhone {
@@ -31,7 +31,7 @@
   margin-top: 4px;
   margin-bottom: 32px;
   color: gray;
-  font-size: 14px;
+  font-size: 0.8em;
   border: none;
   background-color: white;
   padding: 0px;
@@ -57,7 +57,7 @@
 }
 
 .descContent {
-  font-size: 13px;
+  font-size: 0.75em;
   line-height: 20px;
   color: gray;
 }

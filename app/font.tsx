@@ -1,4 +1,4 @@
-import {Noto_Sans_KR, Gowun_Batang} from 'next/font/google';
+import {Noto_Sans_KR, Noto_Serif_KR, Cinzel} from 'next/font/google';
 
 export const sans = Noto_Sans_KR({
   weight: ['300', '400', '500', '700'],
@@ -7,9 +7,16 @@ export const sans = Noto_Sans_KR({
   variable: '--font-sans',
 });
 
-export const serif = Gowun_Batang({
+export const serif = Noto_Serif_KR({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-serif',
+});
+
+export const serif_en = Cinzel({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-serif-en',
 });

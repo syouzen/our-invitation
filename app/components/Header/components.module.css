@@ -20,8 +20,9 @@
 }
 
 .mainContentsTitle {
-  font-size: 16px;
+  font-size: 1rem;
   color: gray;
+  font-family: 'Cinzel', serif;
 }
 
 .mainContentsSpare {
@@ -37,7 +38,7 @@
 }
 
 .mainContentsSubText {
-  margin-top: 16px;
+  font-size: 0.9rem;
   text-align: center;
   color: gray;
 }

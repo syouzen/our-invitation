@@ -19,9 +19,11 @@ const SubHeader = () => {
           />
         </div>
       </Intersection>
+
       <Intersection>
         <DDayCounter />
       </Intersection>
+
       <Intersection>
         <div className={styles.mainContents}>
           <div className={styles.mainContentsText}>

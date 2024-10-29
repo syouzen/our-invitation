@@ -8,3 +8,4 @@ export {default as IconMessage} from './IconMessage';
 export {default as IconClose} from './IconClose';
 export {default as IconPhone} from './IconPhone';
 export {default as IconLocation} from './IconLocation';
+export {default as IconCopy} from './IconCopy';

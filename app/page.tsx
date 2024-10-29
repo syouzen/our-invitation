@@ -1,4 +1,5 @@
 import {
+  Account,
   Comment,
   Header,
   Intersection,
@@ -32,10 +33,7 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <Intersection>
-            <span>마음을 전해주세요</span>
-            {/* TODO: 계좌 번호 등 */}
-          </Intersection>
+          <Account />
         </section>
 
         <section className={styles.section}>

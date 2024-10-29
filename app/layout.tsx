@@ -1,7 +1,7 @@
 import type {Metadata, Viewport} from 'next';
 import './globals.css';
 
-import {sans, serif} from './font';
+import {sans, serif, serif_en} from './font';
 import {ToastProvider} from './components';
 
 const contents = {
@@ -39,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${sans.variable} ${serif.variable}`}>
+    <html
+      lang="ko"
+      className={`${sans.variable} ${serif.variable} ${serif_en.variable}`}
+    >
       <body>
         <ToastProvider />
         {children}

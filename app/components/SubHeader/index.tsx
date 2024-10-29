@@ -34,7 +34,7 @@ const Header = () => {
 
       <Intersection>
         <div className={styles.family}>
-          <div className={styles.familyParents}>
+          <div>
             <div>최호선</div>
             <div>육은주</div>
           </div>
@@ -43,7 +43,7 @@ const Header = () => {
           <strong>최승연</strong>
         </div>
         <div className={styles.family}>
-          <div className={styles.familyParents}>
+          <div>
             <div>서영민</div>
           </div>
           <span>의</span>

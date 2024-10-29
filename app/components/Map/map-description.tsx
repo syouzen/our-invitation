@@ -6,12 +6,16 @@ const MapDescription = () => {
       <div className={styles.desc}>
         <div className={styles.descTitle}>지하철</div>
         <div className={styles.descContent}>
-          <span>
-            <b>지하철 3호선</b> 안국역 1번 출구 도보 5분 거리에 위치
-          </span>
-          <span>
-            <b>지하철 5호선</b> 광화문역 2번 출구 도보 5분 거리에 위치
-          </span>
+          <div className={styles.descContentSub}>
+            <span>
+              <b>지하철 3호선</b> 안국역 1번 출구 도보 5분 거리에 위치
+            </span>
+          </div>
+          <div className={styles.descContentSub}>
+            <span>
+              <b>지하철 5호선</b> 광화문역 2번 출구 도보 5분 거리에 위치
+            </span>
+          </div>
         </div>
       </div>
       <div className={styles.desc}>
