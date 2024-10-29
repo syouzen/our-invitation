@@ -4,9 +4,8 @@ import React, {useState} from 'react';
 import styles from './components.module.css';
 import Intersection from '../Intersection';
 import Image from 'next/image';
-import {IconArrowDown, IconArrowLeft, IconArrowRight} from '@/app/assets';
-import {ImageDialog, ImageDialogContent} from '../ImageDialog';
-import FitImage from './fit-image';
+import {IconArrowDown} from '@/app/assets';
+import PhotoDialog from './photo-dialog';
 
 const SubHeader = () => {
   const [offset, setOffset] = useState(1);
@@ -79,7 +78,16 @@ const SubHeader = () => {
         </div>
       </Intersection>
 
-      <ImageDialog open={open} onOpenChange={setOpen}>
+      <PhotoDialog
+        open={open}
+        images={images}
+        index={index}
+        onPrev={onPrev}
+        onNext={onNext}
+        onClose={() => setOpen(false)}
+      />
+
+      {/* <ImageDialog open={open} onOpenChange={setOpen}>
         <ImageDialogContent>
           <div className={styles.imageDialogContent}>
             <FitImage src={images[index]} alt="갤러리 이미지" />
@@ -115,7 +123,7 @@ const SubHeader = () => {
             </div>
           </div>
         </ImageDialogContent>
-      </ImageDialog>
+      </ImageDialog> */}
     </>
   );
 };
