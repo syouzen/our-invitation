@@ -70,10 +70,11 @@ const Share = () => {
       />
       <div className={styles.shareImageContainer}>
         <Image
-          src="https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o"
+          src="https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_5988.JPG"
           alt="공유하기 이미지"
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{objectFit: 'cover'}}
+          sizes="100vw"
         />
         <div className={styles.shareImageOverlayText}>
           10월의 어느 햇살 고운 날,

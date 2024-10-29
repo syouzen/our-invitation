@@ -1,5 +1,6 @@
 import type {Metadata, Viewport} from 'next';
 import './globals.css';
+import {PreloadResources} from './preload';
 
 import {sans, serif, serif_en} from './font';
 import {ToastProvider} from './components';
@@ -43,6 +44,7 @@ export default function RootLayout({
       lang="ko"
       className={`${sans.variable} ${serif.variable} ${serif_en.variable}`}
     >
+      <PreloadResources />
       <body>
         <ToastProvider />
         {children}

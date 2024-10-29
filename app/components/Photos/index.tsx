@@ -19,19 +19,29 @@ const SubHeader = () => {
   const [index, setIndex] = useState(0);
 
   const images: string[] = [
-    'https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o',
-    'https://ofhsoupkitchen.org/wp-content/uploads/2022/02/spread-love-quotes-2-1024x683.jpg',
-    'https://burst.shopifycdn.com/photos/hand-holding-in-love.jpg?width=1000&format=pjpg&exif=0&iptc=0',
-    'https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o',
-    'https://ofhsoupkitchen.org/wp-content/uploads/2022/02/spread-love-quotes-2-1024x683.jpg',
-    'https://burst.shopifycdn.com/photos/hand-holding-in-love.jpg?width=1000&format=pjpg&exif=0&iptc=0',
-    'https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o',
-    'https://ofhsoupkitchen.org/wp-content/uploads/2022/02/spread-love-quotes-2-1024x683.jpg',
-    'https://burst.shopifycdn.com/photos/hand-holding-in-love.jpg?width=1000&format=pjpg&exif=0&iptc=0',
-    'https://ofhsoupkitchen.org/wp-content/uploads/2022/02/spread-love-quotes-2-1024x683.jpg',
-    'https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o',
-    'https://ofhsoupkitchen.org/wp-content/uploads/2022/02/spread-love-quotes-2-1024x683.jpg',
-    'https://burst.shopifycdn.com/photos/hand-holding-in-love.jpg?width=1000&format=pjpg&exif=0&iptc=0',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_0421.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_1506.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_1559.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_1593.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_1730.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_1986.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_2436.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_2711.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_4251.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_4493.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_4884.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_5316.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_5988.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_6227.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_6238.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_6339.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_6332.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_7276.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_7586.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_8319.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_8402.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_8536.JPG',
+    'https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_9186.JPG',
   ];
 
   const onMore = () => {
@@ -66,8 +76,11 @@ const SubHeader = () => {
                   <Image
                     src={image}
                     alt="갤러리 이미지"
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{objectFit: 'cover'}}
+                    sizes="(max-width: 600px) 100vw, 
+                          (max-width: 1200px) 50vw, 
+                          33vw"
                   />
                 </button>
               </Intersection>
