@@ -26,10 +26,10 @@ const AccountInfo = ({info}: AccountInfo) => {
 
     try {
       await navigator.clipboard.writeText(`${bank} ${account}`);
-      toast.success('계좌를 복사했어요', options);
+      toast.success('계좌번호를 복사했어요', options);
     } catch (e) {
       console.error(e);
-      toast.error('계좌 복사에 실패했어요', options);
+      toast.error('계좌번호 복사에 실패했어요', options);
     }
   };
 

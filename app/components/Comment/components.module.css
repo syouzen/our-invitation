@@ -124,6 +124,7 @@
   padding: 4px;
   border-radius: 4px;
   resize: none;
+  margin-bottom: 0px;
 }
 
 .textareaCount {
@@ -139,7 +140,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 16px;
   gap: 8px;
 }
 

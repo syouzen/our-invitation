@@ -78,3 +78,8 @@
   color: gray;
   text-decoration: none;
 }
+
+.parents {
+  width: 70px;
+  text-align: end;
+}

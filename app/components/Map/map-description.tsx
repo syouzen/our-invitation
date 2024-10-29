@@ -43,7 +43,7 @@ const MapDescription = () => {
           <div className={styles.descContentSub}>
             *
             <span>
-              <b>80인</b>까지 이용이 가능합니다. 양해 부탁드립니다.
+              <b>80인</b>까지 이용이 가능합니다. 양해 부탁 드립니다.
             </span>
           </div>
         </div>

@@ -35,11 +35,11 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
     try {
       setIsLoading(true);
       await deleteComment(comment.id, target.password.value);
-      toast.success('마음을 지웠어요', options);
+      toast.success('보내신 마음을 지웠어요', options);
       setIsOpen(false);
     } catch (e) {
       console.error(e);
-      toast.error('마음을 지우기에 실패했어요', options);
+      toast.error('마음 지우기에 실패했어요', options);
     } finally {
       setIsLoading(false);
     }

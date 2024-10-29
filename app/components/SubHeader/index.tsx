@@ -10,21 +10,18 @@ const Header = () => {
     <>
       <Intersection>
         <div className={styles.subContents}>
-          누군가의 말처럼
+          봄의 그대는 벚꽃이었고
           <br />
-          희구하며, 사랑하며, 전율하며, 감동하며
+          여름의 그대는 바람이었으며
           <br />
-          인생을 살고 싶었습니다.
+          가을의 그대는 하늘이었고
           <br />
-          하지만 방법을 찾기가 어려웠습니다.
+          겨울의 그대는 하얀 눈이었다
           <br />
-          이제야 그 해법을 풀었습니다.
+          그대는 언제나 행복, 그 자체였다.
           <br />
-          사랑하는 두 사람이 함께했을 때 가능하다는 것을…
           <br />
-          인생의 참맛을 찾아 나선 저희들을
-          <br />
-          많이 격려해 주시고 축복해 주세요.
+          {'강현욱 < 사계 > 중에서'}
         </div>
       </Intersection>
 
@@ -34,8 +31,8 @@ const Header = () => {
 
       <Intersection>
         <div className={styles.family}>
-          <div>
-            <div>최호선</div>
+          <div className={styles.parents}>
+            <div>故 최호선</div>
             <div>육은주</div>
           </div>
           <span>의</span>
@@ -43,7 +40,7 @@ const Header = () => {
           <strong>최승연</strong>
         </div>
         <div className={styles.family}>
-          <div>
+          <div className={styles.parents}>
             <div>서영민</div>
           </div>
           <span>의</span>
