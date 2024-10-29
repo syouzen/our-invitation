@@ -10,20 +10,20 @@ import {useCommentsStore} from '@/app/store';
 
 const CommentDeleteButton = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const [name, setName] = useState('');
-  const [content, setContent] = useState('');
-  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const {createComment} = useCommentsStore();
 
-  const onInit = () => {
-    setName('');
-    setContent('');
-    setPassword('');
-  };
+  const onRegist = async (e: React.FormEvent<HTMLFormElement>) => {
+    if (isLoading) return;
+    e.preventDefault();
 
-  const onRegist = async () => {
+    const target = e.target as typeof e.target & {
+      name: {value: string};
+      password: {value: string};
+      content: {value: string};
+    };
+
     const toastId = 'unique-create-toast-id';
     if (toast.isActive(toastId)) return;
 
@@ -32,14 +32,35 @@ const CommentDeleteButton = () => {
       icon: false,
     };
 
+    if (!target.content.value) {
+      toast.error('마음을 적어주세요', options);
+      return;
+    }
+
     try {
-      await createComment(name, password, content);
-      toast.success('방명록을 등록했어요', options);
+      setIsLoading(true);
+      await toast.promise(
+        createComment(
+          target.name.value || '익명',
+          target.password.value,
+          target.content.value.replace(/\n\r?/g, '\n\r'),
+        ),
+        {
+          pending: '마음을 남기고 있어요',
+          success: '마음을 남겼어요',
+          error: '마음 남기기에 실패했어요',
+        },
+        options,
+      );
       setIsOpen(false);
-      onInit();
-    } catch (e) {
-      console.error(e);
-      toast.error('방명록 등록에 실패했어요', options);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
     }
   };
 
@@ -53,45 +74,51 @@ const CommentDeleteButton = () => {
         </button>
       }
     >
-      <DialogContent title="방명록 작성" onClose={onInit}>
-        <div className={styles.inputWrapper}>
-          <p className={styles.inputTitle}>이름</p>
-          <input
-            className={styles.input}
-            type="text"
-            value={name}
-            onChange={e => setName(e.target.value)}
-          />
-        </div>
-        <div className={styles.inputWrapper}>
-          <p className={styles.inputTitle}>비밀번호</p>
-          <input
-            className={styles.input}
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-        </div>
-        <div className={styles.inputContentWrapper}>
-          <p className={styles.inputTitle}>내용</p>
-          <textarea
-            className={styles.textarea}
-            value={content}
-            onChange={e => setContent(e.target.value)}
-            maxLength={100}
-            placeholder="100자까지 작성이 가능해요"
-          />
-          <div className={styles.textareaCount}>{content.length}/100</div>
-        </div>
-        <div className={styles.dialogButtonWrapper}>
-          <button
-            disabled={name === '' || content === ''}
-            className={styles.primaryButton}
-            onClick={onRegist}
-          >
-            등록하기
-          </button>
-        </div>
+      <DialogContent title="마음 남기기">
+        <form className="" onSubmit={e => onRegist(e)}>
+          <div className={styles.inputWrapper}>
+            <input
+              className={styles.input}
+              autoComplete="off"
+              name="name"
+              type="text"
+              placeholder="이름"
+            />
+            <input
+              className={styles.input}
+              autoComplete="new-password"
+              name="password"
+              type="password"
+              placeholder="비밀번호"
+            />
+          </div>
+          <div className={styles.inputContentWrapper}>
+            <textarea
+              name="content"
+              className={styles.textarea}
+              maxLength={200}
+              placeholder="200자까지 작성이 가능해요"
+              onKeyDown={onKeyDown}
+            />
+          </div>
+          <div className={styles.dialogButtonWrapper}>
+            <button
+              disabled={isLoading}
+              type="button"
+              className={styles.closeButton}
+              onClick={() => setIsOpen(false)}
+            >
+              취소
+            </button>
+            <button
+              disabled={isLoading}
+              type="submit"
+              className={styles.primaryButton}
+            >
+              남기기
+            </button>
+          </div>
+        </form>
       </DialogContent>
     </Dialog>
   );

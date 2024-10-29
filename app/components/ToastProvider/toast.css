@@ -22,6 +22,10 @@
   border-radius: 100px;
 }
 
+.Toastify__toast--pending {
+  background: rgba(48, 173, 120, 0.8);
+}
+
 .Toastify__toast--success {
   background: rgba(48, 173, 120, 0.8);
 }

@@ -37,10 +37,6 @@
   transition: background-color 0.15s ease-in-out;
 }
 
-.contactButton:hover {
-  background-color: lightgray;
-}
-
 .contentsSpare {
   display: flex;
   justify-content: center;
@@ -79,4 +75,9 @@
   padding: 0px;
   border-bottom: 1px solid gray;
   cursor: pointer;
+}
+
+.aPhone {
+  color: gray;
+  text-decoration: none;
 }

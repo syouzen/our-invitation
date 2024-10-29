@@ -11,18 +11,20 @@
 .content {
   position: fixed;
   z-index: 50;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 400px;
   background: white;
-  padding: 16px;
+  padding: 12px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .title {
+  padding: 0px;
+  margin: 0px;
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
@@ -35,7 +37,7 @@
 }
 
 .body {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .closeButton {
@@ -46,10 +48,6 @@
   border: none;
   color: gray;
   cursor: pointer;
-}
-
-.closeButton:hover {
-  color: #333;
 }
 
 @keyframes fadein {

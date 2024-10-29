@@ -24,7 +24,7 @@ const Intersection = ({children}: IntersectionProps) => {
           observer.disconnect();
         }
       },
-      {threshold: 0.5},
+      {threshold: 0.3},
     );
 
     observer.observe(currentRef);

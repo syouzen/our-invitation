@@ -22,23 +22,11 @@
   transition: opacity 0.3s;
 }
 
-.shareButton:hover {
-  opacity: 0.5;
-}
-
 .shareImageContainer {
   width: 100%;
   height: 250px;
   position: relative;
   overflow: hidden;
-}
-
-.shareImageContainer img {
-  transition: transform 0.3s ease-in-out;
-}
-
-.shareImageContainer img:hover {
-  transform: scale(1.3, 1.3);
 }
 
 .shareImageOverlayText {

@@ -12,12 +12,18 @@ import {Comment} from '@/app/type';
 
 const CommentDeleteButton = ({comment}: {comment: Comment}) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const {deleteComment} = useCommentsStore();
 
-  const onDelete = async () => {
+  const onDelete = async (e: React.FormEvent<HTMLFormElement>) => {
+    if (isLoading) return;
+    e.preventDefault();
+
+    const target = e.target as typeof e.target & {
+      password: {value: string};
+    };
+
     const toastId = 'unique-delete-toast-id';
     if (toast.isActive(toastId)) return;
 
@@ -27,13 +33,19 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
     };
 
     try {
-      await deleteComment(comment.id, password);
-      toast.success('코멘트를 삭제했어요', options);
+      setIsLoading(true);
+      await toast.promise(
+        deleteComment(comment.id, target.password.value),
+        {
+          pending: '마음을 지우고 있어요',
+          success: '마음을 지웠어요',
+          error: '마음 지우기에 실패했어요',
+        },
+        options,
+      );
       setIsOpen(false);
-      setPassword('');
-    } catch (e) {
-      console.error(e);
-      toast.error('비밀번호를 확인해주세요', options);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -47,26 +59,34 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
         </button>
       }
     >
-      <DialogContent
-        title="방명록 삭제"
-        onClose={() => {
-          setPassword('');
-        }}
-      >
-        <div className={styles.inputWrapper}>
-          <p className={styles.inputTitle}>비밀번호</p>
-          <input
-            className={styles.input}
-            type="password"
-            value={password}
-            onChange={e => setPassword(e.target.value)}
-          />
-        </div>
-        <div className={styles.dialogButtonWrapper}>
-          <button className={styles.primaryButton} onClick={onDelete}>
-            삭제하기
-          </button>
-        </div>
+      <DialogContent title="마음 지우기">
+        <form className="" onSubmit={e => onDelete(e)}>
+          <div className={styles.inputWrapper}>
+            <input
+              className={styles.input}
+              name="password"
+              type="password"
+              autoComplete="new-password"
+              placeholder="비밀번호"
+            />
+          </div>
+          <div className={styles.dialogButtonWrapper}>
+            <button
+              disabled={isLoading}
+              className={styles.closeButton}
+              onClick={() => setIsOpen(false)}
+            >
+              취소
+            </button>
+            <button
+              disabled={isLoading}
+              className={styles.primaryButton}
+              type="submit"
+            >
+              지우기
+            </button>
+          </div>
+        </form>
       </DialogContent>
     </Dialog>
   );

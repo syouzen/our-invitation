@@ -2,7 +2,6 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import {ReactNode} from 'react';
 
 import styles from './components.module.css';
-import {IconClose} from '@/app/assets';
 
 interface DialogProps {
   children: ReactNode;
@@ -22,7 +21,6 @@ interface DialogContentProps {
   title?: string;
   description?: string;
   children: ReactNode;
-  hasClose?: boolean;
   onClose?: () => void;
 }
 
@@ -30,7 +28,6 @@ const DialogContent = ({
   title,
   description,
   children,
-  hasClose = true,
   onClose,
 }: DialogContentProps) => (
   <DialogPrimitive.Portal>
@@ -52,13 +49,6 @@ const DialogContent = ({
         </DialogPrimitive.Description>
       )}
       <div className={styles.body}>{children}</div>
-      {hasClose && (
-        <DialogPrimitive.Close asChild>
-          <button onClick={onClose} className={styles.closeButton}>
-            <IconClose width={16} height={16} />
-          </button>
-        </DialogPrimitive.Close>
-      )}
     </DialogPrimitive.Content>
   </DialogPrimitive.Portal>
 );

@@ -22,16 +22,20 @@ const ContactButton = () => {
               className={styles.infoPhone}
               onClick={() => (window.location.href = 'tel:010-9058-9205')}
             >
-              <IconPhone width={12} height={12} /> 010-9058-9205
+              <a className={styles.aPhone} href="tel:010-9058-9205">
+                <IconPhone width={12} height={12} /> 010-9058-9205
+              </a>
             </button>
           </div>
           <div className={styles.contact}>
-            <span>어머니 최승연</span>
+            <span>어머니 육은주</span>
             <button
               className={styles.infoPhone}
               onClick={() => (window.location.href = 'tel:010-3716-4766')}
             >
-              <IconPhone width={12} height={12} /> 010-3716-4766
+              <a className={styles.aPhone} href="tel:010-3716-4766">
+                <IconPhone width={12} height={12} /> 010-3716-4766
+              </a>
             </button>
           </div>
         </div>
@@ -43,7 +47,9 @@ const ContactButton = () => {
               className={styles.infoPhone}
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
-              <IconPhone width={12} height={12} /> 010-3415-7375
+              <a className={styles.aPhone} href="tel:010-3415-7375">
+                <IconPhone width={12} height={12} /> 010-3415-7375
+              </a>
             </button>
           </div>
           <div className={styles.contact}>
@@ -52,7 +58,9 @@ const ContactButton = () => {
               className={styles.infoPhone}
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
-              <IconPhone width={12} height={12} /> 010-3415-7375
+              <a className={styles.aPhone} href="tel:010-3415-7375">
+                <IconPhone width={12} height={12} /> 010-3415-7375
+              </a>
             </button>
           </div>
         </div>

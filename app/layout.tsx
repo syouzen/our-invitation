@@ -1,4 +1,4 @@
-import type {Metadata} from 'next';
+import type {Metadata, Viewport} from 'next';
 import './globals.css';
 
 import {sans, serif} from './font';
@@ -7,6 +7,13 @@ import {ToastProvider} from './components';
 const contents = {
   title: '우리의 초대장',
   description: '당신을 초대합니다',
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 };
 
 export const metadata: Metadata = {
