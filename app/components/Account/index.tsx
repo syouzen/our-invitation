@@ -24,7 +24,7 @@ const Account = () => {
                 <div className={styles.accountWrapper}>
                   <AccountInfo
                     info={{
-                      name: '최승연',
+                      name: '신랑 최승연',
                       bank: '토스뱅크',
                       account: '1000-5580-9140',
                       kakao: 'https://qr.kakaopay.com/Ej73CkpTz',
@@ -47,7 +47,7 @@ const Account = () => {
                 <div className={styles.accountWrapper}>
                   <AccountInfo
                     info={{
-                      name: '김현아',
+                      name: '신부 김현아',
                       bank: '신한',
                       account: '0000-0000-0000',
                     }}

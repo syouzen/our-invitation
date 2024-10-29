@@ -42,9 +42,7 @@ const DDayCounter = () => {
   return (
     <div className={styles.wrapper}>
       <span>사랑한지</span>
-      <span>
-        <b>{timeLeft}</b>
-      </span>
+      <span>{timeLeft}</span>
     </div>
   );
 };
