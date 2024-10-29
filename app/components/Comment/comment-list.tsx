@@ -3,12 +3,13 @@
 import React, {useEffect, useState} from 'react';
 import styles from './components.module.css';
 import {useCommentsStore} from '@/app/store';
-import {IconLoading} from '@/app/assets';
+import {IconArrowDown, IconLoading} from '@/app/assets';
 import dayjs from 'dayjs';
 import {Intersection} from '@/app/components';
 import CommentDeleteButton from './comment-delete-btn';
 
 const CommentList = () => {
+  const [offset, setOffset] = useState(1);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const {comments, fetchComments} = useCommentsStore();
@@ -27,7 +28,7 @@ const CommentList = () => {
       )}
       {!isLoading && (
         <Intersection>
-          {comments.map(comment => (
+          {comments.slice(0, offset * 4).map(comment => (
             <div key={comment.id} className={styles.comment}>
               <div className={styles.commentHeader}>
                 <span className={styles.commentHeaderName}>{comment.name}</span>
@@ -39,6 +40,16 @@ const CommentList = () => {
               <div className={styles.commentContent}>{comment.content}</div>
             </div>
           ))}
+          <div className={styles.moreButtonWrapper}>
+            {comments.length > offset * 4 && (
+              <button
+                className={styles.moreButton}
+                onClick={() => setOffset(offset + 1)}
+              >
+                <IconArrowDown />
+              </button>
+            )}
+          </div>
         </Intersection>
       )}
     </>

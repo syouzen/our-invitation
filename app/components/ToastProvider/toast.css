@@ -20,16 +20,23 @@
   text-align: center;
   width: fit-content;
   border-radius: 100px;
+  padding: 4px 8px;
 }
 
 .Toastify__toast--pending {
   background: rgba(48, 173, 120, 0.8);
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
 }
 
 .Toastify__toast--success {
   background: rgba(48, 173, 120, 0.8);
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
 }
 
 .Toastify__toast--error {
   background: rgba(224, 72, 82, 0.8);
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
 }

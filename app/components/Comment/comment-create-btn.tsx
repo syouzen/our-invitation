@@ -74,7 +74,12 @@ const CommentDeleteButton = () => {
         </button>
       }
     >
-      <DialogContent title="마음 남기기">
+      <DialogContent
+        title="마음 남기기"
+        onClose={() => {
+          setIsLoading(false);
+        }}
+      >
         <form className="" onSubmit={e => onRegist(e)}>
           <div className={styles.inputWrapper}>
             <input
@@ -106,7 +111,10 @@ const CommentDeleteButton = () => {
               disabled={isLoading}
               type="button"
               className={styles.closeButton}
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                setIsOpen(false);
+                setIsLoading(false);
+              }}
             >
               취소
             </button>
