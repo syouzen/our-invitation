@@ -21,11 +21,12 @@ const FitImage = ({src, alt}: FitImageProps) => {
     <div>
       {size.width && size.height && (
         <Image
+          layout="responsive"
           src={src}
           alt={alt}
           width={size.width}
           height={size.height}
-          style={{objectFit: 'contain'}}
+          style={{objectFit: 'cover'}}
           sizes="(max-width: 600px) 100vw, 
                  (max-width: 1200px) 50vw, 
                  33vw"
