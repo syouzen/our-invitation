@@ -1,9 +1,13 @@
-import type { NextConfig } from "next";
+import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["lh6.googleusercontent.com"],
+    domains: [
+      'lh6.googleusercontent.com',
+      'ofhsoupkitchen.org',
+      'burst.shopifycdn.com',
+    ],
   },
 };
 

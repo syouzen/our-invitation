@@ -9,5 +9,6 @@ export {default as DDayCounter} from './DDayCounter';
 export {default as Account} from './Account';
 export {default as Photos} from './Photos';
 export * from './Dialog';
+export * from './ImageDialog';
 export * from './Accordion';
 export * from './Dropdown';
