@@ -4,8 +4,8 @@ export default function IconPhone(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
       fill="#000000"
-      height="14px"
-      width="14px"
+      width="1em"
+      height="1em"
       viewBox="0 0 487.766 487.766"
       {...props}
     >

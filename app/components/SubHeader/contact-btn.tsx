@@ -10,7 +10,7 @@ const ContactButton = () => {
     <Dialog
       trigger={
         <button className={styles.contactButton}>
-          <IconPhone /> 연락하기
+          <IconPhone width="0.9em" height="0.9em" /> 연락하기
         </button>
       }
     >
@@ -23,7 +23,7 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-9058-9205')}
             >
               <a className={styles.aPhone} href="tel:010-9058-9205">
-                <IconPhone width={12} height={12} /> 010-9058-9205
+                <IconPhone width="0.8em" height="0.8em" /> 010-9058-9205
               </a>
             </button>
           </div>
@@ -34,7 +34,7 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-3716-4766')}
             >
               <a className={styles.aPhone} href="tel:010-3716-4766">
-                <IconPhone width={12} height={12} /> 010-3716-4766
+                <IconPhone width="0.8em" height="0.8em" /> 010-3716-4766
               </a>
             </button>
           </div>
@@ -48,7 +48,7 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
               <a className={styles.aPhone} href="tel:010-3415-7375">
-                <IconPhone width={12} height={12} /> 010-3415-7375
+                <IconPhone width="0.8em" height="0.8em" /> 010-3415-7375
               </a>
             </button>
           </div>
@@ -59,7 +59,7 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
               <a className={styles.aPhone} href="tel:010-3415-7375">
-                <IconPhone width={12} height={12} /> 010-3415-7375
+                <IconPhone width="0.8em" height="0.8em" /> 010-3415-7375
               </a>
             </button>
           </div>

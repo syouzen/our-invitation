@@ -21,7 +21,7 @@ const MapInfo = () => {
             onClick={() => (window.location.href = 'tel:02-6261-1616')}
           >
             <a className={styles.aPhone} href="tel:02-6261-1616">
-              <IconPhone width={12} height={12} /> 02-6261-1616
+              <IconPhone width="0.8em" height="0.8em" /> 02-6261-1616
             </a>
           </button>
         </p>
