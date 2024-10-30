@@ -23,9 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: contents.title,
     description: contents.description,
-    images: [
-      'http://www.drpaulwong.com/wp-content/uploads/2022/12/mayur-gala-2PODhmrvLik-unsplash-1080x675.jpg',
-    ],
+    images: ['https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_5316.JPG'],
   },
   manifest: '/manifest.json',
   robots: {
