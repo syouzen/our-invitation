@@ -2,7 +2,6 @@ import {
   Account,
   Comment,
   Header,
-  Intersection,
   Map,
   Photos,
   Share,
@@ -35,15 +34,11 @@ export default function Home() {
         </section>
 
         <section className={styles.section}>
-          <Intersection>
-            <Comment />
-          </Intersection>
+          <Comment />
         </section>
 
         <section className={styles.section}>
-          <Intersection>
-            <Share />
-          </Intersection>
+          <Share />
         </section>
 
         <footer className={styles.footer}>

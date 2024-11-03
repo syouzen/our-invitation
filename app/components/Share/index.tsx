@@ -6,6 +6,7 @@ import {IconKakao, IconLink} from '@/app/assets';
 import Image from 'next/image';
 import Script from 'next/script';
 import {toast, ToastOptions} from 'react-toastify';
+import Intersection from '../Intersection';
 
 const INVITATION_URL =
   process.env.NODE_ENV === 'production'
@@ -64,37 +65,41 @@ const Share = () => {
 
   return (
     <>
-      <Script
-        src="https://developers.kakao.com/sdk/js/kakao.min.js"
-        onLoad={onInitKakao}
-      />
-      <div className={styles.shareImageContainer}>
-        <Image
-          src="https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_5988.JPG"
-          alt="공유하기 이미지"
-          fill
-          style={{objectFit: 'cover'}}
-          sizes="100vw"
+      <Intersection>
+        <Script
+          src="https://developers.kakao.com/sdk/js/kakao.min.js"
+          onLoad={onInitKakao}
         />
-        <div className={styles.shareImageOverlayText}>
-          10월의 어느 햇살 고운 날,
-          <br />
-          귀한 걸음 하시어 따뜻한 마음으로
-          <br />
-          축복해 주시면 더 없는 기쁨이 되겠습니다.
+        <div className={styles.shareImageContainer}>
+          <Image
+            src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
+            alt="공유하기 이미지"
+            fill
+            style={{objectFit: 'cover'}}
+            sizes="100vw"
+          />
+          <div className={styles.shareImageOverlayText}>
+            10월의 어느 햇살 고운 날,
+            <br />
+            귀한 걸음 하시어 따뜻한 마음으로
+            <br />
+            축복해 주시면 더 없는 기쁨이 되겠습니다.
+          </div>
         </div>
-      </div>
+      </Intersection>
 
-      <div className={styles.shareInvitation}>
-        <button className={styles.shareButton} onClick={onShareKakao}>
-          <IconKakao width={24} height={24} />
-          카카오톡 공유하기
-        </button>
-        <button className={styles.shareButton} onClick={onLinkCopy}>
-          <IconLink width={20} height={20} />
-          링크주소 복사하기
-        </button>
-      </div>
+      <Intersection>
+        <div className={styles.shareInvitation}>
+          <button className={styles.shareButton} onClick={onShareKakao}>
+            <IconKakao width={24} height={24} />
+            카카오톡 공유하기
+          </button>
+          <button className={styles.shareButton} onClick={onLinkCopy}>
+            <IconLink width={20} height={20} />
+            링크주소 복사하기
+          </button>
+        </div>
+      </Intersection>
     </>
   );
 };

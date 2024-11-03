@@ -19,7 +19,7 @@ const SubHeader = () => {
         <div className={styles.imageContainer}>
           <Image
             priority
-            src="https://kjhswhyddvck27143991.gcdn.ntruss.com/IMG_5988.JPG"
+            src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
             alt="메인 이미지"
             fill
             style={{objectFit: 'cover'}}
