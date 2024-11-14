@@ -30,8 +30,10 @@ const SubHeader = () => {
       </Intersection> */}
 
       <Intersection>
-        <DayCounter />
-        <DDayCounter />
+        <div className={styles.dayContents}>
+          <DayCounter />
+          <DDayCounter />
+        </div>
       </Intersection>
 
       <Intersection>
