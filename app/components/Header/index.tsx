@@ -4,6 +4,7 @@ import React from 'react';
 import styles from './components.module.css';
 import Intersection from '../Intersection';
 import DDayCounter from '../DDayCounter';
+import DayCounter from '../DayCounter';
 import VideoPlayer from '../VideoPlayer';
 
 const SubHeader = () => {
@@ -29,6 +30,7 @@ const SubHeader = () => {
       </Intersection> */}
 
       <Intersection>
+        <DayCounter />
         <DDayCounter />
       </Intersection>
 

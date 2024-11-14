@@ -5,23 +5,36 @@ import dayjs from 'dayjs';
 
 import styles from './components.module.css';
 
-const targetDate = '2023-09-18T18:00:00';
+const targetDate = '2025-12-25T14:00:00';
 
 const DDayCounter = () => {
-  const [timeLeft, setTimeLeft] = useState<string | null>(null);
+  const [start, setStart] = useState<boolean>(false);
+  const [timeCount, setTimeCount] = useState<string | null>(null);
 
   useEffect(() => {
     const calculateTime = () => {
       const now = dayjs();
       const target = dayjs(targetDate);
-      const diffInSeconds = now.diff(target, 'second');
+      const diffInSeconds = target.diff(now, 'second');
 
-      const days = Math.floor(diffInSeconds / (60 * 60 * 24));
-      const hours = Math.floor((diffInSeconds % (60 * 60 * 24)) / (60 * 60));
-      const minutes = Math.floor((diffInSeconds % (60 * 60)) / 60);
-      const seconds = diffInSeconds % 60;
+      let days,
+        hours,
+        minutes,
+        seconds = 0;
+      if (diffInSeconds < 0) {
+        days = Math.floor(-diffInSeconds / (60 * 60 * 24));
+        hours = Math.floor((-diffInSeconds % (60 * 60 * 24)) / (60 * 60));
+        minutes = Math.floor((-diffInSeconds % (60 * 60)) / 60);
+        seconds = -diffInSeconds % 60;
+        setStart(true);
+      } else {
+        days = Math.floor(diffInSeconds / (60 * 60 * 24));
+        hours = Math.floor((diffInSeconds % (60 * 60 * 24)) / (60 * 60));
+        minutes = Math.floor((diffInSeconds % (60 * 60)) / 60);
+        seconds = diffInSeconds % 60;
+      }
 
-      setTimeLeft(
+      setTimeCount(
         `${String(days).padStart(2, '0')}일 ${String(hours).padStart(
           2,
           '0',
@@ -41,8 +54,8 @@ const DDayCounter = () => {
 
   return (
     <div className={styles.wrapper}>
-      <span>사랑한지</span>
-      <span>{timeLeft}</span>
+      <span>{start ? '우리의 시작' : '결실까지'}</span>
+      <span>{timeCount}</span>
     </div>
   );
 };
