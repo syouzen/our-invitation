@@ -1,3 +1,9 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .header {
   display: flex;
   width: 100%;
@@ -30,7 +36,6 @@
   flex-direction: column;
   font-size: 0.8rem;
   overflow: hidden;
-  margin-bottom: 16px;
 
   border: 1px solid lightgray;
   border-radius: 8px;
@@ -44,25 +49,26 @@
 .content[data-state='open'] {
   animation: slideDown 0.3s ease-in-out;
 }
+
 .content[data-state='closed'] {
   animation: slideUp 0.3s ease-in-out;
 }
 
 @keyframes slideDown {
   from {
-    max-height: 0;
+    height: 0;
   }
   to {
-    max-height: 200px;
+    height: var(--radix-accordion-content-height);
   }
 }
 
 @keyframes slideUp {
   from {
-    max-height: 200px;
+    height: var(--radix-accordion-content-height);
   }
   to {
-    max-height: 0;
+    height: 0;
   }
 }
 

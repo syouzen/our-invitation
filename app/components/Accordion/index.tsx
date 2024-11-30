@@ -8,7 +8,9 @@ interface AccordionProps {
 }
 
 const Accordion = ({children}: AccordionProps) => (
-  <AccordionPrimitive.Root type="multiple">{children}</AccordionPrimitive.Root>
+  <AccordionPrimitive.Root type="multiple" className={styles.root}>
+    {children}
+  </AccordionPrimitive.Root>
 );
 
 interface AccordionItemProps {
