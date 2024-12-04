@@ -37,7 +37,7 @@ interface DropdownMenuItemProps {
 
 const DropdownMenuItem = ({children, href}: DropdownMenuItemProps) => (
   <DropdownMenuPrimitive.Item asChild>
-    <a href={href} className={styles.item}>
+    <a href={href} target="_blank" className={styles.item}>
       {children}
     </a>
   </DropdownMenuPrimitive.Item>
