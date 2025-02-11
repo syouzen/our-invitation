@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import styles from './components.module.css';
 import {IconMute, IconUnmute} from '@/app/assets';
 
 const VideoPlayer = () => {
@@ -46,12 +45,18 @@ const VideoPlayer = () => {
         </video>
       </div>
       {muted && (
-        <button className={styles.muteButton} onClick={() => onMute(false)}>
+        <button
+          className="absolute top-0.5 right-0.5 z-10 bg-transparent border-none flex justify-center items-center px-[8px] py-[4px]"
+          onClick={() => onMute(false)}
+        >
           <IconMute width={32} height={32} />
         </button>
       )}
       {!muted && (
-        <button className={styles.muteButton} onClick={() => onMute(true)}>
+        <button
+          className="absolute top-0.5 right-0.5 z-10 bg-transparent border-none flex justify-center items-center px-[8px] py-[4px]"
+          onClick={() => onMute(true)}
+        >
           <IconUnmute width={32} height={32} />
         </button>
       )}
