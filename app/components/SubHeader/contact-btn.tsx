@@ -4,13 +4,21 @@ import {Dialog, DialogContent} from '@/app/components';
 import {IconPhone} from '@/app/assets';
 
 import styles from './components.module.css';
+import {cn} from '@/app/utils/tailwind-utils';
 
 const ContactButton = () => {
   return (
     <Dialog
       trigger={
-        <button className={styles.contactButton}>
-          <IconPhone width="0.9em" height="0.9em" /> 연락하기
+        <button
+          className={cn(
+            'w-fit px-[12px] py-[6px] rounded-[100px] cursor-pointer gap-[5px]',
+            'text-[12px] leading-[18px] flex justify-center items-center',
+            'bg-gray-100',
+          )}
+        >
+          <IconPhone width="12px" height="12px" />
+          연락하기
         </button>
       }
     >

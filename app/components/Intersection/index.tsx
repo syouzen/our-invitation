@@ -5,9 +5,10 @@ import {motion} from 'framer-motion';
 
 interface IntersectionProps {
   children: ReactNode;
+  className?: string;
 }
 
-export default function Intersection({children}: IntersectionProps) {
+export default function Intersection({children, className}: IntersectionProps) {
   return (
     <motion.div
       initial={{opacity: 0, y: 10}}
@@ -18,6 +19,7 @@ export default function Intersection({children}: IntersectionProps) {
         duration: 0.4,
         y: {duration: 1},
       }}
+      className={className}
     >
       {children}
     </motion.div>

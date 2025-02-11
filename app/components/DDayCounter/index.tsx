@@ -5,7 +5,7 @@ import dayjs from 'dayjs';
 
 import styles from './components.module.css';
 
-const targetDate = '2025-12-25T14:00:00';
+const targetDate = '2025-11-08T11:00:00';
 
 const DDayCounter = () => {
   const [start, setStart] = useState<boolean>(false);

@@ -2,6 +2,7 @@ import * as DialogPrimitive from '@radix-ui/react-dialog';
 import {ReactNode} from 'react';
 
 import styles from './components.module.css';
+import {cn} from '@/app/utils/tailwind-utils';
 
 interface DialogProps {
   children: ReactNode;
@@ -32,7 +33,10 @@ const DialogContent = ({
 }: DialogContentProps) => (
   <DialogPrimitive.Portal>
     <DialogPrimitive.Overlay
-      className={`${styles.overlay} ${styles.fadeinout}`}
+      className={cn(
+        'fixed inset-0 z-[50] bg-white opacity-80 blur-[4px] transition-opacity duration-300 ease-in-out',
+        'fadeinout',
+      )}
       onClick={onClose}
     />
     <DialogPrimitive.Content

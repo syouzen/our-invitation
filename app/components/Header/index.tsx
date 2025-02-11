@@ -1,19 +1,15 @@
 'use client';
 
 import React from 'react';
-import styles from './components.module.css';
 import Intersection from '../Intersection';
 import DDayCounter from '../DDayCounter';
-import DayCounter from '../DayCounter';
 import VideoPlayer from '../VideoPlayer';
 
 const SubHeader = () => {
   return (
     <>
-      <Intersection>
-        <div className={styles.videoContainer}>
-          <VideoPlayer />
-        </div>
+      <Intersection className="mb-[96px]">
+        <VideoPlayer />
       </Intersection>
 
       {/* <Intersection>
@@ -29,30 +25,36 @@ const SubHeader = () => {
         </div>
       </Intersection> */}
 
-      <Intersection>
-        <div className={styles.dayContents}>
-          <DayCounter />
-          <DDayCounter />
-        </div>
+      <Intersection className="flex flex-row justify-evenly items-center">
+        {/* <DayCounter /> */}
+        <DDayCounter />
       </Intersection>
 
       <Intersection>
-        <div className={styles.mainContents}>
-          <div className={styles.mainContentsText}>
-            <span className={styles.mainContentsTitle}>OUR WEDDING STORY</span>
+        <div className="mt-[96px] mb-[96px] text-center flex flex-col gap-[16px]">
+          <div className="flex justify-center items-center">
+            <span className="text-[16px] leading-[24px] text-gray-900">
+              OUR WEDDING STORY
+            </span>
           </div>
-          <div className={styles.mainContentsSpare}>
+
+          <div>
             <span>💍</span>
           </div>
-          <div className={styles.mainContentsText}>
+
+          <div className="flex justify-center items-center gap-[8px]">
             <span>최승연</span>
-            <span>|</span>
             <span>김현아</span>
           </div>
-          <div className={styles.mainContentsSubText}>
-            202X년 XX월 XX일 일요일 오후 2시
-            <br />
-            두가헌
+
+          <div className="flex flex-col gap-[8px]">
+            <div className="text-[14px] leading-[20px] text-gray-500">
+              2025년 11월 8일 일요일 오전 11시
+            </div>
+
+            <div className="text-[14px] leading-[20px] text-gray-500">
+              두가헌
+            </div>
           </div>
         </div>
       </Intersection>
