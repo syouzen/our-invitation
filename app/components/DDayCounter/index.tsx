@@ -3,8 +3,6 @@
 import React, {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 
-import styles from './components.module.css';
-
 const targetDate = '2025-11-08T11:00:00';
 
 const DDayCounter = () => {
@@ -53,7 +51,7 @@ const DDayCounter = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className="flex flex-col justify-center items-center mb-[64px] text-[16px] leading-[24px] text-gray-900">
       <span>{start ? '우리의 시작' : '결실까지'}</span>
       <span>{timeCount}</span>
     </div>

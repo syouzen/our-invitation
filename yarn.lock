@@ -3982,6 +3982,7 @@ __metadata:
     react-toastify: ^10.0.6
     tailwind-merge: ^3.0.1
     tailwindcss: ^3.4.1
+    tailwindcss-animate: ^1.0.7
     typescript: ^5
     zustand: ^5.0.0
   languageName: unknown
@@ -5010,6 +5011,15 @@ __metadata:
   version: 3.0.1
   resolution: "tailwind-merge@npm:3.0.1"
   checksum: a058ca9d4d1c954c68acfdd6be375023e7d6614234920f9b710562fbabb2038c5a11c9a01f1d3a77051071343489aca1bd51909caad305b3fd3b1875683ee0c9
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animate@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "tailwindcss-animate@npm:1.0.7"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: c1760983eb3fec0c8421e95082bf308e6845df43e2f90862386366e82545c801b26b4d189c4cd23d6915252b76d18005c8e5f591f8b119944c7fb8650d0f8bce
   languageName: node
   linkType: hard
 

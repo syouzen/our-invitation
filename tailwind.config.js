@@ -2,8 +2,8 @@
 module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
-    //custom theme 설정
     extend: {},
   },
-  plugins: [], //사용할 플러그인 추가
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  plugins: [require('tailwindcss-animate')],
 };

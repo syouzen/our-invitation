@@ -4,30 +4,13 @@ import React from 'react';
 import Intersection from '../Intersection';
 import DDayCounter from '../DDayCounter';
 import VideoPlayer from '../VideoPlayer';
+import Image from 'next/image';
 
 const SubHeader = () => {
   return (
     <>
       <Intersection className="mb-[96px]">
         <VideoPlayer />
-      </Intersection>
-
-      {/* <Intersection>
-        <div className={styles.imageContainer}>
-          <Image
-            priority
-            src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
-            alt="메인 이미지"
-            fill
-            style={{objectFit: 'cover'}}
-            sizes="100vw"
-          />
-        </div>
-      </Intersection> */}
-
-      <Intersection className="flex flex-row justify-evenly items-center">
-        {/* <DayCounter /> */}
-        <DDayCounter />
       </Intersection>
 
       <Intersection>
@@ -57,6 +40,23 @@ const SubHeader = () => {
             </div>
           </div>
         </div>
+      </Intersection>
+
+      <Intersection className="flex justify-center items-center w-[100%] h-[400px] relative overflow-hidden">
+        <Image
+          priority
+          src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
+          alt="메인 이미지"
+          width={350}
+          height={350}
+          className="object-cover opacity-80"
+          sizes="100vw"
+        />
+      </Intersection>
+
+      <Intersection className="flex flex-row justify-evenly items-center mt-[96px]">
+        {/* <DayCounter /> */}
+        <DDayCounter />
       </Intersection>
     </>
   );

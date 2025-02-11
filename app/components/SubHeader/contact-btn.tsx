@@ -2,8 +2,6 @@
 
 import {Dialog, DialogContent} from '@/app/components';
 import {IconPhone} from '@/app/assets';
-
-import styles from './components.module.css';
 import {cn} from '@/app/utils/tailwind-utils';
 
 const ContactButton = () => {
@@ -23,51 +21,63 @@ const ContactButton = () => {
       }
     >
       <DialogContent title="연락하기">
-        <div className={styles.contactWrapper}>
-          <div className={styles.contact}>
+        <div className="flex flex-col w-full row-gap-[8px] mb-[16px] text-[13px] leading-[19px]">
+          <div className="flex flex-row justify-between">
             <span>신랑 최승연</span>
             <button
-              className={styles.infoPhone}
+              className="cursor-pointer border-b border-solid border-gray-300 p-0 m-0 mt-[4px] text-gray-500 text-[12px] leading-[18px]"
               onClick={() => (window.location.href = 'tel:010-9058-9205')}
             >
-              <a className={styles.aPhone} href="tel:010-9058-9205">
-                <IconPhone width="0.8em" height="0.8em" /> 010-9058-9205
+              <a
+                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                href="tel:010-9058-9205"
+              >
+                <IconPhone width="11px" height="11px" /> 010-9058-9205
               </a>
             </button>
           </div>
-          <div className={styles.contact}>
+          <div className="flex flex-row justify-between">
             <span>어머니 육은주</span>
             <button
-              className={styles.infoPhone}
+              className="cursor-pointer border-b border-solid border-gray-300 p-0 m-0 mt-[4px] text-gray-500 text-[12px] leading-[18px]"
               onClick={() => (window.location.href = 'tel:010-3716-4766')}
             >
-              <a className={styles.aPhone} href="tel:010-3716-4766">
-                <IconPhone width="0.8em" height="0.8em" /> 010-3716-4766
+              <a
+                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                href="tel:010-3716-4766"
+              >
+                <IconPhone width="11px" height="11px" /> 010-3716-4766
               </a>
             </button>
           </div>
         </div>
 
-        <div className={styles.contactWrapper}>
-          <div className={styles.contact}>
+        <div className="flex flex-col w-full row-gap-[8px] mb-[16px] text-[13px] leading-[19px]">
+          <div className="flex flex-row justify-between">
             <span>신부 김현아</span>
             <button
-              className={styles.infoPhone}
+              className="cursor-pointer border-b border-solid border-gray-300 p-0 m-0 mt-[4px] text-gray-500 text-[12px] leading-[18px]"
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
-              <a className={styles.aPhone} href="tel:010-3415-7375">
-                <IconPhone width="0.8em" height="0.8em" /> 010-3415-7375
+              <a
+                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                href="tel:010-3415-7375"
+              >
+                <IconPhone width="11px" height="11px" /> 010-3415-7375
               </a>
             </button>
           </div>
-          <div className={styles.contact}>
+          <div className="flex flex-row justify-between">
             <span>어머니 서영민</span>
             <button
-              className={styles.infoPhone}
+              className="cursor-pointer border-b border-solid border-gray-300 p-0 m-0 mt-[4px] text-gray-500 text-[12px] leading-[18px]"
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
-              <a className={styles.aPhone} href="tel:010-3415-7375">
-                <IconPhone width="0.8em" height="0.8em" /> 010-3415-7375
+              <a
+                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                href="tel:010-3415-7375"
+              >
+                <IconPhone width="11px" height="11px" /> 010-3415-7375
               </a>
             </button>
           </div>
