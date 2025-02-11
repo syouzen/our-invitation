@@ -13,32 +13,29 @@ const SubHeader = () => {
         <VideoPlayer />
       </Intersection>
 
-      <Intersection>
-        <div className="mt-[96px] mb-[96px] text-center flex flex-col gap-[16px]">
-          <div className="flex justify-center items-center">
-            <span className="text-[16px] leading-[24px] text-gray-900">
-              OUR WEDDING STORY
-            </span>
+      <Intersection className="mt-[96px] mb-[32px] text-center flex flex-col gap-[16px]">
+        <div className="flex justify-center items-center">
+          <span className="text-[16px] leading-[24px] text-gray-900">
+            OUR WEDDING STORY
+          </span>
+        </div>
+
+        <div>
+          <span>💍</span>
+        </div>
+
+        <div className="flex justify-center items-center gap-[8px]">
+          <span>최승연</span>
+          <span>·</span>
+          <span>김현아</span>
+        </div>
+
+        <div className="flex flex-col gap-[8px]">
+          <div className="text-[14px] leading-[20px] text-gray-500">
+            2025년 11월 8일 일요일 오전 11시
           </div>
 
-          <div>
-            <span>💍</span>
-          </div>
-
-          <div className="flex justify-center items-center gap-[8px]">
-            <span>최승연</span>
-            <span>김현아</span>
-          </div>
-
-          <div className="flex flex-col gap-[8px]">
-            <div className="text-[14px] leading-[20px] text-gray-500">
-              2025년 11월 8일 일요일 오전 11시
-            </div>
-
-            <div className="text-[14px] leading-[20px] text-gray-500">
-              두가헌
-            </div>
-          </div>
+          <div className="text-[14px] leading-[20px] text-gray-500">두가헌</div>
         </div>
       </Intersection>
 
