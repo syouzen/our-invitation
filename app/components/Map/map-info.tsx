@@ -1,5 +1,4 @@
 import {IconLink, IconPhone} from '@/app/assets';
-import styles from './components.module.css';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,22 +8,22 @@ import {
 
 const MapInfo = () => {
   return (
-    <div className={styles.infoWrapper}>
-      <div className={styles.info}>
-        <p className={styles.infoP}>
-          <b>💍 두가헌</b>
-          <br />
-          서울 종로구 삼청로 14
-          <br />
-          <button
-            className={styles.infoPhone}
-            onClick={() => (window.location.href = 'tel:02-6261-1616')}
+    <div className="flex justify-between items-center px-[12px] my-[48px]">
+      <div className="font-size-[16px] leading-[24px] flex flex-col gap-[4px]">
+        <strong>💍 두가헌</strong>
+        <p>서울 종로구 삼청로 14</p>
+        <button
+          className="text-gray-500 text-[14px] leading-[20px] bg-white border-b border-solid border-gray-300 cursor-pointer w-fit"
+          onClick={() => (window.location.href = 'tel:02-6261-1616')}
+        >
+          <a
+            className="flex items-center gap-[4px] text-gray-500 text-[14px] leading-[20px]"
+            href="tel:02-6261-1616"
           >
-            <a className={styles.aPhone} href="tel:02-6261-1616">
-              <IconPhone width="0.8em" height="0.8em" /> 02-6261-1616
-            </a>
-          </button>
-        </p>
+            <IconPhone width="12px" height="12px" />
+            02-6261-1616
+          </a>
+        </button>
       </div>
 
       <DropdownMenu>
