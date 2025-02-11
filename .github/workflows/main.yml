@@ -1,0 +1,13 @@
+name: wake up supabase
+on:
+  schedule:
+    - cron: "0 0 */5 * *"
+  workflow_dispatch:
+jobs:
+  send_request:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Send request
+        run: |
+          curl --request GET --url "https://lphvepsfyschtvhhhqix.supabase.co/auth/v1/health"
