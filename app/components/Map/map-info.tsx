@@ -1,4 +1,4 @@
-import {IconLink, IconPhone} from '@/app/assets';
+import {IconMap, IconPhone} from '@/app/assets';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,7 +28,7 @@ const MapInfo = () => {
 
       <DropdownMenu>
         <DropdownMenuTrigger>
-          <IconLink />
+          <IconMap />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem href="https://tmap.life/754d0653">
