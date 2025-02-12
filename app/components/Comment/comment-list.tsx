@@ -47,7 +47,7 @@ const CommentList = () => {
           <div className="flex justify-center items-center mt-[24px]">
             {comments.length > offset * 4 && (
               <button
-                className="flex justify-center items-center w-[32px] h-[32px] border-none border-radius-[100px] cursor-pointer"
+                className="bg-gray-100 flex justify-center items-center border-none cursor-pointer w-[32px] h-[32px] rounded-[100px]"
                 onClick={onMore}
               >
                 <IconArrowDown />

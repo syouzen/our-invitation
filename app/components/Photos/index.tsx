@@ -65,7 +65,7 @@ const SubHeader = () => {
       <Intersection className="flex flex-col mb-[32px]">
         <span className="text-center mt-[48px] mb-[32px]">갤러리</span>
         <div className="grid grid-cols-3 gap-x-[6px] mb-[32px]">
-          {images.slice(0, offset * 6).map((image, i) => (
+          {images.slice(0, offset * 9).map((image, i) => (
             <Intersection key={i}>
               <button
                 className="relative w-full aspect-[1/1] overflow-hidden border-none cursor-pointer rounded-[4px]"
@@ -85,7 +85,7 @@ const SubHeader = () => {
           ))}
         </div>
         <div className="flex justify-center items-center">
-          {images.length > offset * 6 && (
+          {images.length > offset * 9 && (
             <button
               className="bg-gray-100 flex justify-center items-center border-none cursor-pointer w-[32px] h-[32px] rounded-[100px]"
               onClick={onMore}
