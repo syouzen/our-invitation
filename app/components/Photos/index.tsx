@@ -104,44 +104,6 @@ const SubHeader = () => {
         onNext={onNext}
         onClose={() => setOpen(false)}
       />
-
-      {/* <ImageDialog open={open} onOpenChange={setOpen}>
-        <ImageDialogContent>
-          <div className={styles.imageDialogContent}>
-            <FitImage src={images[index]} alt="갤러리 이미지" />
-          </div>
-
-          <div className={styles.imageDialogFooterWrapper}>
-            <div className={styles.imageDialogIndex}>
-              <span>{images.length}개의 이미지 중</span>
-              <span>{index + 1}번째 이미지</span>
-            </div>
-
-            <div className={styles.imageDialogFooter}>
-              <button
-                disabled={index === 0}
-                className={styles.imageDialogButton}
-                onClick={onPrev}
-              >
-                <IconArrowLeft width="2em" height="2em" />
-              </button>
-              <button
-                className={styles.imageDialogFooterCloseButton}
-                onClick={() => setOpen(false)}
-              >
-                닫기
-              </button>
-              <button
-                disabled={index === images.length - 1}
-                className={styles.imageDialogButton}
-                onClick={onNext}
-              >
-                <IconArrowRight width="2em" height="2em" />
-              </button>
-            </div>
-          </div>
-        </ImageDialogContent>
-      </ImageDialog> */}
     </>
   );
 };
