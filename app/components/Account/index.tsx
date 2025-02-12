@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import styles from './components.module.css';
 import Intersection from '../Intersection';
 import {
   Accordion,
@@ -15,13 +14,15 @@ const Account = () => {
   return (
     <>
       <Intersection>
-        <div className={styles.wrapper}>
-          <span className={styles.commentTitle}>마음을 전해주세요</span>
-          <Accordion>
+        <div className="flex flex-col px-[16px] mb-[64px]">
+          <span className="text-center mb-[32px] mt-[16px]">
+            마음을 전해주세요
+          </span>
+          <Accordion type="multiple" className="flex flex-col gap-[8px]">
             <AccordionItem value="seungyeon">
               <AccordionTrigger>신랑측 계좌번호 확인하기</AccordionTrigger>
               <AccordionContent>
-                <div className={styles.accountWrapper}>
+                <div className="flex flex-col">
                   <AccountInfo
                     info={{
                       name: '신랑 최승연',
@@ -30,7 +31,7 @@ const Account = () => {
                       kakao: 'https://qr.kakaopay.com/Ej73CkpTz',
                     }}
                   />
-                  <div className={styles.accountDivider} />
+                  <div className="flex w-full h-[1px] bg-gray-200 my-[12px]" />
                   <AccountInfo
                     info={{
                       name: '어머니 육은주',
@@ -44,7 +45,7 @@ const Account = () => {
             <AccordionItem value="kkomi">
               <AccordionTrigger>신부측 계좌번호 확인하기</AccordionTrigger>
               <AccordionContent>
-                <div className={styles.accountWrapper}>
+                <div className="flex flex-col">
                   <AccountInfo
                     info={{
                       name: '신부 김현아',
@@ -52,7 +53,7 @@ const Account = () => {
                       account: '0000-0000-0000',
                     }}
                   />
-                  <div className={styles.accountDivider} />
+                  <div className="flex w-full h-[1px] bg-gray-200 my-[12px]" />
                   <AccountInfo
                     info={{
                       name: '어머니 서영민',

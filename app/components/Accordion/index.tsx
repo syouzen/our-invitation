@@ -1,48 +1,58 @@
+'use client';
+
+import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
-import {ReactNode} from 'react';
-import styles from './components.module.css';
 import {IconArrowDown} from '@/app/assets';
+import {cn} from '@/app/utils/tailwind-utils';
 
-interface AccordionProps {
-  children: ReactNode;
-}
+const Accordion = AccordionPrimitive.Root;
 
-const Accordion = ({children}: AccordionProps) => (
-  <AccordionPrimitive.Root type="multiple">{children}</AccordionPrimitive.Root>
-);
+const AccordionItem = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+>(({className, ...props}, ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn('text-sm border rounded-lg overflow-hidden', className)}
+    {...props}
+  />
+));
+AccordionItem.displayName = 'AccordionItem';
 
-interface AccordionItemProps {
-  value: string;
-  children: ReactNode;
-}
-
-const AccordionItem = ({value, children}: AccordionItemProps) => (
-  <AccordionPrimitive.Item value={value} className={styles.item}>
-    {children}
-  </AccordionPrimitive.Item>
-);
-
-interface AccordionTriggerProps {
-  children: ReactNode;
-}
-
-const AccordionTrigger = ({children}: AccordionTriggerProps) => (
-  <AccordionPrimitive.Header className={styles.header}>
-    <AccordionPrimitive.Trigger className={styles.trigger}>
+const AccordionTrigger = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+>(({className, children, ...props}, ref) => (
+  <AccordionPrimitive.Header className="flex">
+    <AccordionPrimitive.Trigger
+      ref={ref}
+      className={cn(
+        'flex flex-1 items-center justify-between px-4 py-3 bg-gray-50 active:bg-gray-100 transition-colors [&[data-state=open]>svg]:rotate-180',
+        className,
+      )}
+      {...props}
+    >
       {children}
-      <IconArrowDown className={styles.arrow} />
+      <IconArrowDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
-);
+));
+AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName;
 
-interface AccordionContentProps {
-  children: ReactNode;
-}
-
-const AccordionContent = ({children}: AccordionContentProps) => (
-  <AccordionPrimitive.Content className={styles.content}>
-    {children}
+const AccordionContent = React.forwardRef<
+  React.ElementRef<typeof AccordionPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+>(({className, children, ...props}, ref) => (
+  <AccordionPrimitive.Content
+    ref={ref}
+    className={cn(
+      'overflow-hidden transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down',
+    )}
+    {...props}
+  >
+    <div className={cn('border-t px-4 py-3', className)}>{children}</div>
   </AccordionPrimitive.Content>
-);
+));
+AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
 export {Accordion, AccordionItem, AccordionTrigger, AccordionContent};
