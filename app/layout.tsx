@@ -6,8 +6,8 @@ import {sans, serif, serif_en} from './font';
 import {ToastProvider} from './components';
 
 const contents = {
-  title: '우리의 초대장',
-  description: '당신을 초대합니다',
+  title: '최승연 ♥ 김현아 결혼합니다',
+  description: '11월 8일 오전 11시, 두가헌',
 };
 
 export const viewport: Viewport = {

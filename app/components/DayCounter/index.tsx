@@ -3,8 +3,6 @@
 import React, {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 
-import styles from './components.module.css';
-
 const targetDate = '2023-09-18T18:00:00';
 
 const DayCounter = () => {
@@ -40,7 +38,7 @@ const DayCounter = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className="flex flex-col justify-center items-center mb-[64px]">
       <span>사랑한지</span>
       <span>{timeLeft}</span>
     </div>

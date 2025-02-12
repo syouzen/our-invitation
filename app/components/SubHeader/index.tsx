@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import styles from './components.module.css';
 import Intersection from '../Intersection';
 import ContactButton from './contact-btn';
 
@@ -9,7 +8,7 @@ const Header = () => {
   return (
     <>
       <Intersection>
-        <div className={styles.subContents}>
+        <div className="text-center text-[14px] leading-[20px] text-gray-900">
           봄의 그대는 벚꽃이었고
           <br />
           여름의 그대는 바람이었으며
@@ -25,13 +24,13 @@ const Header = () => {
         </div>
       </Intersection>
 
-      <div className={styles.contentsSpare}>
+      <div className="flex justify-center items-center my-[96px] text-gray-300">
         <span>-</span>
       </div>
 
       <Intersection>
-        <div className={styles.family}>
-          <div className={styles.parents}>
+        <div className="text-[16px] leading-[24px] text-gray-900 flex mt-[12px] justify-center items-center gap-[16px]">
+          <div className="w-[70px] text-end">
             <div>故 최호선</div>
             <div>육은주</div>
           </div>
@@ -39,8 +38,8 @@ const Header = () => {
           <span>장남</span>
           <strong>최승연</strong>
         </div>
-        <div className={styles.family}>
-          <div className={styles.parents}>
+        <div className="text-[16px] leading-[24px] text-gray-900 flex mt-[12px] justify-center items-center gap-[16px]">
+          <div className="w-[70px] text-end">
             <div>서영민</div>
           </div>
           <span>의</span>
@@ -49,10 +48,8 @@ const Header = () => {
         </div>
       </Intersection>
 
-      <Intersection>
-        <div className={styles.contactButtonWrapper}>
-          <ContactButton />
-        </div>
+      <Intersection className="flex justify-center items-center mt-[96px] mb-[64px]">
+        <ContactButton />
       </Intersection>
     </>
   );

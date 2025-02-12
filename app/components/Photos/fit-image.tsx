@@ -26,7 +26,7 @@ const FitImage = ({src, alt}: FitImageProps) => {
           alt={alt}
           width={size.width}
           height={size.height}
-          style={{objectFit: 'cover'}}
+          className="object-cover pointer-events-none"
           sizes="(max-width: 600px) 100vw, 
                  (max-width: 1200px) 50vw, 
                  33vw"

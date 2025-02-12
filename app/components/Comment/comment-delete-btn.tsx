@@ -5,7 +5,6 @@ import {Dialog, DialogContent} from '@/app/components';
 import {IconClose, IconLoading} from '@/app/assets';
 import {toast, ToastOptions} from 'react-toastify';
 
-import styles from './components.module.css';
 import {useCommentsStore} from '@/app/store';
 
 import {Comment} from '@/app/type';
@@ -50,7 +49,7 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
       open={isOpen}
       onOpenChange={setIsOpen}
       trigger={
-        <button className={styles.commentDeletebutton}>
+        <button className="border-none bg-transparent cursor-pointer text-gray-400 ml-[12px] pt-[1.5px]">
           <IconClose width={12} height={12} />
         </button>
       }
@@ -62,20 +61,20 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
         }}
       >
         <form className="" onSubmit={e => onDelete(e)}>
-          <div className={styles.inputWrapper}>
+          <div className="flex h-[25px] w-full justify-between items-center mb-[8px] gap-[8px]">
             <input
-              className={styles.input}
+              className="flex h-[25px] w-full px-[4px] justify-between text-[14px] leading-[20px] p-[16px] border border-gray-900 rounded-[4px]"
               name="password"
               type="password"
               autoComplete="new-password"
               placeholder="비밀번호"
             />
           </div>
-          <div className={styles.dialogButtonWrapper}>
+          <div className="flex justify-center items-center mt-[16px] gap-[8px]">
             <button
               type="button"
               disabled={isLoading}
-              className={styles.closeButton}
+              className="flex border-none w-[40%] px-[12px] py-[6px] justify-center items-center gap-[5px] text-[14px] leading-[20px] rounded-[8px] cursor-pointer transition-colors bg-white text-black"
               onClick={() => {
                 setIsOpen(false);
                 setIsLoading(false);
@@ -85,7 +84,7 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
             </button>
             <button
               disabled={isLoading}
-              className={styles.primaryButton}
+              className="flex border-none w-full px-[12px] py-[6px] justify-center items-center gap-[5px] text-[14px] leading-[20px] rounded-[8px] cursor-pointer transition-colors bg-black text-white"
               type="submit"
             >
               {!isLoading && '지우기'}

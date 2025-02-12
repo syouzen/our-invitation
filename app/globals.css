@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --font-sans: 'Noto Sans KR', sans-serif;
   --font-serif: 'Nanum Myeongjo', serif;
@@ -29,6 +33,7 @@ h3 {
 button {
   color: black;
   font-family: var(--font-serif);
+  outline: none;
 }
 
 input,

@@ -1,7 +1,6 @@
 'use client';
 
 import React, {useRef} from 'react';
-import styles from './components.module.css';
 import Script from 'next/script';
 import Intersection from '../Intersection';
 import MapDescription from './map-description';
@@ -29,21 +28,23 @@ const Map = () => {
 
   return (
     <>
-      <Intersection>
-        <div className={styles.wrapper}>
-          <span className={styles.mapTitle}>오시는 길</span>
-          <Script
-            src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_CLIENT_ID}`}
-            onLoad={initMap}
-          />
-          <div className={styles.mapWrapper}>
-            <div id="naver-map" className={styles.map}></div>
-          </div>
+      <Intersection className="flex flex-col gap-[32px]">
+        <span className="text-center text-[16px] leading-[24px] text-gray-900">
+          오시는 길
+        </span>
+        <Script
+          src={`https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NAVER_CLIENT_ID}`}
+          onLoad={initMap}
+        />
+        <div className="w-full h-[250px]">
+          <div id="naver-map" className="w-full h-full"></div>
         </div>
       </Intersection>
+
       <Intersection>
         <MapInfo />
       </Intersection>
+
       <Intersection>
         <MapDescription />
       </Intersection>
