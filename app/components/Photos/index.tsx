@@ -1,7 +1,6 @@
 'use client';
 
 import React, {useState} from 'react';
-import styles from './components.module.css';
 import Intersection from '../Intersection';
 import Image from 'next/image';
 import {IconArrowDown} from '@/app/assets';
@@ -63,36 +62,37 @@ const SubHeader = () => {
 
   return (
     <>
-      <Intersection>
-        <div className={styles.wrapper}>
-          <span className={styles.title}>갤러리</span>
-          <div className={styles.grid}>
-            {images.slice(0, offset * 6).map((image, i) => (
-              <Intersection key={i}>
-                <button
-                  className={styles.imageContainer}
-                  onClick={() => onOpen(i)}
-                >
-                  <Image
-                    src={image}
-                    alt="갤러리 이미지"
-                    fill
-                    style={{objectFit: 'cover'}}
-                    sizes="(max-width: 600px) 100vw, 
+      <Intersection className="flex flex-col mb-[32px] px-[8px]">
+        <span className="text-center mt-[48px] mb-[32px]">갤러리</span>
+        <div className="grid grid-cols-3 gap-[4px] mb-[32px]">
+          {images.slice(0, offset * 6).map((image, i) => (
+            <Intersection key={i}>
+              <button
+                className="relative w-full aspect-[1/1] overflow-hidden border-none cursor-pointer rounded-[4px]"
+                onClick={() => onOpen(i)}
+              >
+                <Image
+                  src={image}
+                  alt="갤러리 이미지"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 600px) 100vw, 
                           (max-width: 1200px) 50vw, 
                           33vw"
-                  />
-                </button>
-              </Intersection>
-            ))}
-          </div>
-          <div className={styles.moreButtonWrapper}>
-            {images.length > offset * 6 && (
-              <button className={styles.moreButton} onClick={onMore}>
-                <IconArrowDown />
+                />
               </button>
-            )}
-          </div>
+            </Intersection>
+          ))}
+        </div>
+        <div className="flex justify-center items-center">
+          {images.length > offset * 6 && (
+            <button
+              className="bg-gray-100 flex justify-center items-center border-none cursor-pointer w-[32px] h-[32px] rounded-[100px]"
+              onClick={onMore}
+            >
+              <IconArrowDown />
+            </button>
+          )}
         </div>
       </Intersection>
 
