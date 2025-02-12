@@ -1,6 +1,5 @@
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import {ReactNode} from 'react';
-import styles from './components.module.css';
 import {cn} from '@/app/utils/tailwind-utils';
 
 interface DropdownMenuProps {
