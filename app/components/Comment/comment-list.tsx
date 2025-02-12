@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import styles from './components.module.css';
 import {useCommentsStore} from '@/app/store';
 import {IconArrowDown, IconLoading} from '@/app/assets';
 import dayjs from 'dayjs';
@@ -23,31 +22,34 @@ const CommentList = () => {
   return (
     <>
       {isLoading && (
-        <div className={styles.commentLoading}>
+        <div className="flex justify-center items-center mt-[32px] mb-[32px]">
           <IconLoading />
         </div>
       )}
       {!isLoading && (
         <>
           {comments.slice(0, offset * 4).map(comment => (
-            <Intersection key={comment.id}>
-              <div className={styles.comment}>
-                <div className={styles.commentHeader}>
-                  <span className={styles.commentHeaderName}>
-                    {comment.name}
-                  </span>
-                  <span className={styles.commentHeaderDate}>
+            <Intersection key={comment.id} className="px-[4px]">
+              <div className="flex flex-col box-border w-full text-[12px] leading-[18px] mt-[16px] border-b border-solid border-gray-200 px-[4px]">
+                <div className="flex w-full justify-between items-center text-[14px] leading-[20px]">
+                  <span className="text-gray-400">{comment.name}</span>
+                  <span className="flex text-gray-400 text-[12px] leading-[18px] justify-center items-center">
                     {dayjs(comment.created_at).format('YYYY.MM.DD')}
                     <CommentDeleteButton comment={comment} />
                   </span>
                 </div>
-                <div className={styles.commentContent}>{comment.content}</div>
+                <div className="mt-[16px] mb-[16px] text-[14px] leading-[20px]">
+                  {comment.content}
+                </div>
               </div>
             </Intersection>
           ))}
-          <div className={styles.moreButtonWrapper}>
+          <div className="flex justify-center items-center mt-[24px]">
             {comments.length > offset * 4 && (
-              <button className={styles.moreButton} onClick={onMore}>
+              <button
+                className="flex justify-center items-center w-[32px] h-[32px] border-none border-radius-[100px] cursor-pointer"
+                onClick={onMore}
+              >
                 <IconArrowDown />
               </button>
             )}
