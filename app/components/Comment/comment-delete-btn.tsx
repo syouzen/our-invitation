@@ -8,6 +8,7 @@ import {toast, ToastOptions} from 'react-toastify';
 import {useCommentsStore} from '@/app/store';
 
 import {Comment} from '@/app/type';
+import {cn} from '@/app/utils/tailwind-utils';
 
 const CommentDeleteButton = ({comment}: {comment: Comment}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +85,11 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
             </button>
             <button
               disabled={isLoading}
-              className="flex border-none w-full px-[12px] py-[6px] justify-center items-center gap-[5px] text-[14px] leading-[20px] rounded-[8px] cursor-pointer transition-colors bg-black text-white"
+              className={cn(
+                'flex border-none w-full px-[12px] py-[6px] justify-center items-center gap-[5px] text-[14px] leading-[20px] rounded-[8px] cursor-pointer transition-colors bg-black text-white',
+                isLoading &&
+                  'cursor-not-allowed pointer-events-none opacity-50',
+              )}
               type="submit"
             >
               {!isLoading && '지우기'}
