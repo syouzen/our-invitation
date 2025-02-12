@@ -15,7 +15,7 @@ const SubHeader = () => {
 
       <Intersection className="mt-[96px] mb-[32px] text-center flex flex-col gap-[16px]">
         <div className="flex justify-center items-center">
-          <span className="text-[16px] leading-[24px] text-gray-900">
+          <span className="font-serif_en font-bold text-[16px] leading-[24px] text-gray-900">
             OUR WEDDING STORY
           </span>
         </div>

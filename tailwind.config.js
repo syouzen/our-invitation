@@ -3,6 +3,16 @@ module.exports = {
   content: ['./app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['var(--font-sans)', 'Noto Sans KR', 'sans-serif'],
+      serif: ['var(--font-serif)', 'Nanum Myeongjo', 'serif'],
+      serif_en: [
+        'var(--font-serif-en)',
+        'Cormorant SC',
+        'Nanum Myeongjo',
+        'serif',
+      ],
+    },
     keyframes: {
       'accordion-down': {
         from: {height: 0},

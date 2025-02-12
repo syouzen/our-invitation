@@ -4,6 +4,7 @@ import {PreloadResources} from './preload';
 
 import {sans, serif, serif_en} from './font';
 import {ToastProvider} from './components';
+import {cn} from './utils/tailwind-utils';
 
 const contents = {
   title: '최승연 ♥ 김현아 결혼합니다',
@@ -40,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={`${sans.variable} ${serif.variable} ${serif_en.variable}`}
+      className={cn(sans.variable, serif.variable, serif_en.variable)}
     >
       <PreloadResources />
       <body>
