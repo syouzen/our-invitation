@@ -37,7 +37,7 @@ export default function Home() {
           <Comment />
         </section>
 
-        <section className="mt-16 mb-16">
+        <section className="mt-16">
           <Share />
         </section>
 

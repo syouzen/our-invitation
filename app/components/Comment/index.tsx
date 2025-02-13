@@ -8,7 +8,7 @@ import Intersection from '../Intersection';
 const Comment = () => {
   return (
     <Intersection>
-      <div className="flex flex-col mb-[64px]">
+      <div className="flex flex-col mb-[32px]">
         <span className="text-center mb-[16px] mt-[16px]">
           마음을 남겨주세요
         </span>

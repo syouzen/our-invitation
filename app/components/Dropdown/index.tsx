@@ -40,10 +40,15 @@ const DropdownMenuContent = ({children}: DropdownMenuContentProps) => (
 interface DropdownMenuItemProps {
   children: ReactNode;
   href?: string;
+  onSelect?: () => void;
 }
 
-const DropdownMenuItem = ({children, href}: DropdownMenuItemProps) => (
-  <DropdownMenuPrimitive.Item asChild>
+const DropdownMenuItem = ({
+  children,
+  href,
+  onSelect,
+}: DropdownMenuItemProps) => (
+  <DropdownMenuPrimitive.Item asChild onSelect={onSelect}>
     <a
       href={href}
       target="_blank"

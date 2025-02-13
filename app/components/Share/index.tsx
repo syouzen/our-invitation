@@ -1,11 +1,16 @@
 'use client';
 
 import React from 'react';
-import {IconKakao, IconLink} from '@/app/assets';
-import Image from 'next/image';
+import {IconKakao, IconLink, IconShare} from '@/app/assets';
 import Script from 'next/script';
 import {toast, ToastOptions} from 'react-toastify';
 import Intersection from '../Intersection';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '../Dropdown';
 
 const INVITATION_URL =
   process.env.NODE_ENV === 'production'
@@ -63,49 +68,32 @@ const Share = () => {
   };
 
   return (
-    <>
-      <Intersection>
-        <Script
-          src="https://developers.kakao.com/sdk/js/kakao.min.js"
-          onLoad={onInitKakao}
-        />
-        <div className="relative w-full h-[250px] overflow-hidden">
-          <Image
-            src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
-            alt="공유하기 이미지"
-            fill
-            className="object-cover opacity-80"
-            sizes="100vw"
-          />
-          <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-full text-center text-white text-[14px] leading-[20px] [text-shadow:_1px_1px_2px_gray-900/70]">
-            11월의 어느 햇살 고운 날,
-            <br />
-            귀한 걸음 하시어 따뜻한 마음으로
-            <br />
-            축복해 주시면 더 없는 기쁨이 되겠습니다.
-          </div>
-        </div>
-      </Intersection>
+    <div className="flex flex-col justify-center items-center">
+      <Script
+        src="https://developers.kakao.com/sdk/js/kakao.min.js"
+        onLoad={onInitKakao}
+      />
 
-      <Intersection>
-        <div className="flex flex-col justify-center items-center mt-[32px] mb-[16px]">
-          <button
-            className="flex justify-center items-center bg-transparent border-none cursor-pointer w-[200px] h-[40px] gap-[4px] text-[13px] leading-[20px]"
-            onClick={onShareKakao}
-          >
-            <IconKakao width={20} height={20} />
-            카카오톡 공유하기
-          </button>
-          <button
-            className="flex justify-center items-center bg-transparent border-none cursor-pointer w-[200px] h-[40px] gap-[4px] text-[13px] leading-[20px]"
-            onClick={onLinkCopy}
-          >
-            <IconLink width={16} height={16} />
-            링크주소 복사하기
-          </button>
-        </div>
-      </Intersection>
-    </>
+      <DropdownMenu>
+        <DropdownMenuTrigger>
+          <IconShare />
+        </DropdownMenuTrigger>
+        <DropdownMenuContent>
+          <DropdownMenuItem onSelect={onLinkCopy}>
+            <div className="flex justify-center items-center gap-[4px]">
+              <IconLink width={16} height={16} />
+              링크주소 복사하기
+            </div>
+          </DropdownMenuItem>
+          <DropdownMenuItem onSelect={onShareKakao}>
+            <div className="flex justify-center items-center gap-[4px]">
+              <IconKakao width={20} height={20} />
+              카카오톡 공유하기
+            </div>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </div>
   );
 };
 
