@@ -24,19 +24,54 @@
 }
 
 .Toastify__toast--pending {
-  background: rgba(48, 173, 120, 0.8);
+  background: #ffffff;
   font-family: var(--font-serif);
   font-size: 0.8rem;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .Toastify__toast--success {
-  background: rgba(48, 173, 120, 0.8);
+  background: #ffffff;
   font-family: var(--font-serif);
   font-size: 0.8rem;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .Toastify__toast--error {
-  background: rgba(224, 72, 82, 0.8);
+  background: #ffffff;
   font-family: var(--font-serif);
   font-size: 0.8rem;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Toastify--animate {
+  animation-fill-mode: both;
+  animation-duration: 0.2s;
+}
+.Toastify__bounce-enter--top-center {
+  animation-name: Toastify__fadeIn;
+}
+.Toastify__bounce-exit--top-center {
+  animation-name: Toastify__fadeOut;
+}
+
+@keyframes Toastify__fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes Toastify__fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

@@ -8,6 +8,8 @@ const ToastProvider = () => {
   return (
     <ToastContainer
       hideProgressBar
+      pauseOnHover={false}
+      pauseOnFocusLoss={false}
       position="top-center"
       limit={1}
       closeButton={false}
