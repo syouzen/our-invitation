@@ -15,7 +15,7 @@ const SubHeader = () => {
 
       <Intersection className="mt-[96px] mb-[32px] text-center flex flex-col gap-[16px]">
         <div className="flex justify-center items-center">
-          <span className="font-serif_en font-bold text-[16px] leading-[24px] text-gray-900">
+          <span className="font-serif_en font-bold text-[14px] leading-[20px] text-gray-900">
             OUR WEDDING STORY
           </span>
         </div>
@@ -24,15 +24,20 @@ const SubHeader = () => {
           <span>💍</span>
         </div>
 
-        <div className="flex justify-center items-center gap-[8px]">
-          <span>최승연</span>
-          <span>·</span>
-          <span>김현아</span>
+        <div className="flex flex-col gap-[2px]">
+          <div className="flex justify-center items-center gap-[8px] text-[14px] leading-[20px]">
+            <span>최승연</span>
+            <span>그리고</span>
+            <span>김현아</span>
+          </div>
+          <div className="flex justify-center items-center gap-[8px] text-[14px] leading-[20px]">
+            <span>우리 결혼합니다</span>
+          </div>
         </div>
 
-        <div className="flex flex-col gap-[8px]">
+        <div className="flex flex-col gap-[2px]">
           <div className="text-[14px] leading-[20px] text-gray-500">
-            2025년 11월 8일 일요일 오전 11시
+            2025년 11월 8일 토요일, 낮 12시 30분
           </div>
 
           <div className="text-[14px] leading-[20px] text-gray-500">두가헌</div>

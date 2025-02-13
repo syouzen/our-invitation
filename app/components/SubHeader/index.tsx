@@ -24,12 +24,42 @@ const Header = () => {
         </div>
       </Intersection>
 
-      <div className="flex justify-center items-center my-[96px] text-gray-300">
+      <div className="flex justify-center items-center my-[48px] text-gray-300">
         <span>-</span>
       </div>
 
       <Intersection>
-        <div className="text-[16px] leading-[24px] text-gray-900 flex mt-[12px] justify-center items-center gap-[16px]">
+        <div className="text-center text-[14px] leading-[20px] text-gray-900 mb-[64px]">
+          저의 두 걸음은
+          <br />
+          그녀의 세 걸음입니다.
+          <br />
+          <br />
+          속도는 달라도 함께 걸어갈 때
+          <br />
+          가장 조화로운 수를 배웠습니다.
+          <br />
+          <br />
+          앞으로 마주할 수많은 선택과 길 위에서
+          <br />
+          우리는 언제나 서로의 최대공약수를 찾으려 합니다.
+          <br />
+          <br />
+          이제 서로를 더 빛나게 하는 하나가 되어
+          <br />
+          소중한 분들 앞에서 새로운 출발을 약속하려 합니다.
+          <br />
+          <br />
+          11월의 어느 햇살 고운 날,
+          <br />
+          귀한 걸음 하시어 따뜻한 마음으로
+          <br />
+          축복해 주시면 더 없는 기쁨이 되겠습니다.
+        </div>
+      </Intersection>
+
+      <Intersection>
+        <div className="text-[14px] leading-[20px] text-gray-900 flex mt-[12px] justify-center items-center gap-[12px]">
           <div className="w-[70px] text-end">
             <div>故 최호선</div>
             <div>육은주</div>
@@ -38,7 +68,7 @@ const Header = () => {
           <span>장남</span>
           <strong>최승연</strong>
         </div>
-        <div className="text-[16px] leading-[24px] text-gray-900 flex mt-[12px] justify-center items-center gap-[16px]">
+        <div className="text-[14px] leading-[20px] text-gray-900 flex mt-[12px] justify-center items-center gap-[12px]">
           <div className="w-[70px] text-end">
             <div>서영민</div>
           </div>
@@ -48,7 +78,7 @@ const Header = () => {
         </div>
       </Intersection>
 
-      <Intersection className="flex justify-center items-center mt-[96px] mb-[64px]">
+      <Intersection className="flex justify-center items-center mt-[64px]">
         <ContactButton />
       </Intersection>
     </>

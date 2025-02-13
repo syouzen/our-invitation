@@ -3,7 +3,7 @@
 import React, {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 
-const targetDate = '2025-11-08T11:00:00';
+const targetDate = '2025-11-08T12:30:00';
 
 const DDayCounter = () => {
   const [start, setStart] = useState<boolean>(false);
@@ -51,7 +51,7 @@ const DDayCounter = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center mb-[64px] text-[16px] leading-[24px] text-gray-900">
+    <div className="flex flex-col justify-center items-center mb-[64px] text-[14px] leading-[20px] text-gray-900">
       <span>{start ? '우리의 시작' : '결실까지'}</span>
       <span>{timeCount}</span>
     </div>
