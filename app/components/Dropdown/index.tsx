@@ -29,7 +29,7 @@ interface DropdownMenuContentProps {
 const DropdownMenuContent = ({children}: DropdownMenuContentProps) => (
   <DropdownMenuPrimitive.Content
     className={cn(
-      'flex flex-col bg-white border border-solid border-gray-200 rounded-[4px] p-[8px] box-shadow-[0px_2px_10px_rgba(0,0,0,0.1)] mt-[4px] mr-[12px]',
+      'flex flex-col bg-white border border-solid border-gray-200 rounded-[4px] p-[8px] mt-[4px] mr-[12px] mb-[4px] ml-[12px] shadow-lg',
       'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
     )}
   >
