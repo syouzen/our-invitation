@@ -15,9 +15,7 @@ const Account = () => {
     <>
       <Intersection>
         <div className="flex flex-col px-[16px] mb-[64px]">
-          <span className="text-center mb-[32px] mt-[16px]">
-            마음을 전해주세요
-          </span>
+          <span className="text-center mb-[32px]">마음을 전해주세요</span>
           <Accordion type="multiple" className="flex flex-col gap-[8px]">
             <AccordionItem value="seungyeon">
               <AccordionTrigger>신랑측 계좌번호 확인하기</AccordionTrigger>

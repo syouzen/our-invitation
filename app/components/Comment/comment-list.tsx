@@ -31,14 +31,14 @@ const CommentList = () => {
           {comments.slice(0, offset * 4).map(comment => (
             <Intersection key={comment.id} className="px-[16px]">
               <div className="flex flex-col box-border w-full text-[12px] leading-[18px] mt-[16px] border-b border-solid border-gray-200 px-[4px]">
-                <div className="flex w-full justify-between items-center text-[14px] leading-[20px]">
+                <div className="flex w-full justify-between items-center text-[12px] leading-[18px]">
                   <span className="text-gray-400">{comment.name}</span>
                   <span className="flex text-gray-400 text-[12px] leading-[18px] justify-center items-center">
                     {dayjs(comment.created_at).format('YYYY.MM.DD')}
                     <CommentDeleteButton comment={comment} />
                   </span>
                 </div>
-                <div className="mt-[16px] mb-[16px] text-[14px] leading-[20px]">
+                <div className="mt-[12px] mb-[12px] text-[14px] leading-[20px]">
                   {comment.content}
                 </div>
               </div>
