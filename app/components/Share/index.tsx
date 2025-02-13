@@ -4,7 +4,6 @@ import React from 'react';
 import {IconKakao, IconLink, IconShare} from '@/app/assets';
 import Script from 'next/script';
 import {toast, ToastOptions} from 'react-toastify';
-import Intersection from '../Intersection';
 import {
   DropdownMenu,
   DropdownMenuContent,
