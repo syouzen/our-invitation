@@ -29,7 +29,7 @@ const CommentList = () => {
       {!isLoading && (
         <>
           {comments.slice(0, offset * 4).map(comment => (
-            <Intersection key={comment.id} className="px-[4px]">
+            <Intersection key={comment.id} className="px-[16px]">
               <div className="flex flex-col box-border w-full text-[12px] leading-[18px] mt-[16px] border-b border-solid border-gray-200 px-[4px]">
                 <div className="flex w-full justify-between items-center text-[14px] leading-[20px]">
                   <span className="text-gray-400">{comment.name}</span>
