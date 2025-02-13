@@ -5,6 +5,7 @@ import Intersection from '../Intersection';
 import DDayCounter from '../DDayCounter';
 import VideoPlayer from '../VideoPlayer';
 import Image from 'next/image';
+import Calendar from '../Calendar';
 
 const SubHeader = () => {
   return (
@@ -57,7 +58,10 @@ const SubHeader = () => {
       </Intersection>
 
       <Intersection className="flex flex-row justify-evenly items-center mt-[96px]">
-        {/* <DayCounter /> */}
+        <Calendar />
+      </Intersection>
+
+      <Intersection className="flex flex-row justify-evenly items-center mt-[96px]">
         <DDayCounter />
       </Intersection>
     </>
