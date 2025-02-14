@@ -61,7 +61,7 @@ const SubHeader = () => {
         <Calendar />
       </Intersection>
 
-      <Intersection className="flex flex-row justify-evenly items-center mt-[96px]">
+      <Intersection className="flex flex-row justify-evenly items-center mt-[64px]">
         <DDayCounter />
       </Intersection>
     </>
