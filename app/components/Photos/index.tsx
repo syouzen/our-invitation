@@ -64,7 +64,7 @@ const SubHeader = () => {
     <>
       <Intersection className="flex flex-col mb-[32px]">
         <span className="text-center mt-[48px] mb-[32px]">갤러리</span>
-        <div className="grid grid-cols-3 gap-x-[6px] mb-[32px]">
+        <div className="grid grid-cols-3 gap-[6px] mb-[32px]">
           {images.slice(0, offset * 9).map((image, i) => (
             <Intersection key={i}>
               <button
