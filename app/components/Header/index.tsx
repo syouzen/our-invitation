@@ -14,7 +14,7 @@ const SubHeader = () => {
         <VideoPlayer />
       </Intersection>
 
-      <Intersection className="mt-[96px] mb-[32px] text-center flex flex-col gap-[16px]">
+      <Intersection className="mt-[160px] mb-[32px] text-center flex flex-col gap-[16px]">
         <div className="flex justify-center items-center">
           <span className="font-serif_en font-bold text-[14px] leading-[20px] text-gray-900">
             OUR WEDDING STORY
