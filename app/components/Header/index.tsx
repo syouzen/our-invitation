@@ -45,7 +45,7 @@ const SubHeader = () => {
         </div>
       </Intersection>
 
-      <Intersection className="flex justify-center items-center w-[100%] h-[400px] relative overflow-hidden">
+      <Intersection className="flex justify-center items-center w-[100%] h-[400px] relative overflow-hidden mt-[64px]">
         <Image
           priority
           src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
