@@ -21,7 +21,7 @@ const ContactButton = () => {
       }
     >
       <DialogContent title="연락하기">
-        <div className="flex flex-col w-full row-gap-[8px] mb-[16px] text-[13px] leading-[19px]">
+        <div className="flex flex-col w-full row-gap-[8px] mb-[16px] text-[14px] leading-[20px]">
           <div className="flex flex-row justify-between">
             <span>신랑 최승연</span>
             <button
@@ -29,10 +29,10 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-9058-9205')}
             >
               <a
-                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                className="flex gap-[4px] text-gray-500 text-[14px] leading-[20px] justify-center items-center"
                 href="tel:010-9058-9205"
               >
-                <IconPhone width="11px" height="11px" /> 010-9058-9205
+                <IconPhone width="13px" height="13px" /> 010-9058-9205
               </a>
             </button>
           </div>
@@ -43,16 +43,16 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-3716-4766')}
             >
               <a
-                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                className="flex gap-[4px] text-gray-500 text-[14px] leading-[20px] justify-center items-center"
                 href="tel:010-3716-4766"
               >
-                <IconPhone width="11px" height="11px" /> 010-3716-4766
+                <IconPhone width="13px" height="13px" /> 010-3716-4766
               </a>
             </button>
           </div>
         </div>
 
-        <div className="flex flex-col w-full row-gap-[8px] mb-[16px] text-[13px] leading-[19px]">
+        <div className="flex flex-col w-full row-gap-[8px] text-[14px] leading-[20px]">
           <div className="flex flex-row justify-between">
             <span>신부 김현아</span>
             <button
@@ -60,10 +60,10 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
               <a
-                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
+                className="flex gap-[4px] text-gray-500 text-[14px] leading-[20px] justify-center items-center"
                 href="tel:010-3415-7375"
               >
-                <IconPhone width="11px" height="11px" /> 010-3415-7375
+                <IconPhone width="13px" height="13px" /> 010-3415-7375
               </a>
             </button>
           </div>
@@ -74,10 +74,10 @@ const ContactButton = () => {
               onClick={() => (window.location.href = 'tel:010-3415-7375')}
             >
               <a
-                className="flex gap-[4px] text-gray-500 text-[12px] leading-[18px] justify-center items-center"
-                href="tel:010-3415-7375"
+                className="flex gap-[4px] text-gray-500 text-[14px] leading-[20px] justify-center items-center"
+                href="tel:010-6620-3020"
               >
-                <IconPhone width="11px" height="11px" /> 010-3415-7375
+                <IconPhone width="13px" height="13px" /> 010-6620-3020
               </a>
             </button>
           </div>
