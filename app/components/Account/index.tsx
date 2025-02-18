@@ -34,7 +34,8 @@ const Account = () => {
                     info={{
                       name: '어머니 육은주',
                       bank: '국민',
-                      account: '0000-0000-0000',
+                      account: '441525-01-036833',
+                      kakao: 'https://qr.kakaopay.com/Ej9STDqUk',
                     }}
                   />
                 </div>
@@ -48,15 +49,17 @@ const Account = () => {
                     info={{
                       name: '신부 김현아',
                       bank: '신한',
-                      account: '0000-0000-0000',
+                      account: '110-378-579420',
+                      kakao: 'https://qr.kakaopay.com/FZKbBV0Ib',
                     }}
                   />
                   <div className="flex w-full h-[1px] bg-gray-200 my-[12px]" />
                   <AccountInfo
                     info={{
                       name: '어머니 서영민',
-                      bank: '신한',
-                      account: '0000-0000-0000',
+                      bank: '우리',
+                      account: '1002-043-252303',
+                      kakao: 'https://qr.kakaopay.com/Ej9D8RWiE',
                     }}
                   />
                 </div>
