@@ -25,8 +25,7 @@ const Share = () => {
     window.Kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
-        imageUrl:
-          'https://lh6.googleusercontent.com/proxy/vuxyus0fYbILQcp7YGZetOZECaBMPJBE9IY4OEBmw1y47E5ULJpRjCYl9P53o-1G2OrxQg8ftdrJIEWrY69X6tdlFEOo_BbPW-TOZYtL9FAzwgz6uxDje-PWwdfMNgBrU3aA1C26zRKlI4o',
+        imageUrl: 'https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG',
         imageWidth: 600,
         imageHeight: 400,
         title: '최승연 ♥ 김현아 결혼합니다',
