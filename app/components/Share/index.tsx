@@ -79,14 +79,14 @@ const Share = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem onSelect={onLinkCopy}>
-            <div className="flex justify-center items-center gap-[4px]">
-              <IconLink width={16} height={16} />
+            <div className="flex justify-center items-center gap-[6px]">
+              <IconLink width={14} height={14} />
               링크주소 복사하기
             </div>
           </DropdownMenuItem>
           <DropdownMenuItem onSelect={onShareKakao}>
-            <div className="flex justify-center items-center gap-[4px]">
-              <IconKakao width={20} height={20} />
+            <div className="flex justify-center items-center gap-[6px]">
+              <IconKakao width={16} height={16} />
               카카오톡 공유하기
             </div>
           </DropdownMenuItem>
