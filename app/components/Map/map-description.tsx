@@ -58,14 +58,14 @@ const MapDescription = () => {
               <Link
                 href="https://naver.me/GDa2FKhZ"
                 target="_blank"
-                className="w-full text-center border border-gray-400 rounded-[8px] py-[4px] px-[8px]"
+                className="w-full text-center border border-gray-400 rounded-[4px] py-[4px] px-[8px]"
               >
                 국립현대미술관 주차장
               </Link>
               <Link
                 href="https://naver.me/FY3ycwW6"
                 target="_blank"
-                className="w-full text-center border border-gray-400 rounded-[8px] py-[4px] px-[8px]"
+                className="w-full text-center border border-gray-400 rounded-[4px] py-[4px] px-[8px]"
               >
                 경복궁 주차장
               </Link>
