@@ -2,12 +2,14 @@
 
 import React, {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
+import {cn} from '@/app/utils/tailwind-utils';
 
 const targetDate = '2025-11-08T12:30:00';
 
 const DDayCounter = () => {
   const [start, setStart] = useState<boolean>(false);
   const [timeCount, setTimeCount] = useState<string | null>(null);
+  const [timeDiff, setTimeDiff] = useState<number>(0);
 
   useEffect(() => {
     const calculateTime = () => {
@@ -41,6 +43,7 @@ const DDayCounter = () => {
           '0',
         )}초`,
       );
+      setTimeDiff(diffInSeconds);
     };
 
     calculateTime();
@@ -53,7 +56,13 @@ const DDayCounter = () => {
   return (
     <div className="flex flex-col justify-center items-center mb-[64px] text-[14px] leading-[20px] text-gray-900">
       <span>{start ? '우리의 시작' : '결실까지'}</span>
-      <span>{timeCount}</span>
+      <span
+        className={cn(
+          0 < timeDiff && timeDiff < 60 && 'text-red-500 font-semibold',
+        )}
+      >
+        {timeCount}
+      </span>
     </div>
   );
 };
