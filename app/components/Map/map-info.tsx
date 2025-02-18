@@ -5,10 +5,20 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../Dropdown';
+import Image from 'next/image';
 
 const MapInfo = () => {
   return (
     <div className="flex flex-col gap-[12px] px-[16px] my-[48px]">
+      <div className="flex justify-center items-center mb-[32px]">
+        <Image
+          src="/images/logo.png"
+          alt="두가헌"
+          width={360}
+          height={140}
+          className="px-[32px] min-w-[180px]"
+        />
+      </div>
       <div className="flex justify-between items-center">
         <div className="text-[16px] leading-[24px] flex flex-col gap-[4px]">
           <strong>💍 두가헌</strong>
@@ -38,10 +48,10 @@ const MapInfo = () => {
       >
         <a
           className="flex items-center gap-[4px] text-gray-500 text-[14px] leading-[20px]"
-          href="tel:02-6261-1616"
+          href="tel:02-3210-2100"
         >
-          <IconPhone width="12px" height="12px" />
-          02-6261-1616
+          <IconPhone width="13px" height="13px" />
+          02-3210-2100
         </a>
       </button>
     </div>

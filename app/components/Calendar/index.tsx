@@ -17,8 +17,7 @@ const days = [
   {day: 7},
   {
     day: 8,
-    className:
-      'text-white bg-gray-900 border border-solid border-gray-900 rounded-full flex justify-center items-center',
+    className: 'text-white bg-gray-900 rounded-full',
   },
   {day: 9, className: 'text-red-500'},
   {day: 10},
