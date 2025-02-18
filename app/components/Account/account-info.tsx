@@ -47,7 +47,7 @@ const AccountInfo = ({info}: AccountInfo) => {
 
       <div className="flex justify-between items-center gap-[4px]">
         <button
-          className="flex w-[100%] h-[50px] justify-center items-center cursor-pointer text-[13px] leading-[18px] gap-[4px] bg-gray-100 rounded-[8px]"
+          className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[13px] leading-[18px] gap-[4px] bg-gray-100 rounded-[8px]"
           onClick={() => onAccountCopy(info.bank, info.account)}
         >
           <IconCopy width={16} height={16} />
@@ -56,7 +56,7 @@ const AccountInfo = ({info}: AccountInfo) => {
         {!!info.kakao && (
           <Link
             className={cn(
-              'flex w-[100%] h-[50px] justify-center items-center bg-transparent border-none cursor-pointer bg-[#fae14b] rounded-[8px] p-[16px]"',
+              'flex w-[100%] h-[40px] justify-center items-center bg-transparent border-none cursor-pointer bg-[#fae14b] rounded-[8px] p-[16px]"',
             )}
             href={info.kakao}
             target="_blank"
