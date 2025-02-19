@@ -11,8 +11,8 @@ const Map = () => {
 
   const initMap = () => {
     const position = new window.naver.maps.LatLng(
-      37.5771083858247,
-      126.979935344842,
+      37.5771045665509,
+      126.9800877049,
     );
 
     map.current = new window.naver.maps.Map('naver-map', {
