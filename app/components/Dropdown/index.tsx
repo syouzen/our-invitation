@@ -12,11 +12,20 @@ const DropdownMenu = ({children}: DropdownMenuProps) => (
 
 interface DropdownMenuTriggerProps {
   children: ReactNode;
+  className?: string;
 }
 
-const DropdownMenuTrigger = ({children}: DropdownMenuTriggerProps) => (
+const DropdownMenuTrigger = ({
+  children,
+  className,
+}: DropdownMenuTriggerProps) => (
   <DropdownMenuPrimitive.Trigger asChild>
-    <button className="border-none cursor-pointer outline-color-white p-[8px] bg-gray-100 rounded-[100px]">
+    <button
+      className={cn(
+        'border-none cursor-pointer outline-color-white p-[8px] bg-gray-100 rounded-[100px]',
+        className,
+      )}
+    >
       {children}
     </button>
   </DropdownMenuPrimitive.Trigger>
@@ -24,13 +33,18 @@ const DropdownMenuTrigger = ({children}: DropdownMenuTriggerProps) => (
 
 interface DropdownMenuContentProps {
   children: ReactNode;
+  className?: string;
 }
 
-const DropdownMenuContent = ({children}: DropdownMenuContentProps) => (
+const DropdownMenuContent = ({
+  children,
+  className,
+}: DropdownMenuContentProps) => (
   <DropdownMenuPrimitive.Content
     className={cn(
       'flex flex-col bg-white border border-solid border-gray-200 rounded-[4px] p-[8px] mt-[4px] mr-[12px] mb-[4px] ml-[12px] shadow-lg',
       'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      className,
     )}
   >
     {children}
@@ -41,18 +55,23 @@ interface DropdownMenuItemProps {
   children: ReactNode;
   href?: string;
   onSelect?: () => void;
+  className?: string;
 }
 
 const DropdownMenuItem = ({
   children,
   href,
   onSelect,
+  className,
 }: DropdownMenuItemProps) => (
   <DropdownMenuPrimitive.Item asChild onSelect={onSelect}>
     <a
       href={href}
       target="_blank"
-      className="min-w-[100px] text-decoration-none text-black cursor-pointer px-[8px] py-[8px] text-[12px] leading-[18px]"
+      className={cn(
+        'min-w-[100px] text-decoration-none text-black cursor-pointer px-[8px] py-[8px] text-[12px] leading-[18px]',
+        className,
+      )}
     >
       {children}
     </a>

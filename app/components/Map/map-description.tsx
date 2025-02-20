@@ -1,4 +1,11 @@
 import Link from 'next/link';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '../Dropdown';
+import {IconMap} from '@/app/assets';
 
 const MapDescription = () => {
   return (
@@ -54,22 +61,22 @@ const MapDescription = () => {
                 만차 시 <b>국립현대미술관, 경복궁</b> 주차장 이용 부탁 드립니다.
               </span>
             </div>
-            <div className="flex gap-[4px] mt-[8px]">
-              <Link
-                href="https://naver.me/GDa2FKhZ"
-                target="_blank"
-                className="w-full text-center border border-gray-400 rounded-[4px] py-[4px] px-[8px]"
-              >
-                국립현대미술관 주차장
-              </Link>
-              <Link
-                href="https://naver.me/FY3ycwW6"
-                target="_blank"
-                className="w-full text-center border border-gray-400 rounded-[4px] py-[4px] px-[8px]"
-              >
-                경복궁 주차장
-              </Link>
-            </div>
+
+            <DropdownMenu>
+              <DropdownMenuTrigger className="mt-[4px] w-fit px-[16px] py-[8px] flex justify-center items-center">
+                <div className="text-[13px] leading-[20px] text-gray-500">
+                  <span>외부 주차장 안내</span>
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem href="https://naver.me/GDa2FKhZ">
+                  국립현대미술관 주차장
+                </DropdownMenuItem>
+                <DropdownMenuItem href="https://naver.me/FY3ycwW6">
+                  경복궁 주차장
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
         <div className="flex flex-col item-start gap-[8px]">
