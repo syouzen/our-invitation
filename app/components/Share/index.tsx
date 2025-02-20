@@ -72,25 +72,24 @@ const Share = () => {
         onLoad={onInitKakao}
       />
 
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <IconShare />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem onSelect={onLinkCopy}>
-            <div className="flex justify-center items-center gap-[6px]">
-              <IconLink width={14} height={14} />
-              링크주소 복사하기
-            </div>
-          </DropdownMenuItem>
-          <DropdownMenuItem onSelect={onShareKakao}>
-            <div className="flex justify-center items-center gap-[6px]">
-              <IconKakao width={16} height={16} />
-              카카오톡 공유하기
-            </div>
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <span className="text-center mb-[16px]  text-[12px] leading-[18px]">
+        마음을 나눠주세요
+      </span>
+
+      <div className="flex gap-[12px] mb-[8px]">
+        <button
+          className="flex justify-center items-center gap-[6px] text-[12px] leading-[18px] w-[40px] h-[40px] bg-gray-100 rounded-[100px]"
+          onClick={onLinkCopy}
+        >
+          <IconLink width={16} height={16} />
+        </button>
+        <button
+          className="flex justify-center items-center gap-[6px] text-[12px] leading-[18px] w-[40px] h-[40px] bg-gray-100 rounded-[100px]"
+          onClick={onShareKakao}
+        >
+          <IconKakao width={22} height={22} />
+        </button>
+      </div>
     </div>
   );
 };
