@@ -1,3 +1,5 @@
+'use client';
+
 import React, {useEffect, useState} from 'react';
 import {useCommentsStore} from '@/app/store';
 import {IconArrowDown, IconLoading} from '@/app/assets';
