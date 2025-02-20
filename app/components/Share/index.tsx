@@ -1,15 +1,9 @@
 'use client';
 
 import React from 'react';
-import {IconKakao, IconLink, IconShare} from '@/app/assets';
+import {IconKakao, IconLink} from '@/app/assets';
 import Script from 'next/script';
 import {toast, ToastOptions} from 'react-toastify';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '../Dropdown';
 
 const INVITATION_URL =
   process.env.NODE_ENV === 'production'

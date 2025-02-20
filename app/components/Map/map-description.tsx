@@ -1,11 +1,9 @@
-import Link from 'next/link';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../Dropdown';
-import {IconMap} from '@/app/assets';
 
 const MapDescription = () => {
   return (
