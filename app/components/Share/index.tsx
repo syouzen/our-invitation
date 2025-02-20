@@ -72,8 +72,8 @@ const Share = () => {
         onLoad={onInitKakao}
       />
 
-      <span className="text-center mb-[16px]  text-[12px] leading-[18px]">
-        마음을 나눠주세요
+      <span className="text-center mb-[16px] text-[12px] leading-[18px]">
+        공유하기
       </span>
 
       <div className="flex gap-[12px] mb-[8px]">
