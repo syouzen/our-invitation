@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,11 +13,23 @@ const MapDescription = () => {
         <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">지하철</div>
           <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
-            <div className="flex gap-[2px]">
-              <span>3호선 안국역 1번 출구, 도보 5분 거리에 위치</span>
-            </div>
-            <div className="flex gap-[2px]">
-              <span>5호선 광화문역 2번 출구, 도보 5분 거리에 위치</span>
+            <div className="flex flex-col gap-[4px]">
+              <Link
+                href="https://naver.me/5JpkWgRu"
+                target="_blank"
+                className="flex items-center"
+              >
+                <div className="bg-[-40px_0px] bg-[url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/ico_traffic_190826.png)] bg-no-repeat w-[14px] h-[14px] mr-[5px] overflow-hidden" />
+                3호선 안국역 1번 출구, 도보 약 5분 거리에 위치
+              </Link>
+              <Link
+                href="https://naver.me/5Bcj1E4C"
+                target="_blank"
+                className="flex items-center"
+              >
+                <div className="bg-[-80px_0px] bg-[url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/ico_traffic_190826.png)] bg-no-repeat w-[14px] h-[14px] mr-[5px] overflow-hidden" />
+                5호선 광화문역 2번 출구, 도보 약 5분 거리에 위치
+              </Link>
             </div>
           </div>
         </div>
@@ -24,18 +37,38 @@ const MapDescription = () => {
           <div className="font-bold text-[16px] leading-[24px]">버스</div>
           <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
             <div className="flex gap-[2px]">
-              <span>법련사 정류장, 도보 1분 거리에 위치</span>
+              <Link
+                href="https://naver.me/GWegvO0b"
+                target="_blank"
+                className="flex items-center"
+              >
+                법련사 정류장, 도보 약 1분 거리에 위치
+              </Link>
             </div>
-            <div className="flex gap-[4px]">
-              <span>*</span>
+            <div className="flex gap-[4px] items-center">
+              <div>*</div>
+              <div className="bg-[-330px_-410px] bg-[url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/ico_traffic_190826.png)] bg-no-repeat w-[26px] h-[16px] overflow-hidden" />
               <span>종로 11번 버스</span>
             </div>
+            <div className="my-[2px]" />
             <div className="flex gap-[2px]">
-              <span>덕성여중고 정류장, 도보 3분 거리에 위치</span>
+              <Link
+                href="https://naver.me/G65eGJfJ"
+                target="_blank"
+                className="flex items-center"
+              >
+                덕성여중고 정류장, 도보 약 3분 거리에 위치
+              </Link>
             </div>
-            <div className="flex gap-[4px]">
-              <span>*</span>
-              <span>171, 272, 401, 406, 704, 710, 7022, 7025, 8111번 버스</span>
+            <div className="flex gap-[4px] items-center">
+              <div>*</div>
+              <div className="bg-[0px_-410px] bg-[url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/ico_traffic_190826.png)] bg-no-repeat w-[26px] h-[16px] overflow-hidden" />
+              <span>171, 272, 401, 406, 704, 710번 버스</span>
+            </div>
+            <div className="flex gap-[4px] items-center">
+              <div>*</div>
+              <div className="bg-[-60px_-410px] bg-[url(//t1.daumcdn.net/localimg/localimages/07/2018/pc/ico_traffic_190826.png)] bg-no-repeat w-[26px] h-[16px] overflow-hidden" />
+              <span>7022, 7025, 8111번 버스</span>
             </div>
           </div>
         </div>
