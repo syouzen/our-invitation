@@ -19,7 +19,13 @@ const ContactButton = () => {
         <AccordionTrigger>신랑측 연락하기</AccordionTrigger>
         <AccordionContent>
           <div className="flex flex-col">
-            <ContactInfo info={{name: '신랑 최승연', phone: '010-9058-9205'}} />
+            <ContactInfo
+              info={{
+                name: '신랑 최승연',
+                phone: '010-9058-9205',
+                kakao: 'http://qr.kakao.com/talk/jLpCGPQF_V6pa0c638zgxNaLGrE-',
+              }}
+            />
             <div className="flex w-full h-[1px] bg-gray-200 my-[12px]" />
             <ContactInfo
               info={{name: '어머니 육은주', phone: '010-3716-4766'}}

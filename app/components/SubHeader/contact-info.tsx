@@ -1,12 +1,13 @@
 'use client';
 
-import {IconMessage, IconPhone} from '@/app/assets';
+import {IconKakao, IconMessage, IconPhone} from '@/app/assets';
 import Link from 'next/link';
 
 type ContactInfo = {
   info: {
     name: string;
     phone: string;
+    kakao?: string;
   };
 };
 
@@ -24,19 +25,28 @@ const ContactInfo = ({info}: ContactInfo) => {
 
       <div className="flex justify-between items-center gap-[4px]">
         <Link
-          className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[13px] leading-[18px] gap-[4px] bg-gray-100 rounded-[8px]"
+          className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[12px] leading-[18px] gap-[4px] bg-gray-100 rounded-[8px]"
           href={`tel:${info.phone}`}
         >
-          <IconPhone width={16} height={16} />
+          <IconPhone width={14} height={14} />
           전화하기
         </Link>
         <Link
-          className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[13px] leading-[18px] gap-[4px] bg-gray-100 rounded-[8px]"
+          className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[12px] leading-[18px] gap-[4px] bg-gray-100 rounded-[8px]"
           href={`sms:${info.phone}`}
         >
-          <IconMessage width={16} height={16} />
+          <IconMessage width={14} height={14} />
           문자하기
         </Link>
+        {!!info.kakao && (
+          <Link
+            className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[12px] leading-[18px] gap-[4px] bg-[#fee500] rounded-[8px]"
+            href={info.kakao}
+          >
+            <IconKakao width={16} height={16} />
+            카카오톡
+          </Link>
+        )}
       </div>
     </div>
   );
