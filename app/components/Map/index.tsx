@@ -37,7 +37,7 @@ const Map = () => {
           onLoad={initMap}
         />
         <div className="w-full h-[250px]">
-          <div id="naver-map" className="w-full h-full"></div>
+          <div id="naver-map" className="w-full h-full z-0"></div>
         </div>
       </Intersection>
 

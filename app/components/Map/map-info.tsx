@@ -5,20 +5,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '../Dropdown';
-import Image from 'next/image';
+import MapGallary from './map-gallary';
 
 const MapInfo = () => {
   return (
     <div className="flex flex-col gap-[12px] px-[16px] my-[48px]">
-      <div className="flex justify-center items-center mb-[32px]">
-        <Image
-          src="/images/logo.png"
-          alt="두가헌"
-          width={360}
-          height={140}
-          className="px-[32px] min-w-[180px]"
-        />
-      </div>
+      <MapGallary />
+
       <div className="flex justify-between items-center">
         <div className="text-[16px] leading-[24px] flex flex-col gap-[4px]">
           <strong>💍 두가헌</strong>
