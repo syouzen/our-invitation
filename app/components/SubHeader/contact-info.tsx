@@ -1,6 +1,5 @@
 'use client';
 
-import {toast, ToastOptions} from 'react-toastify';
 import {IconMessage, IconPhone} from '@/app/assets';
 import Link from 'next/link';
 
@@ -12,24 +11,6 @@ type ContactInfo = {
 };
 
 const ContactInfo = ({info}: ContactInfo) => {
-  const onContactCopy = async (phone: string) => {
-    const toastId = 'unique-contact-copy-toast-id';
-    if (toast.isActive(toastId)) return;
-
-    const options: ToastOptions = {
-      toastId,
-      icon: false,
-    };
-
-    try {
-      await navigator.clipboard.writeText(`${phone}`);
-      toast.success('전화번호를 복사했어요', options);
-    } catch (e) {
-      console.error(e);
-      toast.error('전화번호 복사에 실패했어요', options);
-    }
-  };
-
   return (
     <div className="flex flex-col gap-[12px] py-[8px]">
       <div className="mb-[6px] flex justify-between items-center">
