@@ -1,4 +1,4 @@
-import {IconMap, IconPhone} from '@/app/assets';
+import {IconMap, IconPhone2} from '@/app/assets';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -25,35 +25,36 @@ const MapInfo = () => {
           <p>서울 종로구 삼청로 14</p>
         </div>
 
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <IconMap />
-          </DropdownMenuTrigger>
-          <DropdownMenuContent>
-            <DropdownMenuItem href="https://tmap.life/754d0653">
-              티맵
-            </DropdownMenuItem>
-            <DropdownMenuItem href="https://naver.me/5vIYBzpn">
-              네이버 지도
-            </DropdownMenuItem>
-            <DropdownMenuItem href="https://kko.kakao.com/YQjI3gSmm7">
-              카카오 지도
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div className="flex gap-[4px]">
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <IconPhone2 />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem href="tel:02-3210-2100" target="_self">
+                tel: 02-3210-2100
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <DropdownMenu>
+            <DropdownMenuTrigger>
+              <IconMap />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuItem href="https://tmap.life/754d0653">
+                티맵
+              </DropdownMenuItem>
+              <DropdownMenuItem href="https://naver.me/5vIYBzpn">
+                네이버 지도
+              </DropdownMenuItem>
+              <DropdownMenuItem href="https://kko.kakao.com/YQjI3gSmm7">
+                카카오 지도
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </div>
-      <button
-        className="text-gray-500 text-[14px] leading-[20px] bg-white cursor-pointer w-fit"
-        onClick={() => (window.location.href = 'tel:02-6261-1616')}
-      >
-        <a
-          className="flex items-center gap-[4px] text-gray-500 text-[14px] leading-[20px]"
-          href="tel:02-3210-2100"
-        >
-          <IconPhone width="13px" height="13px" />
-          02-3210-2100
-        </a>
-      </button>
     </div>
   );
 };

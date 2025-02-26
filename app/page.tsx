@@ -2,7 +2,6 @@ import {
   Account,
   Comment,
   Header,
-  Intersection,
   Map,
   Photos,
   Share,

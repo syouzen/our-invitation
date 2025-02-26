@@ -56,6 +56,7 @@ interface DropdownMenuItemProps {
   href?: string;
   onSelect?: () => void;
   className?: string;
+  target?: string;
 }
 
 const DropdownMenuItem = ({
@@ -63,11 +64,12 @@ const DropdownMenuItem = ({
   href,
   onSelect,
   className,
+  target = '_blank',
 }: DropdownMenuItemProps) => (
   <DropdownMenuPrimitive.Item asChild onSelect={onSelect}>
     <a
       href={href}
-      target="_blank"
+      target={target}
       className={cn(
         'min-w-[100px] text-decoration-none text-black cursor-pointer px-[8px] py-[8px] text-[12px] leading-[18px]',
         className,
