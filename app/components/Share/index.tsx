@@ -78,7 +78,7 @@ const Share = () => {
           <IconLink width={16} height={16} />
         </button>
         <button
-          className="flex justify-center items-center gap-[6px] text-[12px] leading-[18px] w-[40px] h-[40px] bg-gray-100 rounded-[100px]"
+          className="flex justify-center items-center gap-[6px] text-[12px] leading-[18px] w-[40px] h-[40px] bg-[#fee500] rounded-[100px]"
           onClick={onShareKakao}
         >
           <IconKakao width={22} height={22} />
