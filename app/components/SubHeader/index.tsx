@@ -73,7 +73,7 @@ const Header = () => {
         </div>
       </Intersection>
 
-      <Intersection className="flex justify-center items-center mt-[64px]">
+      <Intersection className="flex justify-center items-center mt-[64px] w-full">
         <ContactButton />
       </Intersection>
     </>
