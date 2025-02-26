@@ -42,6 +42,7 @@ const ContactInfo = ({info}: ContactInfo) => {
           <Link
             className="flex w-[100%] h-[40px] justify-center items-center cursor-pointer text-[12px] leading-[18px] gap-[4px] bg-[#fee500] rounded-[8px]"
             href={info.kakao}
+            target="_blank"
           >
             <IconKakao width={16} height={16} />
             카카오톡
