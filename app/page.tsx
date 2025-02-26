@@ -41,16 +41,14 @@ export default function Home() {
           <Share />
         </section>
 
-        <Intersection>
-          <footer className="flex flex-col items-center justify-center text-[10px] mt-[32px] mb-[16px]">
-            <span>
-              Developed by <b>seungyeon</b>
-            </span>
-            <span>
-              Designed by <b>hyuna</b>
-            </span>
-          </footer>
-        </Intersection>
+        <footer className="flex flex-col items-center justify-center text-[10px] mt-[32px] mb-[16px]">
+          <span>
+            Developed by <b>seungyeon</b>
+          </span>
+          <span>
+            Designed by <b>hyuna</b>
+          </span>
+        </footer>
       </main>
     </div>
   );
