@@ -39,8 +39,8 @@ const VideoPlayer = () => {
           webkit-playsinline="webkit-playsinline"
         >
           <source
-            src="https://kr.object.ncloudstorage.com/zen-bucket/our-invitation.mp4"
-            type="video/mp4"
+            src="https://kr.object.ncloudstorage.com/zen-bucket/this_happy_madness.mp3"
+            type="audio/mp3"
           />
         </video>
       </div>
