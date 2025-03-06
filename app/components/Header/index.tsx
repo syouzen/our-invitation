@@ -6,15 +6,20 @@ import DDayCounter from '../DDayCounter';
 import VideoPlayer from '../VideoPlayer';
 import Image from 'next/image';
 import Calendar from '../Calendar';
+import Music from '../VideoPlayer/music';
 
 const SubHeader = () => {
   return (
     <>
-      <Intersection className="mb-[96px]">
+      <Intersection className="mb-[48px]">
         <VideoPlayer />
       </Intersection>
 
-      <Intersection className="mt-[160px] mb-[32px] text-center flex flex-col gap-[16px]">
+      <Intersection className="mb-[48px]">
+        <Music />
+      </Intersection>
+
+      <Intersection className="mb-[32px] text-center flex flex-col gap-[16px]">
         <div className="flex justify-center items-center">
           <span className="font-serif_en font-bold text-[14px] leading-[20px] text-gray-900">
             OUR WEDDING STORY
