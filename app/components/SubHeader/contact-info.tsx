@@ -1,6 +1,7 @@
 'use client';
 
 import {IconKakao, IconMessage, IconPhone} from '@/app/assets';
+import useToast from '@/app/hook/useToast';
 import Link from 'next/link';
 
 type ContactInfo = {
@@ -12,15 +13,30 @@ type ContactInfo = {
 };
 
 const ContactInfo = ({info}: ContactInfo) => {
+  const {showToast} = useToast();
+
+  const onContactCopy = async (phone: string) => {
+    try {
+      await navigator.clipboard.writeText(phone);
+      showToast('전화번호를 복사했어요');
+    } catch (e) {
+      console.error(e);
+      showToast('전화번호 복사에 실패했어요');
+    }
+  };
+
   return (
     <div className="flex flex-col gap-[12px] py-[8px]">
       <div className="mb-[6px] flex justify-between items-center">
         <span>
           <b>{info.name}</b>
         </span>
-        <div>
-          <span>{info.phone}</span>
-        </div>
+        <button
+          className="bg-transparent"
+          onClick={() => onContactCopy(info.phone)}
+        >
+          {info.phone}
+        </button>
       </div>
 
       <div className="flex justify-between items-center gap-[4px]">
