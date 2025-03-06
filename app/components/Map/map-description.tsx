@@ -86,7 +86,7 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                모든 자리는 <b>지정석</b>입니다.
+                일부 가족/친지 지정석이 있습니다.
               </span>
             </div>
             <div className="flex gap-[4px]">
