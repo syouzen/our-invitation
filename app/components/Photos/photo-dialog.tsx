@@ -54,7 +54,10 @@ const PhotoDialog = ({
           <div className="flex justify-center items-center gap-[32px]">
             <button
               disabled={index === 0}
-              className="border-none cursor-pointer bg-transparent"
+              className={cn(
+                'border-none cursor-pointer bg-transparent',
+                index === 0 && 'opacity-30',
+              )}
               onClick={onPrev}
             >
               <IconArrowLeft width="2em" height="2em" />
@@ -67,7 +70,10 @@ const PhotoDialog = ({
             </button>
             <button
               disabled={index === images.length - 1}
-              className="border-none cursor-pointer bg-transparent"
+              className={cn(
+                'border-none cursor-pointer bg-transparent',
+                index === images.length - 1 && 'opacity-30',
+              )}
               onClick={onNext}
             >
               <IconArrowRight width="2em" height="2em" />
