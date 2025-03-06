@@ -9,7 +9,7 @@ import MapGallary from './map-gallary';
 
 const MapInfo = () => {
   return (
-    <div className="flex flex-col gap-[12px] px-[16px] mt-[32px] mb-[64px]">
+    <div className="flex flex-col gap-[12px] px-[16px] mt-[32px] mb-[48px]">
       <MapGallary />
 
       <div className="flex flex-col justify-center items-center gap-[16px]">

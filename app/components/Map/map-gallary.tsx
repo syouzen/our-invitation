@@ -13,7 +13,7 @@ const MapGallary = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center mb-[16px]">
+      <div className="flex justify-center items-center">
         <Image
           src="/images/logo.png"
           alt="두가헌"
