@@ -3,7 +3,7 @@
 import React from 'react';
 import {IconKakao, IconLink} from '@/app/assets';
 import Script from 'next/script';
-import {toast, ToastOptions} from 'react-toastify';
+import useToast from '@/app/hook/useToast';
 
 const INVITATION_URL =
   process.env.NODE_ENV === 'production'
@@ -11,6 +11,8 @@ const INVITATION_URL =
     : 'http://localhost:3000/';
 
 const Share = () => {
+  const {showToast} = useToast();
+
   const onInitKakao = () => {
     window.Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY);
   };
@@ -42,20 +44,12 @@ const Share = () => {
   };
 
   const onLinkCopy = async () => {
-    const toastId = 'unique-link-toast-id';
-    if (toast.isActive(toastId)) return;
-
-    const options: ToastOptions = {
-      toastId,
-      icon: false,
-    };
-
     try {
       await navigator.clipboard.writeText(INVITATION_URL);
-      toast.success('링크를 복사했어요', options);
+      showToast('링크를 복사했어요');
     } catch (e) {
       console.error(e);
-      toast.error('링크 복사를 실패했어요', options);
+      showToast('링크 복사를 실패했어요');
     }
   };
 

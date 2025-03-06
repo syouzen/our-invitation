@@ -3,16 +3,17 @@
 import {useState} from 'react';
 import {Dialog, DialogContent} from '@/app/components';
 import {IconLoading, IconMessage} from '@/app/assets';
-import {toast, ToastOptions} from 'react-toastify';
 
 import {useCommentsStore} from '@/app/store';
 import {cn} from '@/app/utils/tailwind-utils';
+import useToast from '@/app/hook/useToast';
 
 const CommentDeleteButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const {createComment} = useCommentsStore();
+  const {showToast} = useToast();
 
   const onRegist = async (e: React.FormEvent<HTMLFormElement>) => {
     if (isLoading) return;
@@ -24,16 +25,8 @@ const CommentDeleteButton = () => {
       content: {value: string};
     };
 
-    const toastId = 'unique-create-toast-id';
-    if (toast.isActive(toastId)) return;
-
-    const options: ToastOptions = {
-      toastId,
-      icon: false,
-    };
-
     if (!target.content.value) {
-      toast.error('마음을 적어주세요', options);
+      showToast('마음을 적어주세요');
       return;
     }
 
@@ -44,11 +37,11 @@ const CommentDeleteButton = () => {
         target.password.value,
         target.content.value.replace(/\n\r?/g, '\n\r'),
       );
-      toast.success('마음을 남겼어요', options);
+      showToast('마음을 남겼어요');
       setIsOpen(false);
     } catch (e) {
       console.error(e);
-      toast.error('마음 남기기에 실패했어요', options);
+      showToast('마음 남기기에 실패했어요');
     } finally {
       setIsLoading(false);
     }

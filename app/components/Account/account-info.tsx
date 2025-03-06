@@ -1,9 +1,9 @@
 'use client';
 
-import {toast, ToastOptions} from 'react-toastify';
 import {IconCopy} from '@/app/assets';
 import Link from 'next/link';
 import {cn} from '@/app/utils/tailwind-utils';
+import useToast from '@/app/hook/useToast';
 
 type AccountInfo = {
   info: {
@@ -15,21 +15,15 @@ type AccountInfo = {
 };
 
 const AccountInfo = ({info}: AccountInfo) => {
+  const {showToast} = useToast();
+
   const onAccountCopy = async (bank: string, account: string) => {
-    const toastId = 'unique-accout-copy-toast-id';
-    if (toast.isActive(toastId)) return;
-
-    const options: ToastOptions = {
-      toastId,
-      icon: false,
-    };
-
     try {
       await navigator.clipboard.writeText(`${bank} ${account}`);
-      toast.success('계좌번호를 복사했어요', options);
+      showToast('계좌번호를 복사했어요');
     } catch (e) {
       console.error(e);
-      toast.error('계좌번호 복사에 실패했어요', options);
+      showToast('계좌번호 복사에 실패했어요');
     }
   };
 

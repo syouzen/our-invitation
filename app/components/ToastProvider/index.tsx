@@ -13,7 +13,7 @@ const ToastProvider = () => {
       position="top-center"
       limit={1}
       closeButton={false}
-      autoClose={1000}
+      autoClose={2000}
     />
   );
 };

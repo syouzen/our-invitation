@@ -15,12 +15,16 @@
   font-size: 14px;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
   min-height: 44px;
   text-align: center;
   width: fit-content;
   border-radius: 100px;
   padding: 4px 8px;
+  background: #ffffff;
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  color: #000000;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .Toastify__toast--pending {
@@ -70,8 +74,10 @@
 @keyframes Toastify__fadeIn {
   0% {
     opacity: 0;
+    transform: translateY(-100%);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }

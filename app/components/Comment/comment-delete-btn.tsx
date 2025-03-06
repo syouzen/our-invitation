@@ -3,18 +3,19 @@
 import {useState} from 'react';
 import {Dialog, DialogContent} from '@/app/components';
 import {IconClose, IconLoading} from '@/app/assets';
-import {toast, ToastOptions} from 'react-toastify';
 
 import {useCommentsStore} from '@/app/store';
 
 import {Comment} from '@/app/type';
 import {cn} from '@/app/utils/tailwind-utils';
+import useToast from '@/app/hook/useToast';
 
 const CommentDeleteButton = ({comment}: {comment: Comment}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
   const {deleteComment} = useCommentsStore();
+  const {showToast} = useToast();
 
   const onDelete = async (e: React.FormEvent<HTMLFormElement>) => {
     if (isLoading) return;
@@ -24,22 +25,14 @@ const CommentDeleteButton = ({comment}: {comment: Comment}) => {
       password: {value: string};
     };
 
-    const toastId = 'unique-delete-toast-id';
-    if (toast.isActive(toastId)) return;
-
-    const options: ToastOptions = {
-      toastId,
-      icon: false,
-    };
-
     try {
       setIsLoading(true);
       await deleteComment(comment.id, target.password.value);
-      toast.success('보내신 마음을 지웠어요', options);
+      showToast('보내신 마음을 지웠어요');
       setIsOpen(false);
     } catch (e) {
       console.error(e);
-      toast.error('마음 지우기에 실패했어요', options);
+      showToast('마음 지우기에 실패했어요');
     } finally {
       setIsLoading(false);
     }
