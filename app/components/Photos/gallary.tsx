@@ -6,6 +6,7 @@ import Image from 'next/image';
 import {IconArrowDown} from '@/app/assets';
 
 import dynamic from 'next/dynamic';
+import {cn} from '@/app/utils/tailwind-utils';
 
 const PhotoDialog = dynamic(() => import('./photo-dialog'), {
   ssr: false,
@@ -14,9 +15,10 @@ const PhotoDialog = dynamic(() => import('./photo-dialog'), {
 interface GallaryProps {
   images: string[];
   noDialog?: boolean;
+  className?: string;
 }
 
-const Gallary = ({images, noDialog = false}: GallaryProps) => {
+const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
   const [offset, setOffset] = useState(1);
 
   const [open, setOpen] = useState(false);
@@ -41,7 +43,7 @@ const Gallary = ({images, noDialog = false}: GallaryProps) => {
 
   return (
     <>
-      <div className="grid grid-cols-3 gap-[6px] mb-[32px]">
+      <div className={cn('grid grid-cols-3 gap-[6px] mb-[32px]', className)}>
         {images.slice(0, offset * 9).map((image, i) => (
           <Intersection key={i}>
             <button

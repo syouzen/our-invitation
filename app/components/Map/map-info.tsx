@@ -9,16 +9,16 @@ import MapGallary from './map-gallary';
 
 const MapInfo = () => {
   return (
-    <div className="flex flex-col gap-[12px] px-[16px] my-[48px]">
+    <div className="flex flex-col gap-[12px] px-[16px] mt-[32px] mb-[64px]">
       <MapGallary />
 
-      <div className="flex justify-between items-center">
-        <div className="text-[16px] leading-[24px] flex flex-col gap-[4px]">
-          <strong>💍 두가헌</strong>
-          <p>서울 종로구 삼청로 14</p>
+      <div className="flex flex-col justify-center items-center gap-[16px]">
+        <div className="text-[16px] leading-[24px] flex flex-col gap-[4px] justify-center items-center">
+          <strong>두가헌</strong>
+          <span>서울 종로구 삼청로 14</span>
         </div>
 
-        <div className="flex gap-[4px]">
+        <div className="flex gap-[8px]">
           <DropdownMenu>
             <DropdownMenuTrigger>
               <IconPhone2 />

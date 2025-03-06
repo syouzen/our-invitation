@@ -23,7 +23,7 @@ const MapGallary = () => {
         />
       </div>
 
-      <Gallary images={images} noDialog />
+      <Gallary images={images} noDialog className="mb-[16px]" />
     </>
   );
 };
