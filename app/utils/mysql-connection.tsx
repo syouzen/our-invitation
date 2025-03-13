@@ -6,6 +6,7 @@ const pool = createPool({
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
   port: parseInt(process.env.MYSQL_PORT!, 10),
+  timezone: 'Z',
 });
 
 pool.getConnection((err, conn) => {

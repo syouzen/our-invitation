@@ -36,7 +36,9 @@ const CommentList = () => {
                 <div className="flex w-full justify-between items-center text-[14px] leading-[20px]">
                   <span className="text-gray-400">{comment.name}</span>
                   <span className="flex text-gray-400 text-[12px] leading-[18px] justify-center items-center">
-                    {dayjs(comment.created_at).format('YYYY.MM.DD')}
+                    {dayjs(comment.created_at)
+                      .add(-9, 'hours')
+                      .format('YYYY.MM.DD')}
                     <CommentDeleteButton comment={comment} />
                   </span>
                 </div>
