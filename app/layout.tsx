@@ -41,7 +41,12 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={cn(sans.variable, serif.variable, serif_en.variable)}
+      className={cn(
+        sans.variable,
+        serif.variable,
+        serif_en.variable,
+        'scrollbar-hide',
+      )}
     >
       <PreloadResources />
       <body>

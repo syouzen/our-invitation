@@ -3954,6 +3954,7 @@ __metadata:
     react-dom: 18.3.1
     react-toastify: ^10.0.6
     tailwind-merge: ^3.0.1
+    tailwind-scrollbar-hide: ^2.0.0
     tailwindcss: ^3.4.1
     tailwindcss-animate: ^1.0.7
     typescript: ^5
@@ -4998,6 +4999,15 @@ __metadata:
   version: 3.0.1
   resolution: "tailwind-merge@npm:3.0.1"
   checksum: a058ca9d4d1c954c68acfdd6be375023e7d6614234920f9b710562fbabb2038c5a11c9a01f1d3a77051071343489aca1bd51909caad305b3fd3b1875683ee0c9
+  languageName: node
+  linkType: hard
+
+"tailwind-scrollbar-hide@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "tailwind-scrollbar-hide@npm:2.0.0"
+  peerDependencies:
+    tailwindcss: ">=3.0.0 || >= 4.0.0 || >= 4.0.0-beta.8 || >= 4.0.0-alpha.20"
+  checksum: 47d42e672f644609548b5a08f9324db5d773c211a034a33fe83796debd9d5fd6773fe986307138c7af0252073302b23653543de85e0b9843a5f181817f690821
   languageName: node
   linkType: hard
 
