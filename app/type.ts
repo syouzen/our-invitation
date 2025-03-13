@@ -3,4 +3,5 @@ export interface Comment {
   name: string;
   content: string;
   created_at: Date;
+  password: string;
 }

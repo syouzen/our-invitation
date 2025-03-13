@@ -1,25 +1,29 @@
 import {NextResponse} from 'next/server';
-import {supabase} from '@/app/utils';
+import executeQuery from '@/app/utils/mysql-connection';
+import {Comment} from '@/app/type';
 
 export async function DELETE(
   request: Request,
   context: {params: Promise<{id: string}>},
 ) {
-  const {id} = await context.params;
-  const {password} = await request.json();
+  try {
+    const {id} = await context.params;
+    const {password} = await request.json();
 
-  const {data} = await supabase
-    .from('comment')
-    .select('password')
-    .eq('id', id)
-    .single();
+    // 비밀번호 검증
+    const selectSql = 'SELECT password FROM comment WHERE id = ?';
+    const selectData = (await executeQuery(selectSql, [id])) as Comment[];
 
-  if (data && data.password === password) {
-    const {error} = await supabase.from('comment').delete().eq('id', id);
+    if (selectData.length > 0 && selectData[0].password === password) {
+      // 댓글 삭제
+      const deleteSql = 'DELETE FROM comment WHERE id = ?';
+      await executeQuery(deleteSql, [id]);
 
-    if (error) return NextResponse.json({error: error.message}, {status: 400});
-    return new NextResponse(null, {status: 204});
-  } else {
-    return NextResponse.json({error: 'invalid password'}, {status: 400});
+      return new NextResponse(null, {status: 204});
+    } else {
+      return NextResponse.json({error: 'invalid password'}, {status: 400});
+    }
+  } catch (error) {
+    return NextResponse.json({error: error}, {status: 400});
   }
 }

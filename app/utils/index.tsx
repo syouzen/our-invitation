@@ -1,1 +1,1 @@
-export * from './supabase-client';
+export * from './mysql-connection';
