@@ -3124,6 +3124,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-mobile@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "is-mobile@npm:5.0.0"
+  checksum: 426f6bacfffa4166e9af49a915f3389d27c4cbc5cdce1585c3f5f11a0c2983c6d3d2c739985c32f948c0fe4f6b66fc88f71d8f79802608be232d799a27615a37
+  languageName: node
+  linkType: hard
+
 "is-number-object@npm:^1.1.1":
   version: 1.1.1
   resolution: "is-number-object@npm:1.1.1"
@@ -3947,6 +3954,7 @@ __metadata:
     eslint: ^8
     eslint-config-next: 15.0.1
     framer-motion: ^11.11.10
+    is-mobile: ^5.0.0
     mysql2: ^3.13.0
     next: 15.0.1
     postcss: ^8.5.2
