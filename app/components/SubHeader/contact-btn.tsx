@@ -51,7 +51,11 @@ const ContactButton = () => {
             />
             <div className="flex w-full h-[1px] bg-gray-200 my-[12px]" />
             <ContactInfo
-              info={{name: '어머니 서영민', phone: '010-6620-3020'}}
+              info={{
+                name: '어머니 서영민',
+                phone: '010-6620-3020',
+                kakao: 'http://qr.kakao.com/talk/qtR1tv.mRnsETwaFCmTtyugpWFY-',
+              }}
             />
           </div>
         </AccordionContent>
