@@ -4,7 +4,6 @@ import {IconCopy} from '@/app/assets';
 import Link from 'next/link';
 import {cn} from '@/app/utils/tailwind-utils';
 import useToast from '@/app/hook/useToast';
-import {isMobile} from 'is-mobile';
 
 type AccountInfo = {
   info: {
@@ -48,7 +47,7 @@ const AccountInfo = ({info}: AccountInfo) => {
           <IconCopy width={14} height={14} />
           계좌번호 복사하기
         </button>
-        {!!info.kakao && isMobile() && (
+        {!!info.kakao && (
           <Link
             className={cn(
               'flex w-[100%] h-[40px] justify-center items-center bg-transparent border-none cursor-pointer bg-[#fae14b] rounded-[8px] p-[16px]',
