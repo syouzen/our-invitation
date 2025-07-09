@@ -5,12 +5,8 @@ import Intersection from '../Intersection';
 import Image from 'next/image';
 import {IconArrowDown} from '@/app/assets';
 
-import dynamic from 'next/dynamic';
 import {cn} from '@/app/utils/tailwind-utils';
-
-const PhotoDialog = dynamic(() => import('./photo-dialog'), {
-  ssr: false,
-});
+import PhotoDialog from './photo-dialog';
 
 interface GallaryProps {
   images: string[];
@@ -67,13 +63,12 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
         )}
       </div>
 
-      {open && (
-        <PhotoDialog
-          images={images}
-          index={index}
-          onClose={() => setOpen(false)}
-        />
-      )}
+      <PhotoDialog
+        open={open}
+        images={images}
+        index={index}
+        onOpenChange={setOpen}
+      />
     </>
   );
 };

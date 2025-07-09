@@ -1,44 +1,56 @@
 'use client';
 
-import {createPortal} from 'react-dom';
-import {RemoveScroll} from 'react-remove-scroll';
 import {IconArrowLeft, IconArrowRight} from '@/app/assets';
 import {cn} from '@/app/utils/tailwind-utils';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import SwiperCore from 'swiper';
 import {Zoom} from 'swiper/modules';
 import 'swiper/css';
 import FitImage from './fit-image';
+import * as DialogPrimitive from '@radix-ui/react-dialog';
 
 type PhotoDialogProps = {
+  open: boolean;
   images: string[];
   index: number;
-  onClose: () => void;
+  onOpenChange: (open: boolean) => void;
 };
 
-const PhotoDialog = ({images, index, onClose}: PhotoDialogProps) => {
+const PhotoDialog = ({open, images, index, onOpenChange}: PhotoDialogProps) => {
   const [swiper, setSwiper] = useState<SwiperCore>();
   const [currentImgIndex, setCurrentImgIndex] = useState(index);
 
-  return createPortal(
-    <RemoveScroll enabled={true} removeScrollBar allowPinchZoom>
-      <div
-        className={cn(
-          'z-999 w-full h-full fixed inset-0 bg-white/90 backdrop-blur-sm transition-opacity duration-300',
-        )}
-      />
+  useEffect(() => {
+    if (open) {
+      setCurrentImgIndex(index);
+    }
+  }, [index, open]);
 
-      <div
+  return (
+    <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
+      <DialogPrimitive.Overlay
         className={cn(
-          'flex flex-col w-full h-full fixed inset-0 overflow-y-auto sm:max-w-[600px] mx-auto',
+          'fixed inset-0 z-51 bg-white/80 backdrop-blur-sm',
+          'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
         )}
+        onClick={() => onOpenChange(false)}
+      />
+      <DialogPrimitive.Content
+        className={cn(
+          'container w-full z-50 sm:max-w-[600px]',
+          'fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]',
+          'duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]',
+        )}
+        onPointerDownOutside={e => e.preventDefault()}
       >
+        <DialogPrimitive.Title className="sr-only" />
+        <DialogPrimitive.Description className="sr-only" />
         <div className="flex-1 relative">
           <Swiper
             initialSlide={index}
             onSwiper={setSwiper}
-            className="w-full h-full"
+            className="h-[calc(100vh-128px)] mb-[20px]"
             slidesPerView={1}
             spaceBetween={0}
             onSlideChange={swiper => setCurrentImgIndex(swiper.activeIndex)}
@@ -78,7 +90,7 @@ const PhotoDialog = ({images, index, onClose}: PhotoDialogProps) => {
             </button>
             <button
               className="flex justify-center items-center bg-transparent border-none cursor-pointer text-[16px] leading-[24px] pb-[5px]"
-              onClick={onClose}
+              onClick={() => onOpenChange(false)}
             >
               닫기
             </button>
@@ -97,9 +109,8 @@ const PhotoDialog = ({images, index, onClose}: PhotoDialogProps) => {
             </button>
           </div>
         </div>
-      </div>
-    </RemoveScroll>,
-    document.body,
+      </DialogPrimitive.Content>
+    </DialogPrimitive.Root>
   );
 };
 
