@@ -33,14 +33,6 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
     setOpen(true);
   };
 
-  const onPrev = () => {
-    setIndex(prev => prev - 1);
-  };
-
-  const onNext = () => {
-    setIndex(prev => prev + 1);
-  };
-
   return (
     <>
       <div className={cn('grid grid-cols-3 gap-[6px] mb-[32px]', className)}>
@@ -75,14 +67,13 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
         )}
       </div>
 
-      <PhotoDialog
-        open={open}
-        images={images}
-        index={index}
-        onPrev={onPrev}
-        onNext={onNext}
-        onClose={() => setOpen(false)}
-      />
+      {open && (
+        <PhotoDialog
+          images={images}
+          index={index}
+          onClose={() => setOpen(false)}
+        />
+      )}
     </>
   );
 };

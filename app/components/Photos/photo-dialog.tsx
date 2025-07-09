@@ -2,63 +2,77 @@
 
 import {createPortal} from 'react-dom';
 import {RemoveScroll} from 'react-remove-scroll';
-import FitImage from './fit-image';
 import {IconArrowLeft, IconArrowRight} from '@/app/assets';
 import {cn} from '@/app/utils/tailwind-utils';
+import {Swiper, SwiperSlide} from 'swiper/react';
+import {useState} from 'react';
+import SwiperCore from 'swiper';
+import {Zoom} from 'swiper/modules';
+import 'swiper/css';
+import FitImage from './fit-image';
 
 type PhotoDialogProps = {
-  open: boolean;
   images: string[];
   index: number;
-  onPrev: () => void;
-  onNext: () => void;
   onClose: () => void;
 };
 
-const PhotoDialog = ({
-  open,
-  images,
-  index,
-  onPrev,
-  onNext,
-  onClose,
-}: PhotoDialogProps) => {
+const PhotoDialog = ({images, index, onClose}: PhotoDialogProps) => {
+  const [swiper, setSwiper] = useState<SwiperCore>();
+  const [currentImgIndex, setCurrentImgIndex] = useState(index);
+
   return createPortal(
-    <RemoveScroll enabled={open} removeScrollBar allowPinchZoom>
+    <RemoveScroll enabled={true} removeScrollBar allowPinchZoom>
       <div
         className={cn(
-          open
-            ? 'z-999 w-full h-full fixed inset-0 bg-white/90 backdrop-blur-sm transition-opacity duration-300'
-            : 'hidden',
+          'z-999 w-full h-full fixed inset-0 bg-white/90 backdrop-blur-sm transition-opacity duration-300',
         )}
       />
 
       <div
         className={cn(
-          open
-            ? 'flex flex-col w-full h-full fixed inset-0 overflow-y-auto sm:max-w-[600px] mx-auto'
-            : 'hidden',
+          'flex flex-col w-full h-full fixed inset-0 overflow-y-auto sm:max-w-[600px] mx-auto',
         )}
       >
-        <div className="flex-1 flex justify-center items-center shrink-0 select-none">
-          <FitImage src={images[index]} alt="다이얼로그 이미지" />
+        <div className="flex-1 relative">
+          <Swiper
+            initialSlide={index}
+            onSwiper={setSwiper}
+            className="w-full h-full"
+            slidesPerView={1}
+            spaceBetween={0}
+            onSlideChange={swiper => setCurrentImgIndex(swiper.activeIndex)}
+            zoom={true}
+            modules={[Zoom]}
+          >
+            {images.map((item: string, index: number) => (
+              <SwiperSlide key={index}>
+                <div className="swiper-zoom-container w-full h-full flex items-center justify-center">
+                  <FitImage src={item} alt="다이얼로그 이미지" />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         <div className="mt-auto pb-[48px] pt-[8px]">
           <div className="flex justify-center pt-[4px] pb-[4px] text-[14px] leading-[20px]">
             <span>
-              {index + 1}/{images.length}
+              {currentImgIndex + 1}/{images.length}
             </span>
           </div>
 
           <div className="flex justify-center items-center gap-[32px]">
             <button
-              disabled={index === 0}
+              disabled={currentImgIndex === 0}
               className={cn(
                 'border-none cursor-pointer bg-transparent',
-                index === 0 && 'opacity-30',
+                currentImgIndex === 0 && 'opacity-30',
               )}
-              onClick={onPrev}
+              onClick={() => {
+                setCurrentImgIndex(currentImgIndex - 1);
+                swiper?.slideTo(currentImgIndex - 1, 500);
+              }}
             >
               <IconArrowLeft width="2em" height="2em" />
             </button>
@@ -69,12 +83,15 @@ const PhotoDialog = ({
               닫기
             </button>
             <button
-              disabled={index === images.length - 1}
+              disabled={currentImgIndex === images.length - 1}
               className={cn(
                 'border-none cursor-pointer bg-transparent',
-                index === images.length - 1 && 'opacity-30',
+                currentImgIndex === images.length - 1 && 'opacity-30',
               )}
-              onClick={onNext}
+              onClick={() => {
+                setCurrentImgIndex(currentImgIndex + 1);
+                swiper?.slideTo(currentImgIndex + 1, 500);
+              }}
             >
               <IconArrowRight width="2em" height="2em" />
             </button>
