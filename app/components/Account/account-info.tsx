@@ -20,7 +20,14 @@ const AccountInfo = ({info}: AccountInfo) => {
   const onAccountCopy = async (bank: string, account: string) => {
     try {
       await navigator.clipboard.writeText(`${bank} ${account}`);
-      showToast('계좌번호를 복사했어요');
+      showToast(
+        <div className="flex flex-col gap-[2px]">
+          <span>계좌번호를 복사했어요</span>
+          <span className="text-[11px] leading-[16px] text-gray-500">
+            {bank} {account}
+          </span>
+        </div>,
+      );
     } catch (e) {
       console.error(e);
       showToast('계좌번호 복사에 실패했어요');
