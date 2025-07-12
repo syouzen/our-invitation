@@ -19,7 +19,7 @@ const FitImage = ({src, alt}: FitImageProps) => {
 
   return (
     <div>
-      {size.width && size.height && (
+      {size.width && size.height ? (
         <Image
           layout="responsive"
           src={src}
@@ -31,7 +31,7 @@ const FitImage = ({src, alt}: FitImageProps) => {
                  (max-width: 1200px) 50vw, 
                  33vw"
         />
-      )}
+      ) : null}
     </div>
   );
 };
