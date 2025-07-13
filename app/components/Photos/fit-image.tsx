@@ -1,3 +1,4 @@
+import {IconLoading} from '@/app/assets';
 import Image from 'next/image';
 import {useState, useEffect} from 'react';
 
@@ -29,7 +30,9 @@ const FitImage = ({src, alt}: FitImageProps) => {
           className="object-cover pointer-events-none"
           sizes="100vw"
         />
-      ) : null}
+      ) : (
+        <IconLoading />
+      )}
     </div>
   );
 };
