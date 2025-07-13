@@ -36,7 +36,7 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
           <Intersection key={i}>
             <button
               disabled={noDialog}
-              className="relative w-full aspect-[1/1] overflow-hidden border-none cursor-pointer rounded-[4px]"
+              className="relative w-full aspect-[1/1] overflow-hidden border-none cursor-pointer rounded-[4px] disabled:cursor-default"
               onClick={() => onOpen(i)}
             >
               <Image
@@ -55,7 +55,7 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
       <div className="flex justify-center items-center">
         {images.length > offset * 9 && (
           <button
-            className="bg-gray-100 flex justify-center items-center border-none cursor-pointer w-[32px] h-[32px] rounded-[100px]"
+            className="bg-gray-100 flex justify-center items-center border-none w-[32px] h-[32px] rounded-[100px]"
             onClick={onMore}
           >
             <IconArrowDown />
