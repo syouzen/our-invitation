@@ -9,6 +9,7 @@ import {Zoom} from 'swiper/modules';
 import 'swiper/css';
 import FitImage from './fit-image';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
+import Intersection from '../Intersection';
 
 type PhotoDialogProps = {
   open: boolean;
@@ -59,9 +60,12 @@ const PhotoDialog = ({open, images, index, onOpenChange}: PhotoDialogProps) => {
           >
             {images.map((item: string, index: number) => (
               <SwiperSlide key={index}>
-                <div className="swiper-zoom-container w-full h-full flex items-center justify-center">
+                <Intersection
+                  noY
+                  className="swiper-zoom-container w-full h-full flex items-center justify-center"
+                >
                   <FitImage src={item} alt="다이얼로그 이미지" />
-                </div>
+                </Intersection>
               </SwiperSlide>
             ))}
           </Swiper>
