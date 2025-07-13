@@ -27,9 +27,7 @@ const FitImage = ({src, alt}: FitImageProps) => {
           width={size.width}
           height={size.height}
           className="object-cover pointer-events-none"
-          sizes="(max-width: 600px) 100vw, 
-                 (max-width: 1200px) 50vw, 
-                 33vw"
+          sizes="100vw"
         />
       ) : null}
     </div>
