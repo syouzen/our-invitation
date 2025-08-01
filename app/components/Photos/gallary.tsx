@@ -43,6 +43,7 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
                 src={image}
                 alt="갤러리 이미지"
                 fill
+                loading="lazy"
                 className="object-cover"
                 sizes="(max-width: 600px) 100vw, 
                           (max-width: 1200px) 50vw, 

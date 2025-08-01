@@ -27,6 +27,7 @@ const FitImage = ({src, alt}: FitImageProps) => {
           alt={alt}
           width={size.width}
           height={size.height}
+          loading="lazy"
           className="object-cover pointer-events-none"
           sizes="100vw"
         />
