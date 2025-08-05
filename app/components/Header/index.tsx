@@ -43,7 +43,7 @@ const SubHeader = () => {
 
         <div className="flex flex-col gap-[2px]">
           <div className="text-[14px] leading-[20px] text-gray-500">
-            2025년 11월 8일 토요일, 낮 12시 30분
+            2025년 11월 8일 토요일, 오후 1시 30분
           </div>
 
           <div className="text-[14px] leading-[20px] text-gray-500">두가헌</div>

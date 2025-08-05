@@ -4,7 +4,7 @@ import React, {useEffect, useState} from 'react';
 import dayjs from 'dayjs';
 import {cn} from '@/app/utils/tailwind-utils';
 
-const targetDate = '2025-11-08T12:30:00';
+const targetDate = '2025-11-08T13:30:00';
 
 const DDayCounter = () => {
   const [start, setStart] = useState<boolean>(false);
