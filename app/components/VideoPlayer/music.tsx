@@ -21,7 +21,7 @@ const Music = () => {
           webkit-playsinline="webkit-playsinline"
         >
           <source
-            src="https://kr.object.ncloudstorage.com/zen-bucket/this_happy_madness.mp3"
+            src="https://kr.object.ncloudstorage.com/zen-bucket/just_the_two_of_us.mp3"
             type="audio/mp3"
           />
         </video>
