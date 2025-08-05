@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 export function PreloadResources() {
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/our-invitation.mp4',
+    'https://kr.object.ncloudstorage.com/zen-bucket/our-video.mp4',
     {as: 'video'},
   );
   // ReactDOM.preload(

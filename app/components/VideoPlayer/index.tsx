@@ -12,7 +12,7 @@ const VideoPlayer = () => {
           webkit-playsinline="webkit-playsinline"
         >
           <source
-            src="https://kr.object.ncloudstorage.com/zen-bucket/our-invitation.mp4"
+            src="https://kr.object.ncloudstorage.com/zen-bucket/our-video.mp4"
             type="video/mp4"
           />
           영상을 재생할 수 없습니다
