@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: contents.title,
     description: contents.description,
-    images: ['https://kr.object.ncloudstorage.com/zen-bucket/last-6.jpg'],
+    images: ['https://kr.object.ncloudstorage.com/zen-bucket/last-6.png'],
   },
   manifest: '/manifest.json',
   robots: {
