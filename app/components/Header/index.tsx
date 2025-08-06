@@ -53,7 +53,7 @@ const SubHeader = () => {
       <Intersection className="flex justify-center items-center w-[100%] h-[400px] relative overflow-hidden mt-[64px]">
         <Image
           priority
-          src="https://kr.object.ncloudstorage.com/zen-bucket/IMG_5988.JPG"
+          src="https://kr.object.ncloudstorage.com/zen-bucket/last-6.jpg"
           alt="메인 이미지"
           width={350}
           height={350}
