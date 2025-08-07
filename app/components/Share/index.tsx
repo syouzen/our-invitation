@@ -7,7 +7,7 @@ import useToast from '@/app/hook/useToast';
 
 const INVITATION_URL =
   process.env.NODE_ENV === 'production'
-    ? 'https://our-invitation.vercel.app/'
+    ? 'https://our-invitation.vercel.app'
     : 'http://localhost:3000/';
 
 const Share = () => {
