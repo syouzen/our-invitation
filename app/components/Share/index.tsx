@@ -21,7 +21,7 @@ const Share = () => {
     window.Kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
-        imageUrl: 'https://kr.object.ncloudstorage.com/zen-bucket/last-6.jpg',
+        imageUrl: `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.jpg`,
         imageWidth: 600,
         imageHeight: 400,
         title: '최승연 ♥ 김현아 결혼합니다',

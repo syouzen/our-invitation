@@ -21,7 +21,7 @@ const Music = () => {
           webkit-playsinline="webkit-playsinline"
         >
           <source
-            src="https://kr.object.ncloudstorage.com/zen-bucket/our-music.mp3"
+            src={`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/our_music.mp3`}
             type="audio/mp3"
           />
         </video>

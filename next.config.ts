@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: 'kr.object.ncloudstorage.com',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: `${process.env.NEXT_PUBLIC_IMAGE_SERVER_HOST}`,
+        pathname: '**',
+      },
     ],
   },
 };

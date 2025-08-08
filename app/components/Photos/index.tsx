@@ -3,12 +3,12 @@ import Gallary from './gallary';
 
 const Photos = () => {
   const images: string[] = [
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-1.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-2.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-3.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-4.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-5.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-6.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_1.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_2.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_3.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_4.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_5.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.webp`,
   ];
 
   return (

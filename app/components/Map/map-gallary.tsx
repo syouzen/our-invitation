@@ -3,12 +3,9 @@ import Gallary from '../Photos/gallary';
 
 const MapGallary = () => {
   const images: string[] = [
-    'https://kr.object.ncloudstorage.com/zen-bucket/dugahun_1.jpg',
-    // 'https://kr.object.ncloudstorage.com/zen-bucket/dugahun_2.jpg',
-    // 'https://kr.object.ncloudstorage.com/zen-bucket/dugahun_3.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/dugahun_4.jpg',
-    // 'https://kr.object.ncloudstorage.com/zen-bucket/dugahun_5.jpg',
-    'https://kr.object.ncloudstorage.com/zen-bucket/dugahun_6.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_1.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_4.webp`,
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_6.webp`,
   ];
 
   return (

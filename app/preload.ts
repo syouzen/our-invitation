@@ -4,31 +4,35 @@ import ReactDOM from 'react-dom';
 
 export function PreloadResources() {
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/our-video.mp4',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/our_video.mp4`,
     {as: 'video'},
   );
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-1.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/our_music.mp3`,
+    {as: 'audio'},
+  );
+  ReactDOM.preload(
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_1.webp`,
     {as: 'image'},
   );
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-2.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_2.webp`,
     {as: 'image'},
   );
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-3.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_3.webp`,
     {as: 'image'},
   );
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-4.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_4.webp`,
     {as: 'image'},
   );
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-5.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_5.webp`,
     {as: 'image'},
   );
   ReactDOM.preload(
-    'https://kr.object.ncloudstorage.com/zen-bucket/last-6.jpg',
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.webp`,
     {as: 'image'},
   );
   return null;
