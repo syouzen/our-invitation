@@ -12,6 +12,18 @@ export function PreloadResources() {
     {as: 'audio'},
   );
   ReactDOM.preload(
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_1.webp`,
+    {as: 'image'},
+  );
+  ReactDOM.preload(
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_4.webp`,
+    {as: 'image'},
+  );
+  ReactDOM.preload(
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_6.webp`,
+    {as: 'image'},
+  );
+  ReactDOM.preload(
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_1.webp`,
     {as: 'image'},
   );
@@ -33,6 +45,10 @@ export function PreloadResources() {
   );
   ReactDOM.preload(
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.webp`,
+    {as: 'image'},
+  );
+  ReactDOM.preload(
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`,
     {as: 'image'},
   );
   return null;

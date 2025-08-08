@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: contents.title,
     description: contents.description,
-    images: [`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.webp`],
+    images: [`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`],
   },
   manifest: '/manifest.json',
   robots: {
