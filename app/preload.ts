@@ -51,5 +51,9 @@ export function PreloadResources() {
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`,
     {as: 'image'},
   );
+  ReactDOM.preload(
+    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/kakao_og.webp`,
+    {as: 'image'},
+  );
   return null;
 }

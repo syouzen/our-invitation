@@ -21,7 +21,7 @@ const Share = () => {
     window.Kakao.Share.sendDefault({
       objectType: 'feed',
       content: {
-        imageUrl: `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`,
+        imageUrl: `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/kakao_og.webp`,
         imageWidth: 600,
         imageHeight: 400,
         title: '최승연 ♥ 김현아 결혼합니다',
