@@ -48,6 +48,7 @@ const Header = () => {
         </div>
         <div className="text-[14px] leading-[20px] text-gray-900 flex mt-[12px] justify-center items-center gap-[12px]">
           <div className="w-[70px] text-end">
+            <div>김현중</div>
             <div>서영민</div>
           </div>
           <span>의</span>
