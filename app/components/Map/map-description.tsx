@@ -42,8 +42,12 @@ const MapDescription = () => {
         <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">주차</div>
           <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
-            <div className="flex gap-[2px]">
-              <span>건물 내 15대 무료</span>
+            <div className="flex gap-[4px]">
+              <span>건물 내 8대 무료</span>
+            </div>
+            <div className="flex gap-[4px]">
+              <span>*</span>
+              <span>일부 가족/친지 지정주차가 있습니다.</span>
             </div>
             <div className="flex gap-[4px]">
               <span>*</span>
@@ -56,10 +60,9 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                만차 시 <b>국립현대미술관, 경복궁</b> 주차장 이용 부탁 드립니다.
+                만차 시 <b>경복궁, 국립현대미술관</b> 주차장 이용 부탁 드립니다.
               </span>
             </div>
-
             <DropdownMenu>
               <DropdownMenuTrigger className="mt-[4px] w-fit px-[16px] py-[8px] flex justify-center items-center">
                 <div className="text-[13px] leading-[20px] text-gray-500">
@@ -67,11 +70,11 @@ const MapDescription = () => {
                 </div>
               </DropdownMenuTrigger>
               <DropdownMenuContent>
-                <DropdownMenuItem href="https://naver.me/GDa2FKhZ">
-                  국립현대미술관 주차장
-                </DropdownMenuItem>
                 <DropdownMenuItem href="https://naver.me/FY3ycwW6">
                   경복궁 주차장
+                </DropdownMenuItem>
+                <DropdownMenuItem href="https://naver.me/GDa2FKhZ">
+                  국립현대미술관 주차장
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -86,13 +89,14 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                일부 가족/친지 지정석이 있습니다.
+                전부 가족/친지 지정석입니다. 너른 양해를 부탁 드립니다.
               </span>
             </div>
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                <b>80인</b>까지 이용이 가능합니다. 너른 양해를 부탁 드립니다.
+                이외 방문객분들께서는 서머셋 팰리스 1층, 더키친 일뽀르노에서
+                식사가 가능합니다.
               </span>
             </div>
           </div>
