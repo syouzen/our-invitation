@@ -89,14 +89,19 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                전부 가족/친지 지정석입니다. 너른 양해를 부탁 드립니다.
+                예식 후 함께하는 식사와 담소의 시간이 약 1시간 30분 정도
+                이어집니다.
               </span>
             </div>
             <div className="flex gap-[4px]">
               <span>*</span>
+              <span>자리는 모두 가족/친지 지정석으로 마련되어 있습니다.</span>
+            </div>
+            <div className="flex gap-[4px]">
+              <span>*</span>
               <span>
-                이외 방문객분들께서는 서머셋 팰리스 1층, 더키친 일뽀르노에서
-                식사가 가능합니다.
+                지정석이 없는 분들은 서머셋 팰리스 1층, 더키친 일뽀르노에서
+                편안히 식사하실 수 있습니다.
               </span>
             </div>
           </div>
