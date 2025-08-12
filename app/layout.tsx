@@ -8,7 +8,7 @@ import {cn} from './utils/tailwind-utils';
 
 const contents = {
   title: '최승연 ♥ 김현아 결혼합니다',
-  description: '11월 8일 오후 1시 30분, 두가헌',
+  description: '11월 8일 오후 12시 30분, 두가헌',
 };
 
 export const viewport: Viewport = {
