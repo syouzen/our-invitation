@@ -106,6 +106,12 @@ const MapDescription = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-col items-center gap-[8px] pt-[32px]">
+          <div className="text-[13px] leading-[20px] text-gray-700 flex flex-col gap-[2px] text-center">
+            <span>식장의 규정에 따라 화환은 정중히 사양합니다.</span>
+            <span>좋은 마음만 감사히 받겠습니다.</span>
+          </div>
+        </div>
       </div>
     </div>
   );
