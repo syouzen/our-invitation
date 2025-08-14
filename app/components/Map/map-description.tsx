@@ -10,13 +10,25 @@ const MapDescription = () => {
     <div className="mt-[16px] mb-[64px] px-[16px]">
       <div className="flex flex-col gap-[32px]">
         <div className="flex flex-col item-start gap-[8px]">
+          <div className="font-bold text-[16px] leading-[24px]">안내</div>
+          <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
+            <div className="flex gap-[2px]">
+              <span>
+                두가헌은 경복궁을 끼고 삼청동으로 올라가는 길 초입에 위치하고
+                있습니다. 대로변에서 오른편에 보이는 <b>'아트큐브'</b>와{' '}
+                <b>'갤러리현대'</b> 사이로 진입하시면 됩니다
+              </span>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">지하철</div>
           <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
             <div className="flex gap-[2px]">
               <span>3호선 안국역 1번 출구, 도보 5분 거리에 위치</span>
             </div>
             <div className="flex gap-[2px]">
-              <span>5호선 광화문역 2번 출구, 도보 5분 거리에 위치</span>
+              <span>5호선 광화문역 2번 출구, 도보 10분 거리에 위치</span>
             </div>
           </div>
         </div>
@@ -60,7 +72,7 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                만차 시 <b>경복궁, 국립현대미술관</b> 주차장 이용 부탁 드립니다.
+                만차 시 주위 <b>유료 주차장</b> 이용 부탁 드립니다.
               </span>
             </div>
             <DropdownMenu>
@@ -75,6 +87,12 @@ const MapDescription = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem href="https://naver.me/GDa2FKhZ">
                   국립현대미술관 주차장
+                </DropdownMenuItem>
+                <DropdownMenuItem href="https://naver.me/F2ZABDCE">
+                  트윈트리 타워 주차장
+                </DropdownMenuItem>
+                <DropdownMenuItem href="https://naver.me/xktVQP9w">
+                  서머셋 팰리스 주차장
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -104,11 +122,23 @@ const MapDescription = () => {
                 편안히 식사하실 수 있습니다.
               </span>
             </div>
+            <DropdownMenu>
+              <DropdownMenuTrigger className="mt-[4px] w-fit px-[16px] py-[8px] flex justify-center items-center">
+                <div className="text-[13px] leading-[20px] text-gray-500">
+                  <span>외부 식당 안내</span>
+                </div>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem href="https://naver.me/xOxHPUUY">
+                  더키친 일뽀르노
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
         <div className="flex flex-col items-center gap-[8px] pt-[32px]">
           <div className="text-[13px] leading-[20px] text-gray-700 flex flex-col gap-[2px] text-center">
-            <span>식장의 규정에 따라 화환은 정중히 사양합니다.</span>
+            <span>화환은 정중히 사양합니다.</span>
             <span>좋은 마음만 감사히 받겠습니다.</span>
           </div>
         </div>
