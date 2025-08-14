@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <>
       <Intersection>
-        <div className="text-center text-[14px] leading-[20px] text-gray-900 mb-[64px]">
+        <div className="text-center text-[14px] leading-[20px] text-gray-900 mb-[48px]">
           저의 두 걸음은
           <br />
           그녀의 세 걸음입니다.
@@ -32,12 +32,12 @@ const Header = () => {
         </div>
       </Intersection>
 
-      <div className="flex justify-center items-center my-[48px] text-gray-300">
+      <div className="flex justify-center items-center my-[32px] text-gray-300">
         <span>-</span>
       </div>
 
       <Intersection>
-        <div className="text-[14px] leading-[20px] text-gray-900 flex mt-[12px] justify-center items-center gap-[12px]">
+        <div className="text-[14px] leading-[20px] text-gray-900 flex pt-[12px] justify-center items-center gap-[12px]">
           <div className="w-[70px] text-end">
             <div>故 최호선</div>
             <div>육은주</div>
@@ -46,7 +46,7 @@ const Header = () => {
           <span>장남</span>
           <strong>최승연</strong>
         </div>
-        <div className="text-[14px] leading-[20px] text-gray-900 flex mt-[12px] justify-center items-center gap-[12px]">
+        <div className="text-[14px] leading-[20px] text-gray-900 flex pt-[12px] justify-center items-center gap-[12px]">
           <div className="w-[70px] text-end">
             <div>김현중</div>
             <div>서영민</div>

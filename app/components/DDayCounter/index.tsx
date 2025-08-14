@@ -54,7 +54,7 @@ const DDayCounter = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center mb-[64px] text-[14px] leading-[20px] text-gray-900">
+    <div className="flex flex-col justify-center items-center mb-[48px] text-[14px] leading-[20px] text-gray-900">
       <span>{start ? '우리의 시작' : '결실까지'}</span>
       <span
         className={cn(
