@@ -53,7 +53,7 @@ const SubHeader = () => {
       <Intersection className="flex justify-center items-center w-[100%] h-[400px] relative overflow-hidden mt-[64px]">
         <Image
           priority
-          src={`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.webp`}
+          src={`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_1.webp`}
           alt="메인 이미지"
           width={350}
           height={350}
