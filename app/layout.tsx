@@ -5,6 +5,7 @@ import {PreloadResources} from './preload';
 import {sans, serif, serif_en} from './font';
 import {ToastProvider} from './components';
 import {cn} from './utils/tailwind-utils';
+import {SpeedInsights} from '@vercel/speed-insights/next';
 
 const contents = {
   title: '최승연 ♥ 김현아 결혼합니다',
@@ -52,6 +53,7 @@ export default function RootLayout({
       <body>
         <ToastProvider />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
