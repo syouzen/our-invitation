@@ -10,20 +10,8 @@ const MapDescription = () => {
     <div className="mt-[16px] mb-[64px] px-[16px]">
       <div className="flex flex-col gap-[32px]">
         <div className="flex flex-col item-start gap-[8px]">
-          <div className="font-bold text-[16px] leading-[24px]">안내</div>
-          <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
-            <div className="flex gap-[2px]">
-              <span>
-                두가헌은 경복궁을 끼고 삼청동으로 올라가는 길 초입에 위치하고
-                있습니다. 대로변에서 오른편에 보이는 <b>아트큐브</b>와{' '}
-                <b>갤러리현대</b> 사이로 진입하시면 됩니다
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">지하철</div>
-          <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
+          <div className="text-[13px] leading-[20px] text-gray-600 flex flex-col gap-[2px]">
             <div className="flex gap-[2px]">
               <span>3호선 안국역 1번 출구, 도보 5분 거리에 위치</span>
             </div>
@@ -34,7 +22,7 @@ const MapDescription = () => {
         </div>
         <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">버스</div>
-          <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
+          <div className="text-[13px] leading-[20px] text-gray-600 flex flex-col gap-[2px]">
             <div className="flex gap-[2px]">
               <span>법련사 정류장, 도보 1분 거리에 위치</span>
             </div>
@@ -53,13 +41,9 @@ const MapDescription = () => {
         </div>
         <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">주차</div>
-          <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
+          <div className="text-[13px] leading-[20px] text-gray-600 flex flex-col gap-[2px]">
             <div className="flex gap-[4px]">
-              <span>건물 내 8대 무료</span>
-            </div>
-            <div className="flex gap-[4px]">
-              <span>*</span>
-              <span>일부 가족/친지 지정주차가 있습니다.</span>
+              <span>건물 내 12대 무료</span>
             </div>
             <div className="flex gap-[4px]">
               <span>*</span>
@@ -77,7 +61,7 @@ const MapDescription = () => {
             </div>
             <DropdownMenu>
               <DropdownMenuTrigger className="mt-[4px] w-fit px-[16px] py-[8px] flex justify-center items-center">
-                <div className="text-[13px] leading-[20px] text-gray-500">
+                <div className="text-[13px] leading-[20px] text-gray-600">
                   <span>외부 주차장 안내</span>
                 </div>
               </DropdownMenuTrigger>
@@ -100,9 +84,9 @@ const MapDescription = () => {
         </div>
         <div className="flex flex-col item-start gap-[8px]">
           <div className="font-bold text-[16px] leading-[24px]">식사</div>
-          <div className="text-[13px] leading-[20px] text-gray-500 flex flex-col gap-[2px]">
+          <div className="text-[13px] leading-[20px] text-gray-600 flex flex-col gap-[2px]">
             <div className="flex gap-[2px]">
-              <span>신선한 제철 재료를 사용한 코스요리입니다.</span>
+              <span>식사는 프렌치&이탈리안 코스요리입니다.</span>
             </div>
             <div className="flex gap-[4px]">
               <span>*</span>
@@ -124,7 +108,7 @@ const MapDescription = () => {
             </div>
             <DropdownMenu>
               <DropdownMenuTrigger className="mt-[4px] w-fit px-[16px] py-[8px] flex justify-center items-center">
-                <div className="text-[13px] leading-[20px] text-gray-500">
+                <div className="text-[13px] leading-[20px] text-gray-600">
                   <span>외부 식당 안내</span>
                 </div>
               </DropdownMenuTrigger>
