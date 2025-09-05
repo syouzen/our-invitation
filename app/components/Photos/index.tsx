@@ -12,7 +12,6 @@ const Photos = () => {
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_3.webp`,
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_1.webp`,
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_2.webp`,
-    `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_4.webp`,
     `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_5.webp`,
   ];
 
