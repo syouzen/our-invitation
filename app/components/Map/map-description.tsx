@@ -97,13 +97,9 @@ const MapDescription = () => {
             </div>
             <div className="flex gap-[4px]">
               <span>*</span>
-              <span>자리는 모두 가족/친지 지정석으로 마련되어 있습니다.</span>
-            </div>
-            <div className="flex gap-[4px]">
-              <span>*</span>
               <span>
-                지정석이 없는 분들은 서머셋 팰리스 1층, 더키친 일뽀르노에서
-                편안히 식사하실 수 있습니다.
+                작은 결혼식으로 지정석이 없는 분들은 서머셋 팰리스 호텔 1층,
+                더키친 일뽀르노에서 편안히 식사하실 수 있습니다.
               </span>
             </div>
             <DropdownMenu>
