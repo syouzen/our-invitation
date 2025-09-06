@@ -48,6 +48,12 @@ export function PreloadResources() {
   ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_5.webp`, {
     as: 'image',
   });
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_7.webp`, {
+    as: 'image',
+  });
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_8.webp`, {
+    as: 'image',
+  });
   ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`, {
     as: 'image',
   });
