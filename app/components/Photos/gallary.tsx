@@ -32,7 +32,7 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
   return (
     <>
       <div className={cn('grid grid-cols-3 gap-[6px] mb-[32px]', className)}>
-        {images.slice(0, offset * 9).map((image, i) => (
+        {images.slice(0, offset * 6).map((image, i) => (
           <Intersection key={i}>
             <button
               disabled={noDialog}
@@ -54,7 +54,7 @@ const Gallary = ({images, noDialog = false, className}: GallaryProps) => {
         ))}
       </div>
       <div className="flex justify-center items-center">
-        {images.length > offset * 9 && (
+        {images.length > offset * 6 && (
           <button
             className="bg-gray-100 flex justify-center items-center border-none w-[32px] h-[32px] rounded-[100px]"
             onClick={onMore}
