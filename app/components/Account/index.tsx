@@ -48,8 +48,8 @@ const Account = () => {
                   <AccountInfo
                     info={{
                       name: '신부 김현아',
-                      bank: '신한',
-                      account: '110-378-579420',
+                      bank: '토스뱅크',
+                      account: '1000-2003-8866',
                       kakao: 'https://qr.kakaopay.com/FZKbBV0Ib',
                     }}
                   />
