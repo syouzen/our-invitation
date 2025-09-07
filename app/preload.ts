@@ -18,22 +18,22 @@ export function PreloadResources() {
   ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/dugahun_6.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_1.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_last_1.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_2.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_last_2.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_3.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_last_3.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_4.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_last_4.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_5.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_last_5.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/last_6.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_last_6.webp`, {
     as: 'image',
   });
   ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_1.webp`, {
@@ -51,7 +51,7 @@ export function PreloadResources() {
   ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_7.webp`, {
     as: 'image',
   });
-  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/add_8.webp`, {
+  ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/big_add_8.webp`, {
     as: 'image',
   });
   ReactDOM.preload(`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`, {
