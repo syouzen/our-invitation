@@ -9,6 +9,19 @@ import Calendar from '../Calendar';
 import Music from '../VideoPlayer/music';
 
 const SubHeader = () => {
+  console.log(
+    '___$$$___$$$____\n' +
+      '__$$$$$_$$$$$___\n' +
+      '__$$$$$$$$$$$___\n' +
+      '____$$$$$$$_____\n' +
+      '______$$$_______\n' +
+      '_______$\n' +
+      '_____¸.•´¸.•*¸.•*´¨`*•.♥\n' +
+      '_____*.¸¸.•*¨`\n' +
+      '\n' +
+      '결혼식을 축하해주신 모든 여러분 감사합니다~❤️',
+  );
+
   return (
     <>
       <Intersection className="mb-[48px]">
