@@ -3,7 +3,7 @@
 import {IconArrowLeft, IconArrowRight} from '@/app/assets';
 import {cn} from '@/app/utils/tailwind-utils';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 import SwiperCore from 'swiper';
 import {Zoom} from 'swiper/modules';
 import 'swiper/css';
@@ -21,12 +21,38 @@ type PhotoDialogProps = {
 const PhotoDialog = ({open, images, index, onOpenChange}: PhotoDialogProps) => {
   const [swiper, setSwiper] = useState<SwiperCore>();
   const [currentImgIndex, setCurrentImgIndex] = useState(index);
+  const touchStartY = useRef<number>(0);
+  const touchEndY = useRef<number>(0);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (open) {
       setCurrentImgIndex(index);
     }
   }, [index, open]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartY.current = e.targetTouches[0].clientY;
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndY.current = e.targetTouches[0].clientY;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartY.current || !touchEndY.current) return;
+
+    const distance = touchStartY.current - touchEndY.current;
+    const isUpSwipe = distance > 50; // 50px 이상 위로 스와이프
+
+    if (isUpSwipe) {
+      onOpenChange(false);
+    }
+
+    // 초기화
+    touchStartY.current = 0;
+    touchEndY.current = 0;
+  };
 
   return (
     <DialogPrimitive.Root open={open} onOpenChange={onOpenChange}>
@@ -38,12 +64,16 @@ const PhotoDialog = ({open, images, index, onOpenChange}: PhotoDialogProps) => {
         onClick={() => onOpenChange(false)}
       />
       <DialogPrimitive.Content
+        ref={containerRef}
         className={cn(
           'container w-full z-[999] sm:max-w-[600px]',
           'fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]',
           'duration-200 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[state=closed]:slide-out-to-left-1/2 data-[state=closed]:slide-out-to-top-[48%] data-[state=open]:slide-in-from-left-1/2 data-[state=open]:slide-in-from-top-[48%]',
         )}
         onPointerDownOutside={e => e.preventDefault()}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <DialogPrimitive.Title className="sr-only" />
         <DialogPrimitive.Description className="sr-only" />
