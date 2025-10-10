@@ -19,13 +19,19 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
+const ogImage = {
+  url: `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`,
+  width: 2666,
+  height: 1346,
+};
+
 export const metadata: Metadata = {
   title: contents.title,
   description: contents.description,
   openGraph: {
     title: contents.title,
     description: contents.description,
-    images: [`${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`],
+    images: [ogImage],
   },
   manifest: '/manifest.json',
   robots: {
