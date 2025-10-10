@@ -56,6 +56,10 @@ export default function RootLayout({
       )}
     >
       <PreloadResources />
+      <meta name="twitter:label1" content="장소" />
+      <meta name="twitter:data1" content="두가헌" />
+      <meta name="twitter:label2" content="날짜" />
+      <meta name="twitter:data2" content="11월 8일 오후 12시 30분" />
       <body>
         <ToastProvider />
         {children}
