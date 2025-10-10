@@ -20,7 +20,7 @@ export const viewport: Viewport = {
 };
 
 const ogImage = {
-  url: `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.webp`,
+  url: `${process.env.NEXT_PUBLIC_IMAGE_SERVER}/og.png`,
   width: 2666,
   height: 1346,
 };
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
 };
 
