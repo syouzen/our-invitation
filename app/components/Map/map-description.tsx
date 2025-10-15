@@ -91,8 +91,8 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                예식 후 함께하는 식사와 담소의 시간이 약 1시간 30분 정도
-                이어집니다.
+                예식 후 1시 30분부터 함께하는 식사와 담소의 시간이 약 1시간 30분
+                정도 이어집니다.
               </span>
             </div>
             <div className="flex gap-[4px]">
