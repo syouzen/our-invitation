@@ -56,7 +56,7 @@ const MapDescription = () => {
             <div className="flex gap-[4px]">
               <span>*</span>
               <span>
-                만차 시 주위 <b>유료 주차장</b> 이용 부탁 드립니다.
+                만차 시 주위 <b>유료 주차장</b> 이용 부탁 드립니다. (주차비는 지원되지 않습니다)
               </span>
             </div>
             <DropdownMenu>
