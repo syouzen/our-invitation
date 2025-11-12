@@ -58,7 +58,13 @@ const CommentDeleteButton = () => {
       open={isOpen}
       onOpenChange={setIsOpen}
       trigger={
-        <button className="flex w-fit px-[12px] py-[6px] border-none rounded-full bg-gray-100 justify-center items-center gap-[5px] text-[12px] leading-[18px] cursor-pointer transition-colors">
+        <button
+          disabled
+          className={cn(
+            'flex w-fit px-[12px] py-[6px] border-none rounded-full bg-gray-100 justify-center items-center gap-[5px] text-[12px] leading-[18px] cursor-pointer transition-colors',
+            'disabled:cursor-not-allowed disabled:pointer-events-none disabled:opacity-50',
+          )}
+        >
           <IconMessage /> 남기기
         </button>
       }
