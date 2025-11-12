@@ -39,7 +39,7 @@ const CommentList = () => {
                     {dayjs(comment.created_at)
                       .add(-9, 'hours')
                       .format('YYYY.MM.DD')}
-                    <CommentDeleteButton comment={comment} />
+                    {/* <CommentDeleteButton comment={comment} /> */}
                   </span>
                 </div>
                 <div className="mb-[12px] text-[14px] leading-[20px]">
