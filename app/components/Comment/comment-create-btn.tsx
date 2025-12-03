@@ -8,7 +8,7 @@ import {useCommentsStore} from '@/app/store';
 import {cn} from '@/app/utils/tailwind-utils';
 import useToast from '@/app/hook/useToast';
 
-const CommentDeleteButton = () => {
+const CommentCreateButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -132,4 +132,4 @@ const CommentDeleteButton = () => {
   );
 };
 
-export default CommentDeleteButton;
+export default CommentCreateButton;

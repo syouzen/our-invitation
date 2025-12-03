@@ -5,7 +5,6 @@ import {useCommentsStore} from '@/app/store';
 import {IconArrowDown, IconLoading} from '@/app/assets';
 import dayjs from 'dayjs';
 import {Intersection} from '@/app/components';
-import CommentDeleteButton from './comment-delete-btn';
 
 const CommentList = () => {
   const [offset, setOffset] = useState(1);
@@ -39,7 +38,6 @@ const CommentList = () => {
                     {dayjs(comment.created_at)
                       .add(-9, 'hours')
                       .format('YYYY.MM.DD')}
-                    {/* <CommentDeleteButton comment={comment} /> */}
                   </span>
                 </div>
                 <div className="mb-[12px] text-[14px] leading-[20px]">
